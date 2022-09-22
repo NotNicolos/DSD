@@ -1,5 +1,5 @@
 Restore Archived Project report for exercise3
-Thu Sep 22 09:03:19 2022
+Thu Sep 22 09:05:55 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Thu Sep 22 09:03:19 2022 ;
+; Restore Archived Project Status ; Successful - Thu Sep 22 09:05:55 2022 ;
 ; Revision Name                   ; exercise3                             ;
 ; Top-level Entity Name           ; four_bit_adder_tester                 ;
 ; Family                          ; Cyclone II                            ;
@@ -46,18 +46,25 @@ applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Users/Bruger/OneDrive/studie/softwareingenioer/2. semester/Digitalt systemdesign/ex3/exercise3_template.qar' into the 'C:/Users/Bruger/OneDrive/studie/softwareingenioer/2. semester/Digitalt systemdesign/ex3/exercise3_template_restored/' directory
+Info: Successfully restored 'D:/github/DSD/ex3/exercise3_template.qar' into the 'D:/github/DSD/ex3/exercise3_template_restored/' directory
 Info: Generated report 'exercise3.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/altera/13.0sp1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4409 megabytes
-    Info: Processing ended: Thu Sep 22 09:03:19 2022
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4448 megabytes
+    Info: Processing ended: Thu Sep 22 09:05:55 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
 
 
 +------------------------------------------------------+
-; Files Restored                                       ;
+; Files Not Restored                                   ;
 +------------------------------------------------------+
 ; File Name                                            ;
 +------------------------------------------------------+
@@ -79,12 +86,5 @@ Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
 ; mult_tester.vhd                                      ;
 ; shift_div.vhd                                        ;
 +------------------------------------------------------+
-
-
-+--------------------+
-; Files Not Restored ;
-+--------------------+
-; File Name          ;
-+--------------------+
 
 

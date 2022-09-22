@@ -27,5 +27,5 @@ BEGIN
 END unsigned_impl;
 ARCHITECTURE signed_impl OF four_bit_adder_simple IS
 BEGIN
-
+	sum <= STD_LOGIC_VECTOR(signed(a) + signed(b));
 END signed_impl;
