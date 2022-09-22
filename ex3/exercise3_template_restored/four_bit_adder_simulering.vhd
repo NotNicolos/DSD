@@ -21,13 +21,13 @@ END four_bit_adder_simulering;
 ARCHITECTURE four_bit_adder_simulering_impl OF four_bit_adder_simulering IS
 BEGIN
 	-----Instantierer den four_bit adder jeg vil simulere, jeg kan nu vælge hvilken arkitektur jeg vil simulere
-	DUS : ENTITY four_bit_adder_simple(unsigned_impl)
-
-		PORT MAP
-		(
-			A   => A, -- porte mappes "en-til-en"
-			B   => B,
-			Sum => Sum
-		);
+--	DUS : ENTITY four_bit_adder_simple(unsigned_impl)
+--
+--		PORT MAP
+--		(
+--			A   => A, -- porte mappes "en-til-en"
+--			B   => B,
+--			Sum => Sum
+--		);
 
 END four_bit_adder_simulering_impl;
