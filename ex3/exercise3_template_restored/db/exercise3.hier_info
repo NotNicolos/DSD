@@ -1,72 +1,7 @@
-|multiplier_tester
-SW[0] => multiplier:uut.a[0]
-SW[1] => multiplier:uut.a[1]
-SW[2] => multiplier:uut.a[2]
-SW[3] => multiplier:uut.a[3]
-SW[4] => multiplier:uut.a[4]
-SW[5] => multiplier:uut.a[5]
-SW[6] => multiplier:uut.a[6]
-SW[7] => multiplier:uut.a[7]
-SW[8] => multiplier:uut.b[0]
-SW[9] => multiplier:uut.b[1]
-SW[10] => multiplier:uut.b[2]
-SW[11] => multiplier:uut.b[3]
-SW[12] => multiplier:uut.b[4]
-SW[13] => multiplier:uut.b[5]
-SW[14] => multiplier:uut.b[6]
-SW[15] => multiplier:uut.b[7]
-LEDR[0] <= multiplier:uut.Prod[0]
-LEDR[1] <= multiplier:uut.Prod[1]
-LEDR[2] <= multiplier:uut.Prod[2]
-LEDR[3] <= multiplier:uut.Prod[3]
-LEDR[4] <= multiplier:uut.Prod[4]
-LEDR[5] <= multiplier:uut.Prod[5]
-LEDR[6] <= multiplier:uut.Prod[6]
-LEDR[7] <= multiplier:uut.Prod[7]
-LEDR[8] <= multiplier:uut.Prod[8]
-LEDR[9] <= multiplier:uut.Prod[9]
-LEDR[10] <= multiplier:uut.Prod[10]
-LEDR[11] <= multiplier:uut.Prod[11]
-LEDR[12] <= multiplier:uut.Prod[12]
-LEDR[13] <= multiplier:uut.Prod[13]
-LEDR[14] <= multiplier:uut.Prod[14]
-LEDR[15] <= multiplier:uut.Prod[15]
-LEDR[16] <= <GND>
-LEDR[17] <= <GND>
-
-
-|multiplier_tester|multiplier:uut
-a[0] => Mult0.IN7
-a[1] => Mult0.IN6
-a[2] => Mult0.IN5
-a[3] => Mult0.IN4
-a[4] => Mult0.IN3
-a[5] => Mult0.IN2
-a[6] => Mult0.IN1
-a[7] => Mult0.IN0
-b[0] => Mult0.IN15
-b[1] => Mult0.IN14
-b[2] => Mult0.IN13
-b[3] => Mult0.IN12
-b[4] => Mult0.IN11
-b[5] => Mult0.IN10
-b[6] => Mult0.IN9
-b[7] => Mult0.IN8
+|multiplier
+a[0] => Mult0.IN0
+b[0] => Mult0.IN1
 Prod[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 Prod[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[4] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[5] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[6] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[7] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[8] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[9] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[10] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[11] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[12] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[13] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[14] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
-Prod[15] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 
 

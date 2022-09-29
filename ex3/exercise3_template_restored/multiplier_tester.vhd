@@ -22,7 +22,7 @@ BEGIN
 	PORT MAP
 		(
 			A => SW(7 downto 0),
-			B => SW(15 downto 8),
+		   B => SW(15 downto 8),
 			Prod => LEDR(15 downto 0)
 			
 		);
