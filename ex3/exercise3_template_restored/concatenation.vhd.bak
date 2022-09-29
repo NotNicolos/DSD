@@ -1,0 +1,32 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+USE work.ALL;
+
+
+entity shift_div is
+port (
+a : in std_logic_vector(7 downto 0);
+a_shl, a_shr, a_ror: out std_logic_vector(7 downto 0)
+);
+end;
+
+
+architecture a_shl OF a_shl is
+BEGIN
+
+
+END a_shl
+
+
+architecture a_shr OF a_shr is
+BEGIN
+
+
+END a_shr
+
+architecture a_ror OF a_ror is
+BEGIN
+
+
+END a_ror
