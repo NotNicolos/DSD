@@ -41,12 +41,15 @@ BEGIN
 		Sseg => Number(20 downto 14)
 	);
 	
-	with sel select tsseg <=
-			"000011001011110101111" when "01",-- E = 0000110  -- r = 0101111
+	tsseg <=
+			"000011001011110101111" when sel = "01" else-- E = 0000110  -- r = 0101111
 			--"1111001" when "0001",
-			"100000010010001111111" when "11",--ON
-			number when "10", -- switch output
-			"010100101001010010101" when others; -- test data for kompilere
+			"100000001010111111111" when sel = "11" else--On
+			number when sel = "10" else -- switch output
+			"010100101001010010101" ; -- latch avoidance
+			
+			
+			
 		
 		
 END hex_mux_impl;
