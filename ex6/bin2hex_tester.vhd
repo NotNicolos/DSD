@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 USE work.ALL;
 
-ENTITY bin2sevenseg_tester IS
+ENTITY bin2hex_tester IS
 	PORT
 	(
 		-- Input ports
@@ -13,18 +13,18 @@ ENTITY bin2sevenseg_tester IS
 		HEX0   : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 
 	);
-END bin2sevenseg_tester;
+END bin2hex_tester;
 
-ARCHITECTURE bin2sevenseg_tester_impl OF bin2sevenseg_tester IS
+ARCHITECTURE bin2hex_tester_impl OF bin2hex_tester IS
 BEGIN
 
-	uut : ENTITY work.bin2sevenseg 
+	uut : ENTITY work.bin2hex 
 	PORT MAP
 		(
 			bin => SW(3 downto 0),
-			Sseg => HEX0(6 downto 0)
+			seg => HEX0(6 downto 0)
 			
 		);
 
 
-END bin2sevenseg_tester_impl;
+END bin2hex_tester_impl;

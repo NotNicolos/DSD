@@ -1,18 +1,18 @@
-|bin2sevenseg_tester
-SW[0] => bin2sevenseg:uut.bin[0]
-SW[1] => bin2sevenseg:uut.bin[1]
-SW[2] => bin2sevenseg:uut.bin[2]
-SW[3] => bin2sevenseg:uut.bin[3]
-HEX0[0] <= bin2sevenseg:uut.Sseg[0]
-HEX0[1] <= bin2sevenseg:uut.Sseg[1]
-HEX0[2] <= bin2sevenseg:uut.Sseg[2]
-HEX0[3] <= bin2sevenseg:uut.Sseg[3]
-HEX0[4] <= bin2sevenseg:uut.Sseg[4]
-HEX0[5] <= bin2sevenseg:uut.Sseg[5]
-HEX0[6] <= bin2sevenseg:uut.Sseg[6]
+|bin2hex_tester
+SW[0] => bin2hex:uut.bin[0]
+SW[1] => bin2hex:uut.bin[1]
+SW[2] => bin2hex:uut.bin[2]
+SW[3] => bin2hex:uut.bin[3]
+HEX0[0] <= bin2hex:uut.seg[0]
+HEX0[1] <= bin2hex:uut.seg[1]
+HEX0[2] <= bin2hex:uut.seg[2]
+HEX0[3] <= bin2hex:uut.seg[3]
+HEX0[4] <= bin2hex:uut.seg[4]
+HEX0[5] <= bin2hex:uut.seg[5]
+HEX0[6] <= bin2hex:uut.seg[6]
 
 
-|bin2sevenseg_tester|bin2sevenseg:uut
+|bin2hex_tester|bin2hex:uut
 bin[0] => Mux0.IN19
 bin[0] => Mux1.IN19
 bin[0] => Mux2.IN19
@@ -41,12 +41,12 @@ bin[3] => Mux3.IN16
 bin[3] => Mux4.IN16
 bin[3] => Mux5.IN16
 bin[3] => Mux6.IN16
-Sseg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-Sseg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-Sseg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-Sseg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-Sseg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-Sseg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-Sseg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
