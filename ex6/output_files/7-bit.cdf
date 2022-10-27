@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex4/output_files/") File("7-bit.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/output_files/") File("7-bit.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
