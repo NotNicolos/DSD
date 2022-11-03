@@ -5,7 +5,7 @@ USE work.ALL;
 
 entity mylatch is
 port(
-inputs : in std_logic_vector(7 downto 0);
+input : in std_logic_vector(7 downto 0);
 set : in std_logic; -- Set predefined value
 
 preDef : out std_logic_vector(7 downto 0)
@@ -18,7 +18,7 @@ BEGIN
 
 
 preDef <= 
-	inputs when set = '0';
+	input when set = '0';
 
 	
 	

@@ -1,14 +1,12 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
-
-
-
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+USE work.ALL;
 
 
 entity guess_game is
 port(
-inputs : in std_logic_vector(7 downto 0);
+input : in std_logic_vector(7 downto 0);
 set : in std_logic; -- Set predefined value
 show : in std_logic; -- Show predefined value
 try : in std_logic; -- Evaluate guess
@@ -19,51 +17,74 @@ end;
 
 architecture guess_game_impl OF guess_game is
 
-	signal preDef : std_logic_vector(7 downto 0);
+	signal secret_value  : std_logic_vector(7 downto 0);
+	signal mux2display	: std_logic_vector(13 downto 0);
+	signal compareSignal	: std_logic_vector(13 downto 0);
+	signal mux1display	: std_logic_vector(13 downto 0);
+	signal mux12bin		: std_logic_vector(13 downto 0);
+	signal bin2mux			: std_logic_vector(13 downto 0);
 	
 BEGIN
 
---process(inputs, set, show, try) is
---BEGIN
---
---case bin is
---	when "0000" => 
---		seg <= "1000000";--0
---	when "0001"	 => 
---		seg <= "1111001";--1
---	when "0010" => 
---		seg <= "0100100";--2
---	when "0011" =>
---		seg <="0110000" ;--3
---	when "0100" =>
---		seg <= "0011001" ;--4
---	when "0101" =>
---		seg <= "0010010" ;--5
---	when "0110" =>
---		seg <= "0000010" ;--6
---	when "0111" =>
---		seg <= "1111000" ;--7
---	when "1000" =>
---		seg <= "0000000" ;--8
---	when "1001" =>
---		seg <= "0011000" ;--9
---	when "1010" =>
---		seg <= "0001000" ;--A
---	when "1011" =>
---		seg <= "0000011" ;--b
---	when "1100" =>
---		seg <= "1000110" ;--C
---	when "1101" =>
---		seg <= "0100001" ;--d
---	when "1110" =>
---		seg <= "0000110" ;--E
---	when "1111" =>
---		seg <= "0001110" ;--F
---	when others =>
---		seg <= "0111110" ;--U
---	
---	
---end case;
---end process;
+mylatch: ENTITY work.mylatch
+PORT MAP
+(
+	set => set,
+	input => input,
+	preDef => secret_value
+);
+
+compare_logic: ENTITY work.compare_logic
+PORT MAP
+(
+	input => input,
+	mylatch => secret_value,
+	try => try,
+	result => compareSignal	
+);
+
+
+mux1: ENTITY work.mux1
+PORT MAP
+(
+
+
+	bin(3 downto 0) => mux1display(3 downto 0),
+	bin(7 downto 4) => mux1display(7 downto 4),
+	show => show,
+	input => input,
+	secret_value => secret_value
+);
+
+
+bin2hex1: ENTITY work.bin2hex
+PORT MAP
+(
+	bin => mux1display(3 downto 0),
+	seg(6 downto 0) => bin2mux(6 downto 0)
+);
+
+bin2hex2: ENTITY work.bin2hex
+PORT MAP
+(
+	bin => mux1display(3 downto 0),
+	seg(6 downto 0) => bin2mux(13 downto 7)
+);
+
+
+mux2: ENTITY work.mux2
+PORT MAP
+(
+	input => bin2mux, 
+	hex => mux2display,
+	compare => compareSignal
+);
+
+hex10<= mux2display(13 downto 7);
+hex1<= mux2display(6 downto 0);
+
+
+
+
 	
 END guess_game_impl;
