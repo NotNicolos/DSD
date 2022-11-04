@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 7-bit
-Thu Nov 03 11:50:46 2022
+Fri Nov 04 15:55:26 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,8 +15,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. General Register Statistics
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 03 11:50:46 2022           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 04 15:55:26 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; 7-bit                                           ;
-; Top-level Entity Name              ; compare_logic                                   ;
+; Top-level Entity Name              ; guess_game_tester                               ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 27                                              ;
-;     Total combinational functions  ; 27                                              ;
+; Total logic elements               ; 71                                              ;
+;     Total combinational functions  ; 71                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 19                                              ;
+; Total pins                         ; 35                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -65,7 +66,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; compare_logic      ; 7-bit              ;
+; Top-level entity name                                                      ; guess_game_tester  ; 7-bit              ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -170,55 +171,70 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 27           ;
-;                                             ;              ;
-; Total combinational functions               ; 27           ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 7            ;
-;     -- 3 input functions                    ; 17           ;
-;     -- <=2 input functions                  ; 3            ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 13           ;
-;     -- arithmetic mode                      ; 14           ;
-;                                             ;              ;
-; Total registers                             ; 0            ;
-;     -- Dedicated logic registers            ; 0            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 19           ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-; Maximum fan-out node                        ; LessThan1~14 ;
-; Maximum fan-out                             ; 4            ;
-; Total fan-out                               ; 87           ;
-; Average fan-out                             ; 1.89         ;
-+---------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                        ;
++---------------------------------------------+------------------------------------------------------+
+; Resource                                    ; Usage                                                ;
++---------------------------------------------+------------------------------------------------------+
+; Estimated Total logic elements              ; 71                                                   ;
+;                                             ;                                                      ;
+; Total combinational functions               ; 71                                                   ;
+; Logic element usage by number of LUT inputs ;                                                      ;
+;     -- 4 input functions                    ; 21                                                   ;
+;     -- 3 input functions                    ; 47                                                   ;
+;     -- <=2 input functions                  ; 3                                                    ;
+;                                             ;                                                      ;
+; Logic elements by mode                      ;                                                      ;
+;     -- normal mode                          ; 57                                                   ;
+;     -- arithmetic mode                      ; 14                                                   ;
+;                                             ;                                                      ;
+; Total registers                             ; 0                                                    ;
+;     -- Dedicated logic registers            ; 0                                                    ;
+;     -- I/O registers                        ; 0                                                    ;
+;                                             ;                                                      ;
+; I/O pins                                    ; 35                                                   ;
+; Embedded Multiplier 9-bit elements          ; 0                                                    ;
+; Maximum fan-out node                        ; guess_game:uut|compare_logic:compare_logic|result[0] ;
+; Maximum fan-out                             ; 15                                                   ;
+; Total fan-out                               ; 248                                                  ;
+; Average fan-out                             ; 2.34                                                 ;
++---------------------------------------------+------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |compare_logic             ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |compare_logic      ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                            ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Library Name ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+; |guess_game_tester                  ; 71 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |guess_game_tester                                            ; work         ;
+;    |guess_game:uut|                 ; 71 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut                             ; work         ;
+;       |bin2hex:bin2hex1|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|bin2hex:bin2hex1            ; work         ;
+;       |bin2hex:bin2hex2|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|bin2hex:bin2hex2            ; work         ;
+;       |compare_logic:compare_logic| ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|compare_logic:compare_logic ; work         ;
+;       |mux1:mux1|                   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|mux1:mux1                   ; work         ;
+;       |mux2:mux2|                   ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|mux2:mux2                   ; work         ;
+;       |mylatch:mylatch|             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|mylatch:mylatch             ; work         ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; result[0]$latch                                    ; GND                 ; yes                    ;
-; result[1]$latch                                    ; GND                 ; yes                    ;
-; Number of user-specified and inferred latches = 2  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------+------------------------+
+; guess_game:uut|compare_logic:compare_logic|result[0] ; GND                 ; yes                    ;
+; guess_game:uut|compare_logic:compare_logic|result[1] ; GND                 ; yes                    ;
+; guess_game:uut|mylatch:mylatch|preDef[0]             ; KEY[0]              ; yes                    ;
+; guess_game:uut|mylatch:mylatch|preDef[1]             ; KEY[0]              ; yes                    ;
+; guess_game:uut|mylatch:mylatch|preDef[2]             ; KEY[0]              ; yes                    ;
+; guess_game:uut|mylatch:mylatch|preDef[3]             ; KEY[0]              ; yes                    ;
+; guess_game:uut|mylatch:mylatch|preDef[4]             ; KEY[0]              ; yes                    ;
+; guess_game:uut|mylatch:mylatch|preDef[5]             ; KEY[0]              ; yes                    ;
+; guess_game:uut|mylatch:mylatch|preDef[6]             ; KEY[0]              ; yes                    ;
+; guess_game:uut|mylatch:mylatch|preDef[7]             ; KEY[0]              ; yes                    ;
+; Number of user-specified and inferred latches = 10   ;                     ;                        ;
++------------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -237,6 +253,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |guess_game_tester|guess_game:uut|mux2:mux2|hex[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -252,7 +277,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Nov 03 11:50:44 2022
+    Info: Processing started: Fri Nov 04 15:55:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 7-bit -c 7-bit
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 4 design units, including 2 entities, in source file mux.vhd
@@ -278,19 +303,43 @@ Info (12021): Found 2 design units, including 1 entities, in source file mylatch
 Info (12021): Found 2 design units, including 1 entities, in source file compare_logic.vhd
     Info (12022): Found design unit 1: compare_logic-compare_logic_impl
     Info (12023): Found entity 1: compare_logic
-Info (12127): Elaborating entity "compare_logic" for the top level hierarchy
+Info (12127): Elaborating entity "guess_game_tester" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "LEDG[7..3]" at guess_game_tester.vhd(16)
+Info (12128): Elaborating entity "guess_game" for hierarchy "guess_game:uut"
+Info (12128): Elaborating entity "mylatch" for hierarchy "guess_game:uut|mylatch:mylatch"
+Info (10041): Inferred latch for "preDef[0]" at mylatch.vhd(20)
+Info (10041): Inferred latch for "preDef[1]" at mylatch.vhd(20)
+Info (10041): Inferred latch for "preDef[2]" at mylatch.vhd(20)
+Info (10041): Inferred latch for "preDef[3]" at mylatch.vhd(20)
+Info (10041): Inferred latch for "preDef[4]" at mylatch.vhd(20)
+Info (10041): Inferred latch for "preDef[5]" at mylatch.vhd(20)
+Info (10041): Inferred latch for "preDef[6]" at mylatch.vhd(20)
+Info (10041): Inferred latch for "preDef[7]" at mylatch.vhd(20)
+Info (12128): Elaborating entity "compare_logic" for hierarchy "guess_game:uut|compare_logic:compare_logic"
 Info (10041): Inferred latch for "result[0]" at compare_logic.vhd(22)
 Info (10041): Inferred latch for "result[1]" at compare_logic.vhd(22)
+Info (12128): Elaborating entity "mux1" for hierarchy "guess_game:uut|mux1:mux1"
+Info (12128): Elaborating entity "bin2hex" for hierarchy "guess_game:uut|bin2hex:bin2hex1"
+Info (12128): Elaborating entity "mux2" for hierarchy "guess_game:uut|mux2:mux2"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[7]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 46 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 17 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 27 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Thu Nov 03 11:50:46 2022
-    Info: Elapsed time: 00:00:02
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "KEY[4]"
+Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 71 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4645 megabytes
+    Info: Processing ended: Fri Nov 04 15:55:26 2022
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

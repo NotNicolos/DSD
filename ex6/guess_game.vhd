@@ -6,12 +6,12 @@ USE work.ALL;
 
 entity guess_game is
 port(
-input : in std_logic_vector(7 downto 0);
-set : in std_logic; -- Set predefined value
-show : in std_logic; -- Show predefined value
-try : in std_logic; -- Evaluate guess
-hex1 : out std_logic_vector(6 downto 0); -- 7-seg ones
-hex10: out std_logic_vector(6 downto 0) -- 7-seg tens
+	input : in std_logic_vector(7 downto 0);
+	set : in std_logic; -- Set predefined value
+	show : in std_logic; -- Show predefined value
+	try : in std_logic; -- Evaluate guess
+	hex1 : out std_logic_vector(6 downto 0); -- 7-seg ones
+	hex10: out std_logic_vector(6 downto 0) -- 7-seg tens
 );
 end;
 
@@ -19,7 +19,7 @@ architecture guess_game_impl OF guess_game is
 
 	signal secret_value  : std_logic_vector(7 downto 0);
 	signal mux2display	: std_logic_vector(13 downto 0);
-	signal compareSignal	: std_logic_vector(13 downto 0);
+	signal compareSignal	: std_logic_vector(1 downto 0);
 	signal mux1display	: std_logic_vector(13 downto 0);
 	signal mux12bin		: std_logic_vector(13 downto 0);
 	signal bin2mux			: std_logic_vector(13 downto 0);
@@ -67,7 +67,7 @@ PORT MAP
 bin2hex2: ENTITY work.bin2hex
 PORT MAP
 (
-	bin => mux1display(3 downto 0),
+	bin => mux1display(7 downto 4),
 	seg(6 downto 0) => bin2mux(13 downto 7)
 );
 

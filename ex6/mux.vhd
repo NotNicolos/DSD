@@ -67,14 +67,14 @@ BEGIN
 
 if	compare = "11" then 
 	hex <= input;
-else
-	if compare = "10" then
+elsif compare = "10" then
 		hex <= "00010011101111";
 	elsif compare = "01" then
 		hex <= "10001110100011";
 	elsif compare = "00" then
-		hex <= "01111110111111";		
-	end if;
+		hex <= "01111110111111";
+	else
+		hex <= input;
 end if;	
 
 		
