@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 7-bit
-Fri Nov 04 15:55:26 2022
+Fri Nov 04 16:33:25 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,7 +43,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 04 15:55:26 2022           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 04 16:33:25 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; 7-bit                                           ;
 ; Top-level Entity Name              ; guess_game_tester                               ;
@@ -156,19 +156,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; mux.vhd                          ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/mux.vhd               ;         ;
-; guess_game_tester.vhd            ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/guess_game_tester.vhd ;         ;
-; guess_game.vhd                   ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/guess_game.vhd        ;         ;
-; bin2hex_tester.vhd               ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/bin2hex_tester.vhd    ;         ;
-; bin2hex.vhd                      ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/bin2hex.vhd           ;         ;
-; mylatch.vhd                      ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/mylatch.vhd           ;         ;
-; compare_logic.vhd                ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/compare_logic.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; mux.vhd                          ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/mux.vhd                   ;         ;
+; guess_game_tester.vhd            ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/guess_game_tester.vhd     ;         ;
+; guess_game.vhd                   ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/guess_game.vhd            ;         ;
+; bin2hex_tester.vhd               ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/bin2hex_tester.vhd        ;         ;
+; bin2hex.vhd                      ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/bin2hex.vhd               ;         ;
+; mylatch.vhd                      ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/mylatch.vhd               ;         ;
+; compare_logic.vhd                ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/compare_logic.vhd         ;         ;
+; two_player_guess_game.vhd        ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/two_player_guess_game.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -277,9 +278,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 04 15:55:23 2022
+    Info: Processing started: Fri Nov 04 16:33:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 7-bit -c 7-bit
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 0 design units, including 0 entities, in source file mux_tester.vhd
+Warning (12019): Can't analyze file -- file mux2p.vhd is missing
 Info (12021): Found 4 design units, including 2 entities, in source file mux.vhd
     Info (12022): Found design unit 1: mux1-mux1_impl
     Info (12022): Found design unit 2: mux2-mux2_impl
@@ -303,6 +306,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file mylatch
 Info (12021): Found 2 design units, including 1 entities, in source file compare_logic.vhd
     Info (12022): Found design unit 1: compare_logic-compare_logic_impl
     Info (12023): Found entity 1: compare_logic
+Info (12021): Found 1 design units, including 1 entities, in source file two_player_guess_game.vhd
+    Info (12023): Found entity 1: two_player_guess_game
 Info (12127): Elaborating entity "guess_game_tester" for the top level hierarchy
 Warning (10873): Using initial value X (don't care) for net "LEDG[7..3]" at guess_game_tester.vhd(16)
 Info (12128): Elaborating entity "guess_game" for hierarchy "guess_game:uut"
@@ -336,10 +341,10 @@ Info (21057): Implemented 106 device resources after synthesis - the final resou
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 22 output pins
     Info (21061): Implemented 71 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Fri Nov 04 15:55:26 2022
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Fri Nov 04 16:33:25 2022
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
