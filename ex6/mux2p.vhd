@@ -23,6 +23,8 @@ port (
 			set2: out std_logic;
 			try2: out std_logic;
 			input2 : out std_logic_vector(7 downto 0)
+			
+
 
 );
 end;
@@ -34,7 +36,7 @@ BEGIN
 	BEGIN
 		
 		-- show = 1 fwd input -- show = 0 fwd secret_value
-		if player = '0' then
+		if player = '1' then
 			show1 <= show;
 			set1 <= set;
 			try1 <= try;
@@ -72,7 +74,7 @@ end;
 
 architecture mux_impl OF mux is
 BEGIN
-	muxer : PROCESS(compare, input)
+	muxer : PROCESS(player,seg1,seg2)
 	BEGIN
 
 --"01" when ((inputs > mylatch) 
@@ -85,20 +87,12 @@ BEGIN
 -- o = "0100011"
 -- "-" = "0111111"
 
+if player = '1' then
+	hex <= seg1;
+else
+	hex <= seg2;
+end if;
 
-if	compare = "11" then 
-	hex <= input;
-elsif compare = "10" then
-		hex <= "00010011101111";
-	elsif compare = "01" then
-		hex <= "10001110100011";
-	elsif compare = "00" then
-		hex <= "01111110111111";
-	else
-		hex <= input;
-end if;	
-
-		
 	END PROCESS muxer;
 END mux_impl;
 

@@ -1,5 +1,5 @@
 Flow report for 7-bit
-Fri Nov 04 16:33:37 2022
+Thu Nov 10 10:26:35 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 04 16:33:35 2022           ;
+; Flow Status                        ; Successful - Thu Nov 10 10:26:33 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; 7-bit                                           ;
-; Top-level Entity Name              ; guess_game_tester                               ;
+; Top-level Entity Name              ; two_player_guess_game_tester                    ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 71 / 33,216 ( < 1 % )                           ;
-;     Total combinational functions  ; 71 / 33,216 ( < 1 % )                           ;
+; Total logic elements               ; 172 / 33,216 ( < 1 % )                          ;
+;     Total combinational functions  ; 172 / 33,216 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                              ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 35 / 475 ( 7 % )                                ;
+; Total pins                         ; 34 / 475 ( 7 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
@@ -64,28 +64,28 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/04/2022 16:33:23 ;
+; Start date & time ; 11/10/2022 10:26:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 7-bit               ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+-------------------------------------+---------------------------------------+---------------+-------------------+------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name       ; Section Id ;
-+-------------------------------------+---------------------------------------+---------------+-------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 66619487459871.166757600332916        ; --            ; --                ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --                ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --                ; --         ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; guess_game_tester ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; guess_game_tester ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; guess_game_tester ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --                ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --                ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --                ; --         ;
-; TOP_LEVEL_ENTITY                    ; guess_game_tester                     ; 7-bit         ; --                ; --         ;
-+-------------------------------------+---------------------------------------+---------------+-------------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                        ;
++-------------------------------------+---------------------------------------+---------------+------------------------------+------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name                  ; Section Id ;
++-------------------------------------+---------------------------------------+---------------+------------------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 66619487459871.166807238019060        ; --            ; --                           ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --                           ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --                           ; --         ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; two_player_guess_game_tester ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; two_player_guess_game_tester ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; two_player_guess_game_tester ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --                           ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --                           ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --                           ; --         ;
+; TOP_LEVEL_ENTITY                    ; two_player_guess_game_tester          ; 7-bit         ; --                           ; --         ;
++-------------------------------------+---------------------------------------+---------------+------------------------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -93,11 +93,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4635 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:05     ; 1.0                     ; 4875 MB             ; 00:00:06                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4559 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4540 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4643 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 4881 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4555 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4551 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

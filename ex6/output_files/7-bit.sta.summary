@@ -2,12 +2,60 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Minimum Pulse Width 'KEY[0]'
+Type  : Slow Model Setup 'two_player_guess_game:gg2|demux:demux|set1'
+Slack : -1.217
+TNS   : -9.350
+
+Type  : Slow Model Setup 'two_player_guess_game:gg2|demux:demux|set2'
+Slack : -0.816
+TNS   : -5.472
+
+Type  : Slow Model Hold 'two_player_guess_game:gg2|demux:demux|set2'
+Slack : 0.668
+TNS   : 0.000
+
+Type  : Slow Model Hold 'two_player_guess_game:gg2|demux:demux|set1'
+Slack : 1.166
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'KEY[3]'
 Slack : -1.222
 TNS   : -1.222
 
-Type  : Fast Model Minimum Pulse Width 'KEY[0]'
+Type  : Slow Model Minimum Pulse Width 'two_player_guess_game:gg2|demux:demux|set1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'two_player_guess_game:gg2|demux:demux|set2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'two_player_guess_game:gg2|demux:demux|set1'
+Slack : -0.324
+TNS   : -2.348
+
+Type  : Fast Model Setup 'two_player_guess_game:gg2|demux:demux|set2'
+Slack : 0.140
+TNS   : 0.000
+
+Type  : Fast Model Hold 'two_player_guess_game:gg2|demux:demux|set2'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Fast Model Hold 'two_player_guess_game:gg2|demux:demux|set1'
+Slack : 0.873
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'KEY[3]'
 Slack : -1.222
 TNS   : -1.222
+
+Type  : Fast Model Minimum Pulse Width 'two_player_guess_game:gg2|demux:demux|set1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'two_player_guess_game:gg2|demux:demux|set2'
+Slack : 0.500
+TNS   : 0.000
 
 ------------------------------------------------------------

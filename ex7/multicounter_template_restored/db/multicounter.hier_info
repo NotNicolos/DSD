@@ -1,0 +1,97 @@
+|multi_counter_tester
+SW[16] => multi_counter:mc.mode[0]
+SW[17] => multi_counter:mc.mode[1]
+KEY[0] => multi_counter:mc.clk
+KEY[0] => LEDG[0].DATAIN
+KEY[1] => LEDG[1].DATAIN
+KEY[2] => LEDG[2].DATAIN
+KEY[3] => multi_counter:mc.reset
+HEX0[0] <= bin2sevenseg:uut.seg[0]
+HEX0[1] <= bin2sevenseg:uut.seg[1]
+HEX0[2] <= bin2sevenseg:uut.seg[2]
+HEX0[3] <= bin2sevenseg:uut.seg[3]
+HEX0[4] <= bin2sevenseg:uut.seg[4]
+HEX0[5] <= bin2sevenseg:uut.seg[5]
+HEX0[6] <= bin2sevenseg:uut.seg[6]
+LEDR[0] <= multi_counter:mc.cout
+LEDG[0] <= KEY[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= KEY[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= KEY[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= <GND>
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= <GND>
+
+
+|multi_counter_tester|bin2sevenseg:uut
+bin[0] => Mux0.IN19
+bin[0] => Mux1.IN19
+bin[0] => Mux2.IN19
+bin[0] => Mux3.IN19
+bin[0] => Mux4.IN19
+bin[0] => Mux5.IN19
+bin[0] => Mux6.IN19
+bin[1] => Mux0.IN18
+bin[1] => Mux1.IN18
+bin[1] => Mux2.IN18
+bin[1] => Mux3.IN18
+bin[1] => Mux4.IN18
+bin[1] => Mux5.IN18
+bin[1] => Mux6.IN18
+bin[2] => Mux0.IN17
+bin[2] => Mux1.IN17
+bin[2] => Mux2.IN17
+bin[2] => Mux3.IN17
+bin[2] => Mux4.IN17
+bin[2] => Mux5.IN17
+bin[2] => Mux6.IN17
+bin[3] => Mux0.IN16
+bin[3] => Mux1.IN16
+bin[3] => Mux2.IN16
+bin[3] => Mux3.IN16
+bin[3] => Mux4.IN16
+bin[3] => Mux5.IN16
+bin[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multi_counter_tester|multi_counter:mc
+clk => cout~reg0.CLK
+clk => \counter_proc:cnt[0].CLK
+clk => \counter_proc:cnt[1].CLK
+clk => \counter_proc:cnt[2].CLK
+clk => \counter_proc:cnt[3].CLK
+mode[0] => Mux0.IN5
+mode[0] => Mux1.IN5
+mode[0] => Mux2.IN5
+mode[0] => Mux3.IN5
+mode[0] => Mux4.IN5
+mode[1] => Mux0.IN4
+mode[1] => Mux1.IN4
+mode[1] => Mux2.IN4
+mode[1] => Mux3.IN4
+mode[1] => Mux4.IN4
+reset => \counter_proc:cnt[0].ACLR
+reset => \counter_proc:cnt[1].ACLR
+reset => \counter_proc:cnt[2].ACLR
+reset => \counter_proc:cnt[3].ACLR
+reset => cout~reg0.ENA
+clken => cout~0.OUTPUTSELECT
+clken => \counter_proc:cnt[3].ENA
+clken => \counter_proc:cnt[2].ENA
+clken => \counter_proc:cnt[1].ENA
+clken => \counter_proc:cnt[0].ENA
+count[0] <= \counter_proc:cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= \counter_proc:cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= \counter_proc:cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= \counter_proc:cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

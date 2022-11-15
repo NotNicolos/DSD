@@ -1,0 +1,21 @@
+Quartus II Archive log --	C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/output_files/exercise6.qarlog
+
+Archive:	C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/output_files/exercise6.qar
+Date:		Thu Nov 10 12:02:58 2022
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/E18/DSD/oevelse6/multicounter.vwf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/assignment_defaults.qdf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/bin2hex.vhd
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/db/multicounter.sim.vwf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/exercise6.qpf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/incremental_db/compiled_partitions/multicounter.db_info
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/multi_counter.vhd
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/multi_counter_tester.vhd
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/multicounter.qsf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/multicounter_assignment_defaults.qdf
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

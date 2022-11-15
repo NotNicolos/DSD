@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 7-bit
-Fri Nov 04 16:33:25 2022
+Thu Nov 10 10:26:22 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,8 +16,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. User-Specified and Inferred Latches
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 11. Port Connectivity Checks: "two_player_guess_game:gg2|bin2hex:bin2hex1"
+ 12. Port Connectivity Checks: "two_player_guess_game:gg2"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +45,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 04 16:33:25 2022           ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 10 10:26:22 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; 7-bit                                           ;
-; Top-level Entity Name              ; guess_game_tester                               ;
+; Top-level Entity Name              ; two_player_guess_game_tester                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 71                                              ;
-;     Total combinational functions  ; 71                                              ;
+; Total logic elements               ; 172                                             ;
+;     Total combinational functions  ; 172                                             ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 35                                              ;
+; Total pins                         ; 34                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -60,89 +62,89 @@ applicable agreement for further details.
 +------------------------------------+-------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                     ; Setting            ; Default Value      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; guess_game_tester  ; 7-bit              ;
-; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
-; Use smart compilation                                                      ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                                ; Off                ; Off                ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
-; Preserve fewer node names                                                  ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto               ; Auto               ;
-; Safe State Machine                                                         ; Off                ; Off                ;
-; Extract Verilog State Machines                                             ; On                 ; On                 ;
-; Extract VHDL State Machines                                                ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
-; DSP Block Balancing                                                        ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                 ; On                 ;
-; Power-Up Don't Care                                                        ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
-; Remove Duplicate Registers                                                 ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                         ; 70                 ; 70                 ;
-; Auto Carry Chains                                                          ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
-; Auto ROM Replacement                                                       ; On                 ; On                 ;
-; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
-; Strict RAM Replacement                                                     ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                      ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
-; Clock MUX Protection                                                       ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
-; Block Design Naming                                                        ; Auto               ; Auto               ;
-; SDC constraint protection                                                  ; Off                ; Off                ;
-; Synthesis Effort                                                           ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-; Synthesis Seed                                                             ; 1                  ; 1                  ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                  ;
++----------------------------------------------------------------------------+------------------------------+--------------------+
+; Option                                                                     ; Setting                      ; Default Value      ;
++----------------------------------------------------------------------------+------------------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6                 ;                    ;
+; Top-level entity name                                                      ; two_player_guess_game_tester ; 7-bit              ;
+; Family name                                                                ; Cyclone II                   ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                          ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                           ; On                 ;
+; Enable compact report table                                                ; Off                          ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                         ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                          ; Off                ;
+; Preserve fewer node names                                                  ; On                           ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                          ; Off                ;
+; Verilog Version                                                            ; Verilog_2001                 ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993                    ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                         ; Auto               ;
+; Safe State Machine                                                         ; Off                          ; Off                ;
+; Extract Verilog State Machines                                             ; On                           ; On                 ;
+; Extract VHDL State Machines                                                ; On                           ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                          ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                         ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                          ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                           ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                           ; On                 ;
+; Parallel Synthesis                                                         ; On                           ; On                 ;
+; DSP Block Balancing                                                        ; Auto                         ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                           ; On                 ;
+; Power-Up Don't Care                                                        ; On                           ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                          ; Off                ;
+; Remove Duplicate Registers                                                 ; On                           ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                          ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                          ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                          ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                          ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                          ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                           ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                          ; Off                ;
+; Optimization Technique                                                     ; Balanced                     ; Balanced           ;
+; Carry Chain Length                                                         ; 70                           ; 70                 ;
+; Auto Carry Chains                                                          ; On                           ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                           ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                          ; Off                ;
+; Auto ROM Replacement                                                       ; On                           ; On                 ;
+; Auto RAM Replacement                                                       ; On                           ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto                         ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                         ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                           ; On                 ;
+; Strict RAM Replacement                                                     ; Off                          ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                           ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                          ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                          ; Off                ;
+; Auto Resource Sharing                                                      ; Off                          ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                          ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                          ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                          ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                           ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                          ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                          ; Off                ;
+; Report Parameter Settings                                                  ; On                           ; On                 ;
+; Report Source Assignments                                                  ; On                           ; On                 ;
+; Report Connectivity Checks                                                 ; On                           ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                          ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                            ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation           ; Normal compilation ;
+; HDL message level                                                          ; Level2                       ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                          ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                         ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                         ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                          ; 100                ;
+; Clock MUX Protection                                                       ; On                           ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                          ; Off                ;
+; Block Design Naming                                                        ; Auto                         ; Auto               ;
+; SDC constraint protection                                                  ; Off                          ; Off                ;
+; Synthesis Effort                                                           ; Auto                         ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                           ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                          ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium                       ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                         ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                           ; On                 ;
+; Synthesis Seed                                                             ; 1                            ; 1                  ;
++----------------------------------------------------------------------------+------------------------------+--------------------+
 
 
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
@@ -156,86 +158,129 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
-; mux.vhd                          ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/mux.vhd                   ;         ;
-; guess_game_tester.vhd            ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/guess_game_tester.vhd     ;         ;
-; guess_game.vhd                   ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/guess_game.vhd            ;         ;
-; bin2hex_tester.vhd               ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/bin2hex_tester.vhd        ;         ;
-; bin2hex.vhd                      ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/bin2hex.vhd               ;         ;
-; mylatch.vhd                      ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/mylatch.vhd               ;         ;
-; compare_logic.vhd                ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/compare_logic.vhd         ;         ;
-; two_player_guess_game.vhd        ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/two_player_guess_game.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; two_player_guess_game_tester.vhd ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/two_player_guess_game_tester.vhd ;         ;
+; mux2p.vhd                        ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/mux2p.vhd                        ;         ;
+; mux.vhd                          ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/mux.vhd                          ;         ;
+; guess_game_tester.vhd            ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/guess_game_tester.vhd            ;         ;
+; guess_game.vhd                   ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/guess_game.vhd                   ;         ;
+; bin2hex_tester.vhd               ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/bin2hex_tester.vhd               ;         ;
+; bin2hex.vhd                      ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/bin2hex.vhd                      ;         ;
+; mylatch.vhd                      ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/mylatch.vhd                      ;         ;
+; compare_logic.vhd                ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/compare_logic.vhd                ;         ;
+; two_player_guess_game.vhd        ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex6/two_player_guess_game.vhd        ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                        ;
-+---------------------------------------------+------------------------------------------------------+
-; Resource                                    ; Usage                                                ;
-+---------------------------------------------+------------------------------------------------------+
-; Estimated Total logic elements              ; 71                                                   ;
-;                                             ;                                                      ;
-; Total combinational functions               ; 71                                                   ;
-; Logic element usage by number of LUT inputs ;                                                      ;
-;     -- 4 input functions                    ; 21                                                   ;
-;     -- 3 input functions                    ; 47                                                   ;
-;     -- <=2 input functions                  ; 3                                                    ;
-;                                             ;                                                      ;
-; Logic elements by mode                      ;                                                      ;
-;     -- normal mode                          ; 57                                                   ;
-;     -- arithmetic mode                      ; 14                                                   ;
-;                                             ;                                                      ;
-; Total registers                             ; 0                                                    ;
-;     -- Dedicated logic registers            ; 0                                                    ;
-;     -- I/O registers                        ; 0                                                    ;
-;                                             ;                                                      ;
-; I/O pins                                    ; 35                                                   ;
-; Embedded Multiplier 9-bit elements          ; 0                                                    ;
-; Maximum fan-out node                        ; guess_game:uut|compare_logic:compare_logic|result[0] ;
-; Maximum fan-out                             ; 15                                                   ;
-; Total fan-out                               ; 248                                                  ;
-; Average fan-out                             ; 2.34                                                 ;
-+---------------------------------------------+------------------------------------------------------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 172    ;
+;                                             ;        ;
+; Total combinational functions               ; 172    ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 68     ;
+;     -- 3 input functions                    ; 95     ;
+;     -- <=2 input functions                  ; 9      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 144    ;
+;     -- arithmetic mode                      ; 28     ;
+;                                             ;        ;
+; Total registers                             ; 0      ;
+;     -- Dedicated logic registers            ; 0      ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 34     ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; KEY[3] ;
+; Maximum fan-out                             ; 48     ;
+; Total fan-out                               ; 593    ;
+; Average fan-out                             ; 2.88   ;
++---------------------------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                            ;
-+-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Library Name ;
-+-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
-; |guess_game_tester                  ; 71 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |guess_game_tester                                            ; work         ;
-;    |guess_game:uut|                 ; 71 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut                             ; work         ;
-;       |bin2hex:bin2hex1|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|bin2hex:bin2hex1            ; work         ;
-;       |bin2hex:bin2hex2|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|bin2hex:bin2hex2            ; work         ;
-;       |compare_logic:compare_logic| ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|compare_logic:compare_logic ; work         ;
-;       |mux1:mux1|                   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|mux1:mux1                   ; work         ;
-;       |mux2:mux2|                   ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|mux2:mux2                   ; work         ;
-;       |mylatch:mylatch|             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |guess_game_tester|guess_game:uut|mylatch:mylatch             ; work         ;
-+-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
+; |two_player_guess_game_tester          ; 172 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |two_player_guess_game_tester                                                                        ; work         ;
+;    |two_player_guess_game:gg2|         ; 172 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2                                              ; work         ;
+;       |demux:demux|                    ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|demux:demux                                  ; work         ;
+;       |guess_game:game1|               ; 57 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game1                             ; work         ;
+;          |bin2hex:bin2hex1|            ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game1|bin2hex:bin2hex1            ; work         ;
+;          |bin2hex:bin2hex2|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game1|bin2hex:bin2hex2            ; work         ;
+;          |compare_logic:compare_logic| ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game1|compare_logic:compare_logic ; work         ;
+;          |mux1:mux1|                   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game1|mux1:mux1                   ; work         ;
+;          |mux2:mux2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game1|mux2:mux2                   ; work         ;
+;          |mylatch:mylatch|             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game1|mylatch:mylatch             ; work         ;
+;       |guess_game:game2|               ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game2                             ; work         ;
+;          |bin2hex:bin2hex1|            ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game2|bin2hex:bin2hex1            ; work         ;
+;          |bin2hex:bin2hex2|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game2|bin2hex:bin2hex2            ; work         ;
+;          |compare_logic:compare_logic| ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game2|compare_logic:compare_logic ; work         ;
+;          |mux1:mux1|                   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game2|mux1:mux1                   ; work         ;
+;          |mylatch:mylatch|             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|guess_game:game2|mylatch:mylatch             ; work         ;
+;       |mux:mux|                        ; 37 (37)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |two_player_guess_game_tester|two_player_guess_game:gg2|mux:mux                                      ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                 ;
-+------------------------------------------------------+---------------------+------------------------+
-; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
-+------------------------------------------------------+---------------------+------------------------+
-; guess_game:uut|compare_logic:compare_logic|result[0] ; GND                 ; yes                    ;
-; guess_game:uut|compare_logic:compare_logic|result[1] ; GND                 ; yes                    ;
-; guess_game:uut|mylatch:mylatch|preDef[0]             ; KEY[0]              ; yes                    ;
-; guess_game:uut|mylatch:mylatch|preDef[1]             ; KEY[0]              ; yes                    ;
-; guess_game:uut|mylatch:mylatch|preDef[2]             ; KEY[0]              ; yes                    ;
-; guess_game:uut|mylatch:mylatch|preDef[3]             ; KEY[0]              ; yes                    ;
-; guess_game:uut|mylatch:mylatch|preDef[4]             ; KEY[0]              ; yes                    ;
-; guess_game:uut|mylatch:mylatch|preDef[5]             ; KEY[0]              ; yes                    ;
-; guess_game:uut|mylatch:mylatch|preDef[6]             ; KEY[0]              ; yes                    ;
-; guess_game:uut|mylatch:mylatch|preDef[7]             ; KEY[0]              ; yes                    ;
-; Number of user-specified and inferred latches = 10   ;                     ;                        ;
-+------------------------------------------------------+---------------------+------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                    ;
++----------------------------------------------------------------------------------+--------------------------------------------+------------------------+
+; Latch Name                                                                       ; Latch Enable Signal                        ; Free of Timing Hazards ;
++----------------------------------------------------------------------------------+--------------------------------------------+------------------------+
+; two_player_guess_game:gg2|guess_game:game2|compare_logic:compare_logic|result[0] ; GND                                        ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game2|compare_logic:compare_logic|result[1] ; GND                                        ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game2|mylatch:mylatch|preDef[0]             ; two_player_guess_game:gg2|demux:demux|set2 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input2[0]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|show2                                      ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game2|mylatch:mylatch|preDef[1]             ; two_player_guess_game:gg2|demux:demux|set2 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input2[1]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game2|mylatch:mylatch|preDef[2]             ; two_player_guess_game:gg2|demux:demux|set2 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input2[2]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game2|mylatch:mylatch|preDef[3]             ; two_player_guess_game:gg2|demux:demux|set2 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input2[3]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game1|compare_logic:compare_logic|result[0] ; GND                                        ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game1|compare_logic:compare_logic|result[1] ; GND                                        ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game1|mylatch:mylatch|preDef[0]             ; two_player_guess_game:gg2|demux:demux|set1 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input1[0]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|show1                                      ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game1|mylatch:mylatch|preDef[1]             ; two_player_guess_game:gg2|demux:demux|set1 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input1[1]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game1|mylatch:mylatch|preDef[2]             ; two_player_guess_game:gg2|demux:demux|set1 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input1[2]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game1|mylatch:mylatch|preDef[3]             ; two_player_guess_game:gg2|demux:demux|set1 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input1[3]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game2|mylatch:mylatch|preDef[4]             ; two_player_guess_game:gg2|demux:demux|set2 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input2[4]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game2|mylatch:mylatch|preDef[5]             ; two_player_guess_game:gg2|demux:demux|set2 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input2[5]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game2|mylatch:mylatch|preDef[6]             ; two_player_guess_game:gg2|demux:demux|set2 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input2[6]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game2|mylatch:mylatch|preDef[7]             ; two_player_guess_game:gg2|demux:demux|set2 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input2[7]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game1|mylatch:mylatch|preDef[4]             ; two_player_guess_game:gg2|demux:demux|set1 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input1[4]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game1|mylatch:mylatch|preDef[5]             ; two_player_guess_game:gg2|demux:demux|set1 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input1[5]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game1|mylatch:mylatch|preDef[6]             ; two_player_guess_game:gg2|demux:demux|set1 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input1[6]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|guess_game:game1|mylatch:mylatch|preDef[7]             ; two_player_guess_game:gg2|demux:demux|set1 ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|input1[7]                                  ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|try2                                       ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|set2                                       ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|try1                                       ; KEY[3]                                     ; yes                    ;
+; two_player_guess_game:gg2|demux:demux|set1                                       ; KEY[3]                                     ; yes                    ;
+; Number of user-specified and inferred latches = 42                               ;                                            ;                        ;
++----------------------------------------------------------------------------------+--------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -254,13 +299,31 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |guess_game_tester|guess_game:uut|mux2:mux2|hex[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 10:1               ; 14 bits   ; 84 LEs        ; 70 LEs               ; 14 LEs                 ; No         ; |two_player_guess_game_tester|two_player_guess_game:gg2|mux:mux|hex[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "two_player_guess_game:gg2|bin2hex:bin2hex1" ;
++-----------+-------+----------+-----------------------------------------+
+; Port      ; Type  ; Severity ; Details                                 ;
++-----------+-------+----------+-----------------------------------------+
+; bin[3..1] ; Input ; Info     ; Stuck at GND                            ;
++-----------+-------+----------+-----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "two_player_guess_game:gg2"                                                           ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; hex_p ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -278,11 +341,19 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 04 16:33:23 2022
+    Info: Processing started: Thu Nov 10 10:26:20 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 7-bit -c 7-bit
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file two_player_guess_game_tester.vhd
+    Info (12022): Found design unit 1: two_player_guess_game_tester-two_player_guess_game_tester_impl
+    Info (12023): Found entity 1: two_player_guess_game_tester
 Info (12021): Found 0 design units, including 0 entities, in source file mux_tester.vhd
-Warning (12019): Can't analyze file -- file mux2p.vhd is missing
+Warning (12090): Entity "mux" obtained from "mux2p.vhd" instead of from Quartus II megafunction library
+Info (12021): Found 4 design units, including 2 entities, in source file mux2p.vhd
+    Info (12022): Found design unit 1: demux-demux_impl
+    Info (12022): Found design unit 2: mux-mux_impl
+    Info (12023): Found entity 1: demux
+    Info (12023): Found entity 2: mux
 Info (12021): Found 4 design units, including 2 entities, in source file mux.vhd
     Info (12022): Found design unit 1: mux1-mux1_impl
     Info (12022): Found design unit 2: mux2-mux2_impl
@@ -306,12 +377,47 @@ Info (12021): Found 2 design units, including 1 entities, in source file mylatch
 Info (12021): Found 2 design units, including 1 entities, in source file compare_logic.vhd
     Info (12022): Found design unit 1: compare_logic-compare_logic_impl
     Info (12023): Found entity 1: compare_logic
-Info (12021): Found 1 design units, including 1 entities, in source file two_player_guess_game.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file two_player_guess_game.vhd
+    Info (12022): Found design unit 1: two_player_guess_game-two_player_guess_game_impl
     Info (12023): Found entity 1: two_player_guess_game
-Info (12127): Elaborating entity "guess_game_tester" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "LEDG[7..3]" at guess_game_tester.vhd(16)
-Info (12128): Elaborating entity "guess_game" for hierarchy "guess_game:uut"
-Info (12128): Elaborating entity "mylatch" for hierarchy "guess_game:uut|mylatch:mylatch"
+Info (12127): Elaborating entity "two_player_guess_game_tester" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "LEDG[7..4]" at two_player_guess_game_tester.vhd(16)
+Info (12128): Elaborating entity "two_player_guess_game" for hierarchy "two_player_guess_game:gg2"
+Warning (10540): VHDL Signal Declaration warning at two_player_guess_game.vhd(38): used explicit default value for signal "player2bin" because signal was never assigned a value
+Info (12128): Elaborating entity "demux" for hierarchy "two_player_guess_game:gg2|demux:demux"
+Warning (10492): VHDL Process Statement warning at mux2p.vhd(39): signal "player" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at mux2p.vhd(35): inferring latch(es) for signal or variable "show1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mux2p.vhd(35): inferring latch(es) for signal or variable "set1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mux2p.vhd(35): inferring latch(es) for signal or variable "try1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mux2p.vhd(35): inferring latch(es) for signal or variable "input1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mux2p.vhd(35): inferring latch(es) for signal or variable "show2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mux2p.vhd(35): inferring latch(es) for signal or variable "set2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mux2p.vhd(35): inferring latch(es) for signal or variable "try2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mux2p.vhd(35): inferring latch(es) for signal or variable "input2", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "input2[0]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input2[1]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input2[2]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input2[3]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input2[4]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input2[5]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input2[6]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input2[7]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "try2" at mux2p.vhd(35)
+Info (10041): Inferred latch for "set2" at mux2p.vhd(35)
+Info (10041): Inferred latch for "show2" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input1[0]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input1[1]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input1[2]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input1[3]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input1[4]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input1[5]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input1[6]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "input1[7]" at mux2p.vhd(35)
+Info (10041): Inferred latch for "try1" at mux2p.vhd(35)
+Info (10041): Inferred latch for "set1" at mux2p.vhd(35)
+Info (10041): Inferred latch for "show1" at mux2p.vhd(35)
+Info (12128): Elaborating entity "guess_game" for hierarchy "two_player_guess_game:gg2|guess_game:game1"
+Info (12128): Elaborating entity "mylatch" for hierarchy "two_player_guess_game:gg2|guess_game:game1|mylatch:mylatch"
 Info (10041): Inferred latch for "preDef[0]" at mylatch.vhd(20)
 Info (10041): Inferred latch for "preDef[1]" at mylatch.vhd(20)
 Info (10041): Inferred latch for "preDef[2]" at mylatch.vhd(20)
@@ -320,31 +426,28 @@ Info (10041): Inferred latch for "preDef[4]" at mylatch.vhd(20)
 Info (10041): Inferred latch for "preDef[5]" at mylatch.vhd(20)
 Info (10041): Inferred latch for "preDef[6]" at mylatch.vhd(20)
 Info (10041): Inferred latch for "preDef[7]" at mylatch.vhd(20)
-Info (12128): Elaborating entity "compare_logic" for hierarchy "guess_game:uut|compare_logic:compare_logic"
+Info (12128): Elaborating entity "compare_logic" for hierarchy "two_player_guess_game:gg2|guess_game:game1|compare_logic:compare_logic"
 Info (10041): Inferred latch for "result[0]" at compare_logic.vhd(22)
 Info (10041): Inferred latch for "result[1]" at compare_logic.vhd(22)
-Info (12128): Elaborating entity "mux1" for hierarchy "guess_game:uut|mux1:mux1"
-Info (12128): Elaborating entity "bin2hex" for hierarchy "guess_game:uut|bin2hex:bin2hex1"
-Info (12128): Elaborating entity "mux2" for hierarchy "guess_game:uut|mux2:mux2"
+Info (12128): Elaborating entity "mux1" for hierarchy "two_player_guess_game:gg2|guess_game:game1|mux1:mux1"
+Info (12128): Elaborating entity "bin2hex" for hierarchy "two_player_guess_game:gg2|guess_game:game1|bin2hex:bin2hex1"
+Info (12128): Elaborating entity "mux2" for hierarchy "two_player_guess_game:gg2|guess_game:game1|mux2:mux2"
+Info (12128): Elaborating entity "mux" for hierarchy "two_player_guess_game:gg2|mux:mux"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDG[3]" is stuck at GND
     Warning (13410): Pin "LEDG[4]" is stuck at GND
     Warning (13410): Pin "LEDG[5]" is stuck at GND
     Warning (13410): Pin "LEDG[6]" is stuck at GND
     Warning (13410): Pin "LEDG[7]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[3]"
-    Warning (15610): No output dependent on input pin "KEY[4]"
-Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+Info (21057): Implemented 206 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
     Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 71 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Fri Nov 04 16:33:25 2022
+    Info (21061): Implemented 172 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4649 megabytes
+    Info: Processing ended: Thu Nov 10 10:26:22 2022
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 
