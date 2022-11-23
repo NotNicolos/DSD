@@ -1,5 +1,5 @@
 Analysis & Synthesis report for multicounter
-Tue Nov 15 13:22:01 2022
+Wed Nov 23 13:46:50 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,12 +13,24 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: multi_counter:mc
- 11. Port Connectivity Checks: "multi_counter:mc"
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: multi_counter:mc5
+ 13. Parameter Settings for User Entity Instance: multi_counter:mc4
+ 14. Parameter Settings for User Entity Instance: multi_counter:mc3
+ 15. Parameter Settings for User Entity Instance: multi_counter:mc2
+ 16. Parameter Settings for User Entity Instance: multi_counter:mc1
+ 17. Parameter Settings for User Entity Instance: multi_counter:mc0
+ 18. Port Connectivity Checks: "multi_counter:mc0"
+ 19. Port Connectivity Checks: "multi_counter:mc1"
+ 20. Port Connectivity Checks: "multi_counter:mc2"
+ 21. Port Connectivity Checks: "multi_counter:mc3"
+ 22. Port Connectivity Checks: "multi_counter:mc4"
+ 23. Port Connectivity Checks: "multi_counter:mc5"
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +56,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 15 13:22:01 2022           ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 23 13:46:50 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; multicounter                                    ;
 ; Top-level Entity Name              ; multi_counter_tester                            ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 19                                              ;
-;     Total combinational functions  ; 19                                              ;
-;     Dedicated logic registers      ; 5                                               ;
-; Total registers                    ; 5                                               ;
-; Total pins                         ; 22                                              ;
+; Total logic elements               ; 154                                             ;
+;     Total combinational functions  ; 154                                             ;
+;     Dedicated logic registers      ; 61                                              ;
+; Total registers                    ; 61                                              ;
+; Total pins                         ; 58                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -162,52 +174,78 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                              ; Library ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
+; reset_logic.vhd                  ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/reset_logic.vhd          ;         ;
+; clock_gen.vhd                    ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/clock_gen.vhd            ;         ;
 ; multi_counter_tester.vhd         ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/multi_counter_tester.vhd ;         ;
 ; multi_counter.vhd                ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/multi_counter.vhd        ;         ;
 ; bin2hex.vhd                      ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/bin2hex.vhd              ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                         ;
-+---------------------------------------------+---------------------------------------+
-; Resource                                    ; Usage                                 ;
-+---------------------------------------------+---------------------------------------+
-; Estimated Total logic elements              ; 19                                    ;
-;                                             ;                                       ;
-; Total combinational functions               ; 19                                    ;
-; Logic element usage by number of LUT inputs ;                                       ;
-;     -- 4 input functions                    ; 15                                    ;
-;     -- 3 input functions                    ; 2                                     ;
-;     -- <=2 input functions                  ; 2                                     ;
-;                                             ;                                       ;
-; Logic elements by mode                      ;                                       ;
-;     -- normal mode                          ; 19                                    ;
-;     -- arithmetic mode                      ; 0                                     ;
-;                                             ;                                       ;
-; Total registers                             ; 5                                     ;
-;     -- Dedicated logic registers            ; 5                                     ;
-;     -- I/O registers                        ; 0                                     ;
-;                                             ;                                       ;
-; I/O pins                                    ; 22                                    ;
-; Embedded Multiplier 9-bit elements          ; 0                                     ;
-; Maximum fan-out node                        ; multi_counter:mc|\counter_proc:cnt[0] ;
-; Maximum fan-out                             ; 12                                    ;
-; Total fan-out                               ; 95                                    ;
-; Average fan-out                             ; 2.07                                  ;
-+---------------------------------------------+---------------------------------------+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimated Total logic elements              ; 154                       ;
+;                                             ;                           ;
+; Total combinational functions               ; 154                       ;
+; Logic element usage by number of LUT inputs ;                           ;
+;     -- 4 input functions                    ; 51                        ;
+;     -- 3 input functions                    ; 36                        ;
+;     -- <=2 input functions                  ; 67                        ;
+;                                             ;                           ;
+; Logic elements by mode                      ;                           ;
+;     -- normal mode                          ; 123                       ;
+;     -- arithmetic mode                      ; 31                        ;
+;                                             ;                           ;
+; Total registers                             ; 61                        ;
+;     -- Dedicated logic registers            ; 61                        ;
+;     -- I/O registers                        ; 0                         ;
+;                                             ;                           ;
+; I/O pins                                    ; 58                        ;
+; Embedded Multiplier 9-bit elements          ; 0                         ;
+; Maximum fan-out node                        ; reset_logic:rst|reset_out ;
+; Maximum fan-out                             ; 60                        ;
+; Total fan-out                               ; 696                       ;
+; Average fan-out                             ; 2.55                      ;
++---------------------------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
-; |multi_counter_tester      ; 19 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |multi_counter_tester                  ; work         ;
-;    |bin2sevenseg:uut|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|bin2sevenseg:uut ; work         ;
-;    |multi_counter:mc|      ; 12 (12)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|multi_counter:mc ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                             ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+--------------+
+; |multi_counter_tester      ; 154 (0)           ; 61 (0)       ; 0           ; 0            ; 0       ; 0         ; 58   ; 0            ; |multi_counter_tester                   ; work         ;
+;    |bin2sevenseg:uut0|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|bin2sevenseg:uut0 ; work         ;
+;    |bin2sevenseg:uut1|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|bin2sevenseg:uut1 ; work         ;
+;    |bin2sevenseg:uut2|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|bin2sevenseg:uut2 ; work         ;
+;    |bin2sevenseg:uut3|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|bin2sevenseg:uut3 ; work         ;
+;    |bin2sevenseg:uut4|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|bin2sevenseg:uut4 ; work         ;
+;    |bin2sevenseg:uut5|     ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|bin2sevenseg:uut5 ; work         ;
+;    |clock_gen:clk|         ; 81 (81)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|clock_gen:clk     ; work         ;
+;    |multi_counter:mc0|     ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|multi_counter:mc0 ; work         ;
+;    |multi_counter:mc1|     ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|multi_counter:mc1 ; work         ;
+;    |multi_counter:mc2|     ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|multi_counter:mc2 ; work         ;
+;    |multi_counter:mc3|     ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|multi_counter:mc3 ; work         ;
+;    |multi_counter:mc4|     ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|multi_counter:mc4 ; work         ;
+;    |multi_counter:mc5|     ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|multi_counter:mc5 ; work         ;
+;    |reset_logic:rst|       ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multi_counter_tester|reset_logic:rst   ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; multi_counter:mc1|\counter_proc:cnt[3] ; Stuck at GND due to stuck port data_in ;
+; multi_counter:mc3|\counter_proc:cnt[3] ; Stuck at GND due to stuck port data_in ;
+; multi_counter:mc5|\counter_proc:cnt[3] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 3  ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -215,43 +253,157 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
+; Total registers                              ; 61    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Clear ; 54    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 28    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |multi_counter_tester|multi_counter:mc|\counter_proc:cnt[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; reset_logic:rst|reset_out              ; 60      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: multi_counter:mc ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; min_count      ; 0     ; Signed Integer                       ;
-; max_count      ; 10    ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |multi_counter_tester|clock_gen:clk|tmeCnt[24] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |multi_counter_tester|clock_gen:clk|tmeCnt[31] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multi_counter:mc5 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; min_count      ; 0     ; Signed Integer                        ;
+; max_count      ; 10    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "multi_counter:mc" ;
-+-------+-------+----------+-------------------+
-; Port  ; Type  ; Severity ; Details           ;
-+-------+-------+----------+-------------------+
-; clken ; Input ; Info     ; Stuck at VCC      ;
-+-------+-------+----------+-------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multi_counter:mc4 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; min_count      ; 0     ; Signed Integer                        ;
+; max_count      ; 10    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multi_counter:mc3 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; min_count      ; 0     ; Signed Integer                        ;
+; max_count      ; 10    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multi_counter:mc2 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; min_count      ; 0     ; Signed Integer                        ;
+; max_count      ; 10    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multi_counter:mc1 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; min_count      ; 0     ; Signed Integer                        ;
+; max_count      ; 10    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multi_counter:mc0 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; min_count      ; 0     ; Signed Integer                        ;
+; max_count      ; 10    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "multi_counter:mc0" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; mode ; Input ; Info     ; Stuck at GND        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "multi_counter:mc1" ;
++---------+-------+----------+------------------+
+; Port    ; Type  ; Severity ; Details          ;
++---------+-------+----------+------------------+
+; mode[1] ; Input ; Info     ; Stuck at GND     ;
+; mode[0] ; Input ; Info     ; Stuck at VCC     ;
++---------+-------+----------+------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "multi_counter:mc2" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; mode ; Input ; Info     ; Stuck at GND        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "multi_counter:mc3" ;
++---------+-------+----------+------------------+
+; Port    ; Type  ; Severity ; Details          ;
++---------+-------+----------+------------------+
+; mode[1] ; Input ; Info     ; Stuck at GND     ;
+; mode[0] ; Input ; Info     ; Stuck at VCC     ;
++---------+-------+----------+------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "multi_counter:mc4" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; mode ; Input ; Info     ; Stuck at GND        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "multi_counter:mc5" ;
++---------+-------+----------+------------------+
+; Port    ; Type  ; Severity ; Details          ;
++---------+-------+----------+------------------+
+; mode[1] ; Input ; Info     ; Stuck at GND     ;
+; mode[0] ; Input ; Info     ; Stuck at VCC     ;
++---------+-------+----------+------------------+
 
 
 +-------------------------------+
@@ -269,9 +421,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 15 13:21:59 2022
+    Info: Processing started: Wed Nov 23 13:46:47 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exercise6 -c multicounter
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file reset_logic.vhd
+    Info (12022): Found design unit 1: reset_logic-reset_logic_impl
+    Info (12023): Found entity 1: reset_logic
+Info (12021): Found 2 design units, including 1 entities, in source file clock_gen.vhd
+    Info (12022): Found design unit 1: clock_gen-clock_gen_impl
+    Info (12023): Found entity 1: clock_gen
 Info (12021): Found 2 design units, including 1 entities, in source file multi_counter_tester.vhd
     Info (12022): Found design unit 1: multi_counter_tester-multi_counter_tester_impl
     Info (12023): Found entity 1: multi_counter_tester
@@ -282,24 +440,33 @@ Info (12021): Found 2 design units, including 1 entities, in source file bin2hex
     Info (12022): Found design unit 1: bin2sevenseg-bin2sevenseg_impl
     Info (12023): Found entity 1: bin2sevenseg
 Info (12127): Elaborating entity "multi_counter_tester" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "LEDG[7..3]" at multi_counter_tester.vhd(18)
-Info (12128): Elaborating entity "bin2sevenseg" for hierarchy "bin2sevenseg:uut"
-Info (12128): Elaborating entity "multi_counter" for hierarchy "multi_counter:mc"
+Warning (10873): Using initial value X (don't care) for net "LEDG[7..4]" at multi_counter_tester.vhd(21)
+Info (12128): Elaborating entity "reset_logic" for hierarchy "reset_logic:rst"
+Info (12128): Elaborating entity "clock_gen" for hierarchy "clock_gen:clk"
+Info (12128): Elaborating entity "bin2sevenseg" for hierarchy "bin2sevenseg:uut5"
+Info (12128): Elaborating entity "multi_counter" for hierarchy "multi_counter:mc5"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDG[3]" is stuck at GND
     Warning (13410): Pin "LEDG[4]" is stuck at GND
     Warning (13410): Pin "LEDG[5]" is stuck at GND
     Warning (13410): Pin "LEDG[6]" is stuck at GND
     Warning (13410): Pin "LEDG[7]" is stuck at GND
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register clock_gen:clk|tmeCnt[0] will power up to Low
+    Critical Warning (18010): Register clock_gen:clk|tmeCnt[31] will power up to Low
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 41 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 19 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Tue Nov 15 13:22:02 2022
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[17]"
+Info (21057): Implemented 214 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 51 output pins
+    Info (21061): Implemented 156 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4653 megabytes
+    Info: Processing ended: Wed Nov 23 13:46:50 2022
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
