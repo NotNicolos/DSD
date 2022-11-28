@@ -11,12 +11,12 @@ ENTITY multi_counter_tester IS
 		CLOCK_50 : IN STD_LOGIC;
 
 		-- Output ports
-		HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-		HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 		HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 		HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 		HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 		HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		HEX6 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		HEX7 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 		LEDR : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
 		LEDG : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 
@@ -68,7 +68,7 @@ BEGIN
 		PORT MAP
 		(
 			bin => counter2bin5,
-			seg => HEX5(6 DOWNTO 0)
+			seg => HEX7(6 DOWNTO 0)
 
 		);
 
@@ -76,7 +76,7 @@ BEGIN
 		PORT MAP
 		(
 			bin => counter2bin4,
-			seg => HEX4(6 DOWNTO 0)
+			seg => HEX6(6 DOWNTO 0)
 
 		);
 
@@ -84,7 +84,7 @@ BEGIN
 		PORT MAP
 		(
 			bin => counter2bin3,
-			seg => HEX3(6 DOWNTO 0)
+			seg => HEX5(6 DOWNTO 0)
 
 		);
 
@@ -92,7 +92,7 @@ BEGIN
 		PORT MAP
 		(
 			bin => counter2bin2,
-			seg => HEX2(6 DOWNTO 0)
+			seg => HEX4(6 DOWNTO 0)
 
 		);
 
@@ -100,7 +100,7 @@ BEGIN
 		PORT MAP
 		(
 			bin => counter2bin1,
-			seg => HEX1(6 DOWNTO 0)
+			seg => HEX3(6 DOWNTO 0)
 
 		);
 
@@ -108,7 +108,7 @@ BEGIN
 		PORT MAP
 		(
 			bin => counter2bin,
-			seg => HEX0(6 DOWNTO 0)
+			seg => HEX2(6 DOWNTO 0)
 
 		);
 

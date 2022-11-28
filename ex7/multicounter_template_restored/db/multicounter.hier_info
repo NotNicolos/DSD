@@ -1,62 +1,56 @@
-|multi_counter_tester
+|watch_tester
 SW[16] => ~NO_FANOUT~
 SW[17] => ~NO_FANOUT~
-KEY[0] => clock_gen:clk.speed
+KEY[0] => watch:watch.speed
 KEY[0] => LEDG[0].DATAIN
 KEY[1] => LEDG[1].DATAIN
 KEY[2] => LEDG[2].DATAIN
-KEY[3] => reset_logic:rst.reset_in
+KEY[3] => watch:watch.reset
 KEY[3] => LEDG[3].DATAIN
-CLOCK_50 => clock_gen:clk.clk
-CLOCK_50 => multi_counter:mc5.clk
-CLOCK_50 => multi_counter:mc4.clk
-CLOCK_50 => multi_counter:mc3.clk
-CLOCK_50 => multi_counter:mc2.clk
-CLOCK_50 => multi_counter:mc1.clk
-CLOCK_50 => multi_counter:mc0.clk
-HEX0[0] <= bin2sevenseg:uut0.seg[0]
-HEX0[1] <= bin2sevenseg:uut0.seg[1]
-HEX0[2] <= bin2sevenseg:uut0.seg[2]
-HEX0[3] <= bin2sevenseg:uut0.seg[3]
-HEX0[4] <= bin2sevenseg:uut0.seg[4]
-HEX0[5] <= bin2sevenseg:uut0.seg[5]
-HEX0[6] <= bin2sevenseg:uut0.seg[6]
-HEX1[0] <= bin2sevenseg:uut1.seg[0]
-HEX1[1] <= bin2sevenseg:uut1.seg[1]
-HEX1[2] <= bin2sevenseg:uut1.seg[2]
-HEX1[3] <= bin2sevenseg:uut1.seg[3]
-HEX1[4] <= bin2sevenseg:uut1.seg[4]
-HEX1[5] <= bin2sevenseg:uut1.seg[5]
-HEX1[6] <= bin2sevenseg:uut1.seg[6]
-HEX2[0] <= bin2sevenseg:uut2.seg[0]
-HEX2[1] <= bin2sevenseg:uut2.seg[1]
-HEX2[2] <= bin2sevenseg:uut2.seg[2]
-HEX2[3] <= bin2sevenseg:uut2.seg[3]
-HEX2[4] <= bin2sevenseg:uut2.seg[4]
-HEX2[5] <= bin2sevenseg:uut2.seg[5]
-HEX2[6] <= bin2sevenseg:uut2.seg[6]
-HEX3[0] <= bin2sevenseg:uut3.seg[0]
-HEX3[1] <= bin2sevenseg:uut3.seg[1]
-HEX3[2] <= bin2sevenseg:uut3.seg[2]
-HEX3[3] <= bin2sevenseg:uut3.seg[3]
-HEX3[4] <= bin2sevenseg:uut3.seg[4]
-HEX3[5] <= bin2sevenseg:uut3.seg[5]
-HEX3[6] <= bin2sevenseg:uut3.seg[6]
-HEX4[0] <= bin2sevenseg:uut4.seg[0]
-HEX4[1] <= bin2sevenseg:uut4.seg[1]
-HEX4[2] <= bin2sevenseg:uut4.seg[2]
-HEX4[3] <= bin2sevenseg:uut4.seg[3]
-HEX4[4] <= bin2sevenseg:uut4.seg[4]
-HEX4[5] <= bin2sevenseg:uut4.seg[5]
-HEX4[6] <= bin2sevenseg:uut4.seg[6]
-HEX5[0] <= bin2sevenseg:uut5.seg[0]
-HEX5[1] <= bin2sevenseg:uut5.seg[1]
-HEX5[2] <= bin2sevenseg:uut5.seg[2]
-HEX5[3] <= bin2sevenseg:uut5.seg[3]
-HEX5[4] <= bin2sevenseg:uut5.seg[4]
-HEX5[5] <= bin2sevenseg:uut5.seg[5]
-HEX5[6] <= bin2sevenseg:uut5.seg[6]
-LEDR[0] <= multi_counter:mc5.cout
+CLOCK_50 => watch:watch.clk
+HEX2[0] <= watch:watch.sec_1[0]
+HEX2[1] <= watch:watch.sec_1[1]
+HEX2[2] <= watch:watch.sec_1[2]
+HEX2[3] <= watch:watch.sec_1[3]
+HEX2[4] <= watch:watch.sec_1[4]
+HEX2[5] <= watch:watch.sec_1[5]
+HEX2[6] <= watch:watch.sec_1[6]
+HEX3[0] <= watch:watch.sec_10[0]
+HEX3[1] <= watch:watch.sec_10[1]
+HEX3[2] <= watch:watch.sec_10[2]
+HEX3[3] <= watch:watch.sec_10[3]
+HEX3[4] <= watch:watch.sec_10[4]
+HEX3[5] <= watch:watch.sec_10[5]
+HEX3[6] <= watch:watch.sec_10[6]
+HEX4[0] <= watch:watch.min_1[0]
+HEX4[1] <= watch:watch.min_1[1]
+HEX4[2] <= watch:watch.min_1[2]
+HEX4[3] <= watch:watch.min_1[3]
+HEX4[4] <= watch:watch.min_1[4]
+HEX4[5] <= watch:watch.min_1[5]
+HEX4[6] <= watch:watch.min_1[6]
+HEX5[0] <= watch:watch.min_10[0]
+HEX5[1] <= watch:watch.min_10[1]
+HEX5[2] <= watch:watch.min_10[2]
+HEX5[3] <= watch:watch.min_10[3]
+HEX5[4] <= watch:watch.min_10[4]
+HEX5[5] <= watch:watch.min_10[5]
+HEX5[6] <= watch:watch.min_10[6]
+HEX6[0] <= watch:watch.hrs_1[0]
+HEX6[1] <= watch:watch.hrs_1[1]
+HEX6[2] <= watch:watch.hrs_1[2]
+HEX6[3] <= watch:watch.hrs_1[3]
+HEX6[4] <= watch:watch.hrs_1[4]
+HEX6[5] <= watch:watch.hrs_1[5]
+HEX6[6] <= watch:watch.hrs_1[6]
+HEX7[0] <= watch:watch.hrs_10[0]
+HEX7[1] <= watch:watch.hrs_10[1]
+HEX7[2] <= watch:watch.hrs_10[2]
+HEX7[3] <= watch:watch.hrs_10[3]
+HEX7[4] <= watch:watch.hrs_10[4]
+HEX7[5] <= watch:watch.hrs_10[5]
+HEX7[6] <= watch:watch.hrs_10[6]
+LEDR[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 LEDG[0] <= KEY[0].DB_MAX_OUTPUT_PORT_TYPE
 LEDG[1] <= KEY[1].DB_MAX_OUTPUT_PORT_TYPE
 LEDG[2] <= KEY[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -67,7 +61,69 @@ LEDG[6] <= <GND>
 LEDG[7] <= <GND>
 
 
-|multi_counter_tester|reset_logic:rst
+|watch_tester|watch:watch
+speed => clock_gen:clk1.speed
+reset => reset_logic:rst.reset_in
+clk => clock_gen:clk1.clk
+clk => multi_counter:mc5.clk
+clk => multi_counter:mc4.clk
+clk => multi_counter:mc3.clk
+clk => multi_counter:mc2.clk
+clk => multi_counter:mc1.clk
+clk => multi_counter:mc0.clk
+sec_1[0] <= bin2sevenseg:uut0.seg[0]
+sec_1[1] <= bin2sevenseg:uut0.seg[1]
+sec_1[2] <= bin2sevenseg:uut0.seg[2]
+sec_1[3] <= bin2sevenseg:uut0.seg[3]
+sec_1[4] <= bin2sevenseg:uut0.seg[4]
+sec_1[5] <= bin2sevenseg:uut0.seg[5]
+sec_1[6] <= bin2sevenseg:uut0.seg[6]
+sec_10[0] <= bin2sevenseg:uut1.seg[0]
+sec_10[1] <= bin2sevenseg:uut1.seg[1]
+sec_10[2] <= bin2sevenseg:uut1.seg[2]
+sec_10[3] <= bin2sevenseg:uut1.seg[3]
+sec_10[4] <= bin2sevenseg:uut1.seg[4]
+sec_10[5] <= bin2sevenseg:uut1.seg[5]
+sec_10[6] <= bin2sevenseg:uut1.seg[6]
+min_1[0] <= bin2sevenseg:uut2.seg[0]
+min_1[1] <= bin2sevenseg:uut2.seg[1]
+min_1[2] <= bin2sevenseg:uut2.seg[2]
+min_1[3] <= bin2sevenseg:uut2.seg[3]
+min_1[4] <= bin2sevenseg:uut2.seg[4]
+min_1[5] <= bin2sevenseg:uut2.seg[5]
+min_1[6] <= bin2sevenseg:uut2.seg[6]
+min_10[0] <= bin2sevenseg:uut3.seg[0]
+min_10[1] <= bin2sevenseg:uut3.seg[1]
+min_10[2] <= bin2sevenseg:uut3.seg[2]
+min_10[3] <= bin2sevenseg:uut3.seg[3]
+min_10[4] <= bin2sevenseg:uut3.seg[4]
+min_10[5] <= bin2sevenseg:uut3.seg[5]
+min_10[6] <= bin2sevenseg:uut3.seg[6]
+hrs_1[0] <= bin2sevenseg:uut4.seg[0]
+hrs_1[1] <= bin2sevenseg:uut4.seg[1]
+hrs_1[2] <= bin2sevenseg:uut4.seg[2]
+hrs_1[3] <= bin2sevenseg:uut4.seg[3]
+hrs_1[4] <= bin2sevenseg:uut4.seg[4]
+hrs_1[5] <= bin2sevenseg:uut4.seg[5]
+hrs_1[6] <= bin2sevenseg:uut4.seg[6]
+hrs_10[0] <= bin2sevenseg:uut5.seg[0]
+hrs_10[1] <= bin2sevenseg:uut5.seg[1]
+hrs_10[2] <= bin2sevenseg:uut5.seg[2]
+hrs_10[3] <= bin2sevenseg:uut5.seg[3]
+hrs_10[4] <= bin2sevenseg:uut5.seg[4]
+hrs_10[5] <= bin2sevenseg:uut5.seg[5]
+hrs_10[6] <= bin2sevenseg:uut5.seg[6]
+tm[8] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+tm[9] <= tm[9].DB_MAX_OUTPUT_PORT_TYPE
+tm[10] <= tm[10].DB_MAX_OUTPUT_PORT_TYPE
+tm[11] <= tm[11].DB_MAX_OUTPUT_PORT_TYPE
+tm[12] <= tm[12].DB_MAX_OUTPUT_PORT_TYPE
+tm[13] <= tm[13].DB_MAX_OUTPUT_PORT_TYPE
+tm[14] <= tm[14].DB_MAX_OUTPUT_PORT_TYPE
+tm[15] <= tm[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|watch_tester|watch:watch|reset_logic:rst
 CLK => reset_out~reg0.CLK
 reset_in => reset_out~reg0.PRESET
 hrs_bin1[0] => Equal0.IN2
@@ -81,7 +137,7 @@ hrs_bin10[3] => Equal1.IN0
 reset_out <= reset_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|clock_gen:clk
+|watch_tester|watch:watch|clock_gen:clk1
 clk => clk_out~reg0.CLK
 clk => tmeCnt[0].CLK
 clk => tmeCnt[1].CLK
@@ -153,7 +209,7 @@ reset => clk_out~reg0.ENA
 clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|bin2sevenseg:uut5
+|watch_tester|watch:watch|bin2sevenseg:uut5
 bin[0] => Mux0.IN19
 bin[0] => Mux1.IN19
 bin[0] => Mux2.IN19
@@ -191,7 +247,7 @@ seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|bin2sevenseg:uut4
+|watch_tester|watch:watch|bin2sevenseg:uut4
 bin[0] => Mux0.IN19
 bin[0] => Mux1.IN19
 bin[0] => Mux2.IN19
@@ -229,7 +285,7 @@ seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|bin2sevenseg:uut3
+|watch_tester|watch:watch|bin2sevenseg:uut3
 bin[0] => Mux0.IN19
 bin[0] => Mux1.IN19
 bin[0] => Mux2.IN19
@@ -267,7 +323,7 @@ seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|bin2sevenseg:uut2
+|watch_tester|watch:watch|bin2sevenseg:uut2
 bin[0] => Mux0.IN19
 bin[0] => Mux1.IN19
 bin[0] => Mux2.IN19
@@ -305,7 +361,7 @@ seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|bin2sevenseg:uut1
+|watch_tester|watch:watch|bin2sevenseg:uut1
 bin[0] => Mux0.IN19
 bin[0] => Mux1.IN19
 bin[0] => Mux2.IN19
@@ -343,7 +399,7 @@ seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|bin2sevenseg:uut0
+|watch_tester|watch:watch|bin2sevenseg:uut0
 bin[0] => Mux0.IN19
 bin[0] => Mux1.IN19
 bin[0] => Mux2.IN19
@@ -381,7 +437,7 @@ seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|multi_counter:mc5
+|watch_tester|watch:watch|multi_counter:mc5
 clk => cout~reg0.CLK
 clk => \counter_proc:cnt[0].CLK
 clk => \counter_proc:cnt[1].CLK
@@ -410,7 +466,7 @@ count[3] <= \counter_proc:cnt[3].DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|multi_counter:mc4
+|watch_tester|watch:watch|multi_counter:mc4
 clk => cout~reg0.CLK
 clk => \counter_proc:cnt[0].CLK
 clk => \counter_proc:cnt[1].CLK
@@ -439,7 +495,7 @@ count[3] <= \counter_proc:cnt[3].DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|multi_counter:mc3
+|watch_tester|watch:watch|multi_counter:mc3
 clk => cout~reg0.CLK
 clk => \counter_proc:cnt[0].CLK
 clk => \counter_proc:cnt[1].CLK
@@ -468,7 +524,7 @@ count[3] <= \counter_proc:cnt[3].DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|multi_counter:mc2
+|watch_tester|watch:watch|multi_counter:mc2
 clk => cout~reg0.CLK
 clk => \counter_proc:cnt[0].CLK
 clk => \counter_proc:cnt[1].CLK
@@ -497,7 +553,7 @@ count[3] <= \counter_proc:cnt[3].DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|multi_counter:mc1
+|watch_tester|watch:watch|multi_counter:mc1
 clk => cout~reg0.CLK
 clk => \counter_proc:cnt[0].CLK
 clk => \counter_proc:cnt[1].CLK
@@ -526,7 +582,7 @@ count[3] <= \counter_proc:cnt[3].DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multi_counter_tester|multi_counter:mc0
+|watch_tester|watch:watch|multi_counter:mc0
 clk => cout~reg0.CLK
 clk => \counter_proc:cnt[0].CLK
 clk => \counter_proc:cnt[1].CLK
