@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 USE work.ALL;
 
-ENTITY multi_counter_tester IS
+ENTITY watch_tester IS
 	PORT (
 		-- Input ports
 		SW : IN STD_LOGIC_VECTOR(17 DOWNTO 16);
@@ -18,12 +18,13 @@ ENTITY multi_counter_tester IS
 		HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 		HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 		LEDR : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-		LEDG : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		LEDG : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		tm : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 
 	);
-END multi_counter_tester;
+END watch_tester;
 
-ARCHITECTURE multi_counter_tester_impl OF multi_counter_tester IS
+ARCHITECTURE watch_tester_impl OF watch_tester IS
 	SIGNAL counter2bin : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL counter2bin1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL counter2bin2 : STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -184,4 +185,4 @@ BEGIN
 			cout => cout2clken0
 		);
 
-END multi_counter_tester_impl;
+END watch_tester_impl;
