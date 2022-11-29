@@ -7,7 +7,6 @@ ENTITY compare IS
 		-- Input ports
 		tm_watch : IN STD_LOGIC_VECTOR(15 downto 0);
 		tm_alarm : IN STD_LOGIC_VECTOR(15 downto 0);
-		VIEW   : IN std_LOGIC;
 		-- Output ports
 		alarm : OUT STD_LOGIC
 	);
@@ -20,9 +19,9 @@ BEGIN
 		-- Declaration(s) 
 	BEGIN
 		IF tm_alarm = tm_watch THEN
-			alarm <= '0';
-		else
 			alarm <= '1';
+		else
+			alarm <= '0';
 
 		END IF;
 	END PROCESS;

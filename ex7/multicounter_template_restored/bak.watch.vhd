@@ -6,9 +6,9 @@ USE work.ALL;
 ENTITY watch IS
 	PORT (
 		-- Input ports
+		clk : IN STD_LOGIC;
 		speed : IN STD_LOGIC;
 		reset : IN STD_LOGIC;
-		clk : IN STD_LOGIC;
 
 		-- Output ports
 		sec_1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
@@ -36,13 +36,13 @@ ARCHITECTURE watch_impl OF watch IS
 	SIGNAL cout2clken3 : STD_LOGIC;
 	SIGNAL cout2clken4 : STD_LOGIC;
 	SIGNAL reset_out : STD_LOGIC;
-	
 BEGIN
-	
+tm(11 downto 8) <= counter2bin4;	
+tm(15 downto 12) <= counter2bin5;	
 	rst : ENTITY work.reset_logic
 		PORT MAP
 		(
-			clk => clkSignal,
+			clk => clk,
 			hrs_bin1 => counter2bin4,
 			hrs_bin10 => counter2bin5,
 			reset_in => reset,
@@ -55,7 +55,6 @@ BEGIN
 			clk => clk,
 			speed => speed,
 			reset => reset_out,
-
 			clk_out => clkSignal
 		);
 
@@ -66,52 +65,44 @@ BEGIN
 			seg => hrs_10
 
 		);
-		
-		tm(15 downto 12) <= counter2bin5;
 
 	uut4 : ENTITY work.bin2sevenseg
 		PORT MAP
 		(
 			bin => counter2bin4,
-			seg => hrs_1
+			seg => sec_10
 
 		);
-		
-		tm(11 downto 8) <= counter2bin4;
 
 	uut3 : ENTITY work.bin2sevenseg
 		PORT MAP
 		(
 			bin => counter2bin3,
-			seg => min_10
+			seg => sec_1
 
 		);
-		
-		tm(7 downto 4) <= counter2bin3;
-		
 
-	uut2 : ENTITY work.bin2sevenseg
+	min_101 : ENTITY work.bin2sevenseg
 		PORT MAP
 		(
 			bin => counter2bin2,
-			seg => min_1
+			seg => min_10
+
 		);
 
-		tm(3 downto 0) <= counter2bin2;
-		
-	uut1 : ENTITY work.bin2sevenseg
+	min_11 : ENTITY work.bin2sevenseg
 		PORT MAP
 		(
 			bin => counter2bin1,
-			seg => sec_10
+			seg => min_1
 
 		);
 
-	uut0 : ENTITY work.bin2sevenseg
+	hrs1 : ENTITY work.bin2sevenseg
 		PORT MAP
 		(
 			bin => counter2bin,
-			seg => sec_1
+			seg => hrs_1
 
 		);
 
@@ -124,7 +115,8 @@ BEGIN
 			clken => cout2clken4,
 
 			count => counter2bin5
-			);
+			 
+		);
 
 	mc4 : ENTITY work.multi_counter
 		PORT MAP

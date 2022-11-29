@@ -25,18 +25,18 @@ END alarm_watch_tester;
 
 ARCHITECTURE alarm_watch_tester_impl OF alarm_watch_tester IS
 	
-	SIGNAL MuxtoA1 : STD_LOGIC_VECTOR(6 downto 0);
-	SIGNAL MuxtoA2 : STD_LOGIC_VECTOR(6 downto 0); 
-	SIGNAL MuxtoA3 : STD_LOGIC_VECTOR(6 downto 0);
-	SIGNAL MuxtoA4 : STD_LOGIC_VECTOR(6 downto 0);
+	SIGNAL BinToA1 : STD_LOGIC_VECTOR(6 downto 0);
+	SIGNAL BinToA2 : STD_LOGIC_VECTOR(6 downto 0); 
+	SIGNAL BinToA3 : STD_LOGIC_VECTOR(6 downto 0);
+	SIGNAL BinToA4 : STD_LOGIC_VECTOR(6 downto 0);
 	
-	SIGNAL MuxtoB1 : STD_LOGIC_VECTOR(6 downto 0);
-	SIGNAL MuxtoB2 : STD_LOGIC_VECTOR(6 downto 0);
-	SIGNAL MuxtoB3 : STD_LOGIC_VECTOR(6 downto 0);
-	SIGNAL MuxtoB4 : STD_LOGIC_VECTOR(6 downto 0);
-	SIGNAL MuxtoB5 : STD_LOGIC_VECTOR(6 downto 0);
-	SIGNAL MuxtoB6 : STD_LOGIC_VECTOR(6 downto 0);
-		
+	SIGNAL BinToB1 : STD_LOGIC_VECTOR(6 downto 0);
+	SIGNAL BinToB2 : STD_LOGIC_VECTOR(6 downto 0);
+	SIGNAL BinToB3 : STD_LOGIC_VECTOR(6 downto 0);
+	SIGNAL BinToB4 : STD_LOGIC_VECTOR(6 downto 0);
+	SIGNAL BinToB5 : STD_LOGIC_VECTOR(6 downto 0);
+	SIGNAL BinToB6 : STD_LOGIC_VECTOR(6 downto 0);
+	SIGNAL tmWatchSignal : STD_LOGIC_VECTOR(15 downto 0);
 	SIGNAL time_alarm_signal : STD_LOGIC_VECTOR(15 downto 0);
 	
 BEGIN
@@ -51,8 +51,13 @@ BEGIN
 		clk => CloCK_50,
 		speed => KEY(0),
 		reset => KEY(3),
-		sec_1 => MuxtoB1,
-		sec_10 => MuxtoB2
+		sec_1 => BinToB1,
+		sec_10 => BinToB2,
+		min_1 => BinToB3,
+		min_10 => BinToB4,
+		hrs_1 => BinToB5,
+		hrs_10 => BinToB6,
+		tm => tmWatchSignal
 		
 	);
 	rst2 : ENTITY work.Input_Limiter
@@ -70,16 +75,16 @@ BEGIN
 	mux1 : ENTITY work.Mux
 		PORT MAP
 		(
-		A1 => MuxtoA1,
-		A2 => MuxtoA2,
-		A3 => MuxtoA3,
-		A4 => MuxtoA4,
-		B1 => MuxtoB1,
-		B2 => MuxtoB2,
-		B3 => MuxtoB3,
-		B4 => MuxtoB4,
-		B5 => MuxtoB5,
-		B6 => MuxtoB6,
+		A1 => BinToA1,
+		A2 => BinToA2,
+		A3 => BinToA3,
+		A4 => BinToA4,
+		B1 => BinToB1,
+		B2 => BinToB2,
+		B3 => BinToB3,
+		B4 => BinToB4,
+		B5 => BinToB5,
+		B6 => BinToB6,
 		VIEW => key(2),	
 		-- Output ports
 		C1 => HEX2,
@@ -94,7 +99,7 @@ BEGIN
 		PORT MAP
 		(
 			bin => time_alarm_signal(3 downto 0),
-			seg => MuxtoA1
+			seg => BinToA1
 
 		);
 
@@ -102,7 +107,7 @@ BEGIN
 		PORT MAP
 		(
 			bin => time_alarm_signal(7 downto 4),
-			seg => MuxtoA2
+			seg => BinToA2
 
 		);
 
@@ -110,7 +115,7 @@ BEGIN
 		PORT MAP
 		(
 			bin => time_alarm_signal(11 downto 8),
-			seg => MuxtoA3
+			seg => BinToA3
 
 		);
 
@@ -118,11 +123,17 @@ BEGIN
 		PORT MAP
 		(
 			bin => time_alarm_signal(15 downto 12),
-			seg => MuxtoA4
+			seg => BinToA4
 
 		);
 
-
+	compare: ENTITY work.compare
+		PORT MAP
+		(
+			tm_watch => tmWatchSignal,
+			tm_alarm => time_alarm_signal,
+			alarm => LEDR(0)
+		);
 	
 
 END alarm_watch_tester_impl;

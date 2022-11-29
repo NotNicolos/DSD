@@ -24,22 +24,24 @@ BEGIN
 		if ((bin_min1 >= "0000") and (bin_min1 <= "1001")) then
 			time_alarm(3 downto 0) <= bin_min1;
 		else
-			time_alarm(3 downto 0)  <= "1010";
+			time_alarm(3 downto 0)  <= "1111";
 		end if;	
-	   if ((bin_min10 >= "0000") and (bin_min10 <= "1001")) then
+	   if ((bin_min10 >= "0000") and (bin_min10 <= "0101")) then
 			time_alarm(7 downto 4) <= bin_min10;
 		else
-			time_alarm(7 downto 4) <= "1010";
+			time_alarm(7 downto 4) <= "1111";
 		end if;	
-		if ((bin_hrs1 >= "0000") and (bin_hrs1 <= "0100")) then
-			time_alarm(11 downto 8) <= bin_min10;
+		if (((bin_hrs1 >= "0000") and (bin_hrs1 <= "0011")) AND (bin_hrs10 >= "0010")) then -- Tjek om enkelt time højst skal kunne sættes til 3 eller 9
+			time_alarm(11 downto 8) <= bin_hrs1;
+		elsif (((bin_hrs1 >= "0000") and (bin_hrs1 <= "1001")) AND (bin_hrs10 >= "0000" AND bin_hrs10 < "0010")) then -- Tjek om enkelt time højst skal kunne sættes til 3 eller 9
+			time_alarm(11 downto 8) <= bin_hrs1;
 		else
-			time_alarm(11 downto 8) <= "1010";
+			time_alarm(11 downto 8) <= "1111";
 		end if;	
-		if ((bin_hrs10 >= "0000") and (bin_hrs1 <= "0010")) then
-			time_alarm(15 downto 12) <= bin_min10;
+		if ((bin_hrs10 >= "0000") and (bin_hrs10 <= "0010")) then
+			time_alarm(15 downto 12) <= bin_hrs10;
 		else
-			time_alarm(15 downto 12) <= "1010";
+			time_alarm(15 downto 12) <= "1111";
 		end if;	
 	END PROCESS;
 END Input_Limiter_impl;
