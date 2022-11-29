@@ -1,5 +1,5 @@
 Simulator report for multicounter
-Tue Nov 15 13:36:49 2022
+Tue Nov 29 19:30:58 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -125,32 +125,41 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 15 13:36:49 2022
+    Info: Processing started: Tue Nov 29 19:30:57 2022
 Info: Command: quartus_sim --simulation_results_format=VWF exercise6 -c multicounter
 Info (324025): Using vector source file "C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/FunctionalSimOneDigitCounter.vwf"
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[1]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[2]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[3]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[4]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[5]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[6]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[7]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[8]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[9]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[10]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[11]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[12]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[13]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[14]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[15]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[16]". Ignored vector source file node.
-Warning (328015): Compiler packed, optimized or synthesized away node "|multi_counter_tester|LEDR[17]". Ignored vector source file node.
-Warning (328016): Wrong node type and/or width for node "|multi_counter_tester|LEDR" in vector source file. Node in design is of type Bus and of width 18, but node in vector source file is of type 9-Level and of width 1.
+Warning (328014): Can't find node "HEX0[6]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "HEX0[5]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "HEX0[4]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "HEX0[3]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "HEX0[2]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "HEX0[1]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "HEX0[0]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "SW[16]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "SW[17]" for functional simulation. Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[1]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[2]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[3]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[4]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[5]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[6]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[7]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[8]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[9]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[10]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[11]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[12]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[13]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[14]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[15]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[16]". Ignored vector source file node.
+Warning (328015): Compiler packed, optimized or synthesized away node "|alarm_watch_tester|LEDR[17]". Ignored vector source file node.
+Warning (328016): Wrong node type and/or width for node "|alarm_watch_tester|LEDR" in vector source file. Node in design is of type Bus and of width 18, but node in vector source file is of type 9-Level and of width 1.
 Error (328001): Can't simulate mismatched node types
-Error: Quartus II 64-Bit Simulator was unsuccessful. 1 error, 18 warnings
-    Error: Peak virtual memory: 4440 megabytes
-    Error: Processing ended: Tue Nov 15 13:36:49 2022
-    Error: Elapsed time: 00:00:00
+Error: Quartus II 64-Bit Simulator was unsuccessful. 1 error, 27 warnings
+    Error: Peak virtual memory: 4460 megabytes
+    Error: Processing ended: Tue Nov 29 19:30:58 2022
+    Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
 

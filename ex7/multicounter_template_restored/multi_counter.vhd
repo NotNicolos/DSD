@@ -25,12 +25,12 @@ ARCHITECTURE multi_counter_impl OF multi_counter IS
 BEGIN
 
 	counter_proc :
-	PROCESS (clk, reset) --process reagerer bÃ¥de clk og reset
-		VARIABLE cnt : INTEGER RANGE MIN_COUNT TO MAX_COUNT; -- bruger "variable" for Ã¸jeblikkelig opdatering af counter variable
+	PROCESS (clk, reset) --process reagerer både clk og reset
+		VARIABLE cnt : INTEGER RANGE MIN_COUNT TO MAX_COUNT; -- bruger "variable" for øjeblikkelig opdatering af counter variable
 		VARIABLE cntMax : INTEGER;
-		-- MAX_COUNT betyder IKKE at counteren af sig selv ikke tÃ¦ller hÃ¸jere end til MAX_COUNT
+		-- MAX_COUNT betyder IKKE at counteren af sig selv ikke tæller højere end til MAX_COUNT
 	BEGIN
-		IF reset = '0' THEN-- asynkron reset, ikke afhÃ¦ngig af clk
+		IF reset = '0' THEN-- asynkron reset, ikke afhængig af clk
 			-- Reset the counter to 0
 			cnt := 0;
 		ELSIF (rising_edge(clk)) THEN
