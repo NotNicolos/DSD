@@ -1,5 +1,8 @@
 vendor_name = ModelSim
 source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/multi_counter.vhd
+source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/six_multi_counter_tester.vhd
+source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/multi_counter_tester.vhd
+source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/watch_tester.vhd
 source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/watch.vhd
 source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/alarm_watch_tester.vhd
 source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/Compare.vhd
@@ -7,7 +10,6 @@ source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_
 source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/Input Limiter.vhd
 source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/reset_logic.vhd
 source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/clock_gen.vhd
-source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/multi_counter_tester.vhd
 source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/bin2hex.vhd
 source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/FunctionalSimOneDigitCounter.vwf
 source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex7/multicounter_template_restored/db/multicounter.cbx.xml
