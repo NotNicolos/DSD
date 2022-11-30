@@ -17,7 +17,6 @@ ENTITY multi_counter IS
 		-- Output ports
 		count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 		cout : OUT STD_LOGIC;
-		tm : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
 END multi_counter;
 
