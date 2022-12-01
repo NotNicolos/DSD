@@ -1,3 +1,4 @@
+/* Simulator = Quartus II Simulator */
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -92,24 +93,16 @@ SIGNAL("reset")
 	PARENT = "";
 }
 
-SIGNAL("present_state")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = MACHINE;
-	PARENT = "";
-}
-
 TRANSITION_LIST("a")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 260.0;
-		LEVEL 1 FOR 110.0;
-		LEVEL 0 FOR 630.0;
+		LEVEL 0 FOR 280.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 570.0;
 	}
 }
 
@@ -118,13 +111,11 @@ TRANSITION_LIST("b")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
+		LEVEL 0 FOR 90.0;
 		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 60.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 150.0;
-		LEVEL 1 FOR 110.0;
-		LEVEL 0 FOR 480.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 690.0;
 	}
 }
 
@@ -133,12 +124,7 @@ TRANSITION_LIST("clk")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 20;
-			LEVEL 0 FOR 25.0;
-			LEVEL 1 FOR 25.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -166,18 +152,7 @@ TRANSITION_LIST("reset")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 450.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 510.0;
-	}
-}
-
-TRANSITION_LIST("present_state")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL U FOR 1000.0;
+		LEVEL 1 FOR 980.0;
 	}
 }
 
@@ -232,15 +207,6 @@ DISPLAY_LINE
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "present_state";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 6;
 	TREE_LEVEL = 0;
 }
 

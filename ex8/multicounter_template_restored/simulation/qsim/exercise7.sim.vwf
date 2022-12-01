@@ -26,10 +26,15 @@ HEADER
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
 	DATA_DURATION = 1000.0;
-	SIMULATION_TIME = 0.0;
+	SIMULATION_TIME = 1000.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
 	GRID_DUTY_CYCLE = 50;
+}
+
+USER_TYPE("|Mee_Moo|present_state")
+{
+	VALUES = "present_state.idle", "present_state.init", "present_state.myActive";
 }
 
 SIGNAL("a")
@@ -94,12 +99,13 @@ SIGNAL("reset")
 
 SIGNAL("present_state")
 {
-	VALUE_TYPE = NINE_LEVEL_BIT;
+	VALUE_TYPE = ENUM;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = MACHINE;
 	PARENT = "";
+	ENUM_NAME = "|Mee_Moo|present_state";
 }
 
 TRANSITION_LIST("a")
@@ -147,7 +153,8 @@ TRANSITION_LIST("mee_out")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 75.0;
+		LEVEL 0 FOR 925.0;
 	}
 }
 
@@ -156,7 +163,13 @@ TRANSITION_LIST("moo_out")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 75.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 150.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 525.0;
 	}
 }
 
@@ -177,7 +190,14 @@ TRANSITION_LIST("present_state")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL U FOR 1000.0;
+		LEVEL present_state.idle FOR 75.0;
+		LEVEL present_state.init FOR 50.0;
+		LEVEL present_state.idle FOR 50.0;
+		LEVEL present_state.init FOR 100.0;
+		LEVEL present_state.myActive FOR 50.0;
+		LEVEL present_state.idle FOR 100.0;
+		LEVEL present_state.init FOR 50.0;
+		LEVEL present_state.idle FOR 525.0;
 	}
 }
 
