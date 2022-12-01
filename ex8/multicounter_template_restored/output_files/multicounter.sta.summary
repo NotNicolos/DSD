@@ -1,0 +1,69 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -5.754
+TNS   : -190.239
+
+Type  : Slow Model Setup 'watch:rst|clock_gen:clk1|clk_out'
+Slack : -1.895
+TNS   : -1.895
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -1.374
+TNS   : -6.363
+
+Type  : Slow Model Hold 'watch:rst|clock_gen:clk1|clk_out'
+Slack : 2.256
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'CLOCK_50'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Slow Model Removal 'CLOCK_50'
+Slack : 0.079
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -60.380
+
+Type  : Slow Model Minimum Pulse Width 'watch:rst|clock_gen:clk1|clk_out'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -2.110
+TNS   : -65.642
+
+Type  : Fast Model Setup 'watch:rst|clock_gen:clk1|clk_out'
+Slack : -0.700
+TNS   : -0.700
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.069
+TNS   : -5.591
+
+Type  : Fast Model Hold 'watch:rst|clock_gen:clk1|clk_out'
+Slack : 1.374
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'CLOCK_50'
+Slack : 0.818
+TNS   : 0.000
+
+Type  : Fast Model Removal 'CLOCK_50'
+Slack : -0.205
+TNS   : -2.662
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -60.380
+
+Type  : Fast Model Minimum Pulse Width 'watch:rst|clock_gen:clk1|clk_out'
+Slack : -0.500
+TNS   : -1.000
+
+------------------------------------------------------------

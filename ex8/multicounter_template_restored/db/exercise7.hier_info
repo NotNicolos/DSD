@@ -1,0 +1,19 @@
+|mee_moo
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+clk => present_state~1.DATAIN
+a => outputs.IN0
+a => outputs.IN0
+a => outputs.IN0
+a => nxt_state.IN0
+b => outputs.IN1
+b => outputs.IN1
+b => outputs.IN1
+b => nxt_state.IN1
+b => Selector3.IN1
+b => Selector2.IN1
+mee_out <= mee_out$latch.DB_MAX_OUTPUT_PORT_TYPE
+moo_out <= moo_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

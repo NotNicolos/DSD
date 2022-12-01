@@ -1,0 +1,116 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+USE work.ALL;
+
+ENTITY Mee_Moo IS
+	PORT (
+		-- Input ports
+		reset : IN STD_LOGIC;
+		clk : IN STD_LOGIC;
+		a : IN STD_LOGIC;
+		b : IN STD_LOGIC;
+
+		-- Output ports
+		mee_out : OUT STD_LOGIC := 0;
+		moo_out : OUT STD_LOGIC
+
+	);
+END Mee_Moo;
+
+ARCHITECTURE Mee_Moo_impl OF Mee_Moo IS
+	TYPE state IS (Idle);
+	SIGNAL idle, init : active;
+BEGIN
+	-- Jeg har opsat mee_moo og tester
+
+	-- Baseret på udleveret "three_process_fsm_template.vhd" fil
+	state_reg : PROCESS (clk, reset)
+	BEGIN
+		IF rising_edge(clk) THEN
+			IF (reset = '0') THEN -- reset = 0 
+				present_state <= idle; --< initial_state > ; 
+			ELSE
+				present_state <= next_state;
+			END IF;
+		END IF;
+	END PROCESS;
+
+	outputs : PROCESS (present_state, a, b);
+	BEGIN
+		moo_out := 0
+		CASE present_state IS
+
+				-- one case branch required for each state
+			WHEN idle =>
+				IF b = '1' AND (a = '0' OR a = '1') THEN
+					moo_out <= '0'
+						ELSIF b = '0' AND (a = '0' OR a = '1') THEN
+						moo_out <= '0'
+						ELSE
+						moo_out <= '0'
+					END IF;
+			WHEN init =>
+				IF (a = '1') AND (b = '0') THEN
+					moo_out <= '1'
+						ELSIF (b = '1' AND a = '0' ) THEN
+						moo_out <= '1'
+						mee_out <= '0'
+						ELSIF (b = '1' AND a = '1') THEN
+						moo_out <= '1'
+						mee_out <= '1'
+						ELSE
+						moo_out <= '1'
+					END IF;
+			WHEN active =>
+				moo_out <= '1'
+					IF < input_condition_1 > THEN
+						-- assignment to next_state
+						ELSIF < input_condition_2 > THEN
+						-- assignment to next_state
+						ELSE
+						-- assignment to next_state
+					END IF;
+				-- default branch
+		WHEN OTHERS =>
+		-- assign initial_state to next_state
+
+	END CASE;
+END PROCESS;
+
+END PROCESS;
+
+nxt_state : PROCESS (present_state, a, b);
+BEGIN
+
+	CASE present_state IS
+			-- one case branch required for each state
+		WHEN idle =>
+			IF b = '1' AND (a = '0' OR a = '1') THEN
+				next_state <= init;
+				-- ELSIF b = '0' THEN
+			ELSIF b = '0' AND (a = '0' OR a = '1') THEN
+				next_state <= idle;
+			ELSE
+				next_state <= idle;
+			END IF;
+		WHEN init =>
+			IF (a = '1') AND (b = '0') THEN
+				next_state <= active;
+			ELSIF (a = '0') AND (b = '0') THEN
+				next_state <= idle
+			ELSE
+				next_state <=init
+			END IF;
+		WHEN active =>
+			IF (b = '0' OR b = '1') AND (a = '0' OR a = '1') THEN
+				next_state <= idle;
+			ELSE
+				next_state <= active;
+			END IF;
+		-- 	-- default branch
+		-- WHEN OTHERS =>
+		-- 	-- assignments to outputs
+
+			END CASE;
+	END Mee_Moo_impl;
