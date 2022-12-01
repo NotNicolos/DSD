@@ -1,0 +1,38 @@
+|mee_moo_tester
+SW[0] => mee_moo:mee_moo.a
+SW[1] => mee_moo:mee_moo.b
+KEY[0] => mee_moo:mee_moo.clk
+KEY[0] => LEDG[0].DATAIN
+KEY[1] => mee_moo:mee_moo.reset
+KEY[1] => LEDG[1].DATAIN
+LEDR[0] <= mee_moo:mee_moo.mee_out
+LEDR[1] <= mee_moo:mee_moo.moo_out
+LEDG[0] <= KEY[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= KEY[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= <GND>
+LEDG[3] <= <GND>
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= <GND>
+
+
+|mee_moo_tester|Mee_Moo:mee_moo
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+clk => present_state~1.DATAIN
+a => outputs.IN0
+a => outputs.IN0
+a => outputs.IN0
+a => nxt_state.IN0
+b => outputs.IN1
+b => outputs.IN1
+b => outputs.IN1
+b => nxt_state.IN1
+b => Selector3.IN1
+b => Selector2.IN1
+mee_out <= mee_out$latch.DB_MAX_OUTPUT_PORT_TYPE
+moo_out <= moo_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
