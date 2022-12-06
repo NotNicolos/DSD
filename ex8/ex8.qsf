@@ -474,10 +474,22 @@ set_location_assignment PIN_V24 -to GPIO_1[32]
 set_location_assignment PIN_V23 -to GPIO_1[33]
 set_location_assignment PIN_W25 -to GPIO_1[34]
 set_location_assignment PIN_W23 -to GPIO_1[35]
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity code_lock_simple -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity code_lock_simple -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity code_lock_simple -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity code_lock_simple -section_id Top
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/output_files/WaveformLockTest.vwf"
+set_global_assignment -name VHDL_FILE code_lock_simple_tester.vhd
 set_global_assignment -name VHDL_FILE Code_lock_simple_fsm.vhd
 set_global_assignment -name VHDL_FILE synch.vhd
-set_global_assignment -name VHDL_FILE code_lock_tester.vhd
 set_global_assignment -name VHDL_FILE Code_lock_simple.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/WaveformLockTest.vwf
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\hresk\OneDrive\Dokumenter\GitHub\DSD\ex8\simulation\qsim
+vcode_lock_simple
+Z1 I]OX`4GI:ZTbg4?_gRMFSU2
+Z2 V@S0NGHDH:JE^M;naDPf2i1
+Z3 dC:\Users\hresk\OneDrive\Dokumenter\GitHub\DSD\ex8\simulation\qsim
+Z4 w1670327442
+Z5 8ex8.vo
+Z6 Fex8.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|ex8.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 =nJL3bBcUeNbgH@d93ZM?1
+!s85 0
+Z11 !s108 1670327444.527000
+Z12 !s107 ex8.vo|
+!s101 -O0
+vcode_lock_simple_vlg_check_tst
+!i10b 1
+Z13 !s100 jb=JHTR5WHg81lMH?]1`a2
+Z14 I0MFTVYf`5c9WJ6Kgk6Ze=0
+Z15 V=n1^V9lG19JJdDfVS_B3B0
+R3
+Z16 w1670327441
+Z17 8ex8.vt
+Z18 Fex8.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z19 !s108 1670327444.664000
+Z20 !s107 ex8.vt|
+Z21 !s90 -work|work|ex8.vt|
+!s101 -O0
+R9
+vcode_lock_simple_vlg_sample_tst
+!i10b 1
+Z22 !s100 c4EA5_6?Gf>;@^]FT_zQl3
+Z23 IYz4H3Le8J4lEi:CT3P;k71
+Z24 VERWB[;kKoRNANDH<l]5>B3
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+vcode_lock_simple_vlg_vec_tst
+!i10b 1
+!s100 ?KMGA;:k65n[]j@:JN[9o2
+I1f>cbZoW0Kkl0<9fKfPCm1
+Z25 VTJ96QX:3@8VdTf5lTgUh<1
+R3
+R16
+R17
+R18
+Z26 L0 158
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9

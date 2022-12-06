@@ -5,7 +5,13 @@ SW[1] => code_lock_simple:code_lock_simple.code[1]
 SW[2] => code_lock_simple:code_lock_simple.code[2]
 SW[3] => code_lock_simple:code_lock_simple.code[3]
 KEY[2] => code_lock_simple:code_lock_simple.reset
+KEY[2] => LEDR[0].DATAIN
 KEY[3] => code_lock_simple:code_lock_simple.enter
+KEY[3] => LEDR[1].DATAIN
+LEDR[0] <= KEY[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= KEY[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
 LEDG[0] <= code_lock_simple:code_lock_simple.lock
 
 
@@ -47,10 +53,12 @@ code[2] => Equal0.IN3
 code[2] => Equal1.IN2
 code[3] => Equal0.IN2
 code[3] => Equal1.IN1
+enter => Selector0.IN4
 enter => next_state.Ev_code1.DATAB
 enter => next_state.Ev_code2.DATAB
 enter => Selector0.IN1
-enter => Selector0.IN2
+enter => Selector1.IN1
+enter => Selector2.IN1
 lock <= lock.DB_MAX_OUTPUT_PORT_TYPE
 
 

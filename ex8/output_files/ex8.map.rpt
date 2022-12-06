@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex8
-Thu Dec 01 12:26:38 2022
+Tue Dec 06 13:37:24 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 01 12:26:38 2022           ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 06 13:37:24 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ex8                                             ;
 ; Top-level Entity Name              ; code_lock_simple_tester                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 12                                              ;
-;     Total combinational functions  ; 9                                               ;
+; Total logic elements               ; 15                                              ;
+;     Total combinational functions  ; 12                                              ;
 ;     Dedicated logic registers      ; 9                                               ;
 ; Total registers                    ; 9                                               ;
-; Total pins                         ; 8                                               ;
+; Total pins                         ; 12                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -156,16 +156,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
-; Code_lock_simple_fsm.vhd         ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/Code_lock_simple_fsm.vhd ;         ;
-; synch.vhd                        ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/synch.vhd                ;         ;
-; code_lock_tester.vhd             ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/code_lock_tester.vhd     ;         ;
-; Code_lock_simple.vhd             ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/Code_lock_simple.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; code_lock_simple_tester.vhd      ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/code_lock_simple_tester.vhd ;         ;
+; Code_lock_simple_fsm.vhd         ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/Code_lock_simple_fsm.vhd    ;         ;
+; synch.vhd                        ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/synch.vhd                   ;         ;
+; Code_lock_simple.vhd             ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/Code_lock_simple.vhd        ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -173,27 +173,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 12       ;
+; Estimated Total logic elements              ; 15       ;
 ;                                             ;          ;
-; Total combinational functions               ; 9        ;
+; Total combinational functions               ; 12       ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 3        ;
-;     -- 3 input functions                    ; 5        ;
+;     -- 4 input functions                    ; 5        ;
+;     -- 3 input functions                    ; 6        ;
 ;     -- <=2 input functions                  ; 1        ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 9        ;
+;     -- normal mode                          ; 12       ;
 ;     -- arithmetic mode                      ; 0        ;
 ;                                             ;          ;
 ; Total registers                             ; 9        ;
 ;     -- Dedicated logic registers            ; 9        ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
-; I/O pins                                    ; 8        ;
+; I/O pins                                    ; 12       ;
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ; Maximum fan-out node                        ; clock_50 ;
 ; Maximum fan-out                             ; 9        ;
-; Total fan-out                               ; 48       ;
+; Total fan-out                               ; 61       ;
 ; Average fan-out                             ; 1.85     ;
 +---------------------------------------------+----------+
 
@@ -203,9 +203,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Library Name ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
-; |code_lock_simple_tester               ; 9 (0)             ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |code_lock_simple_tester                                                            ; work         ;
-;    |code_lock_simple:code_lock_simple| ; 9 (0)             ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |code_lock_simple_tester|code_lock_simple:code_lock_simple                          ; work         ;
-;       |code_lock_simple_fsm:fsm|       ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |code_lock_simple_tester|code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm ; work         ;
+; |code_lock_simple_tester               ; 12 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |code_lock_simple_tester                                                            ; work         ;
+;    |code_lock_simple:code_lock_simple| ; 12 (0)            ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |code_lock_simple_tester|code_lock_simple:code_lock_simple                          ; work         ;
+;       |code_lock_simple_fsm:fsm|       ; 11 (11)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |code_lock_simple_tester|code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm ; work         ;
 ;       |synch:synchronizer|             ; 1 (1)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |code_lock_simple_tester|code_lock_simple:code_lock_simple|synch:synchronizer       ; work         ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -264,34 +264,38 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Dec 01 12:26:36 2022
+    Info: Processing started: Tue Dec 06 13:37:22 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex8 -c ex8
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file code_lock_simple_tester.vhd
+    Info (12022): Found design unit 1: code_lock_simple_tester-code_lock_simple_tester_impl
+    Info (12023): Found entity 1: code_lock_simple_tester
 Info (12021): Found 2 design units, including 1 entities, in source file code_lock_simple_fsm.vhd
     Info (12022): Found design unit 1: code_lock_simple_fsm-code_lock_simple_impl
     Info (12023): Found entity 1: code_lock_simple_fsm
 Info (12021): Found 2 design units, including 1 entities, in source file synch.vhd
     Info (12022): Found design unit 1: synch-RTL
     Info (12023): Found entity 1: synch
-Info (12021): Found 2 design units, including 1 entities, in source file code_lock_tester.vhd
-    Info (12022): Found design unit 1: code_lock_simple_tester-code_lock_simple_tester_impl
-    Info (12023): Found entity 1: code_lock_simple_tester
 Info (12021): Found 2 design units, including 1 entities, in source file code_lock_simple.vhd
     Info (12022): Found design unit 1: code_lock_simple-rtl
     Info (12023): Found entity 1: code_lock_simple
 Info (12127): Elaborating entity "code_lock_simple_tester" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "LEDR[3..2]" at code_lock_simple_tester.vhd(14)
 Info (12128): Elaborating entity "code_lock_simple" for hierarchy "code_lock_simple:code_lock_simple"
 Info (12128): Elaborating entity "synch" for hierarchy "code_lock_simple:code_lock_simple|synch:synchronizer"
 Info (12128): Elaborating entity "code_lock_simple_fsm" for hierarchy "code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 27 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 12 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 15 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4634 megabytes
-    Info: Processing ended: Thu Dec 01 12:26:38 2022
+    Info: Processing ended: Tue Dec 06 13:37:24 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
