@@ -1,0 +1,21 @@
+Quartus II Archive log --	C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/output_files/ex8.qarlog
+
+Archive:	C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/output_files/ex8.qar
+Date:		Fri Dec 02 15:57:02 2022
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/Code_lock_simple.vhd
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/Code_lock_simple_fsm.vhd
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/code_lock_tester.vhd
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/db/ex8.sim.vwf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/ex8.qpf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/ex8.qsf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/incremental_db/compiled_partitions/ex8.db_info
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/output_files/WaveformLockTest.vwf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/synch.vhd
+c:/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

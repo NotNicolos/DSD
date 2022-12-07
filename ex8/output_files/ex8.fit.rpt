@@ -1,5 +1,5 @@
 Fitter report for ex8
-Fri Dec 02 14:47:23 2022
+Tue Dec 06 13:37:31 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,18 +63,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Dec 02 14:47:23 2022           ;
+; Fitter Status                      ; Successful - Tue Dec 06 13:37:31 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ex8                                             ;
-; Top-level Entity Name              ; code_lock_simple                                ;
+; Top-level Entity Name              ; code_lock_simple_tester                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 12 / 33,216 ( < 1 % )                           ;
-;     Total combinational functions  ; 9 / 33,216 ( < 1 % )                            ;
+; Total logic elements               ; 15 / 33,216 ( < 1 % )                           ;
+;     Total combinational functions  ; 12 / 33,216 ( < 1 % )                           ;
 ;     Dedicated logic registers      ; 9 / 33,216 ( < 1 % )                            ;
 ; Total registers                    ; 9                                               ;
-; Total pins                         ; 8 / 475 ( 2 % )                                 ;
+; Total pins                         ; 12 / 475 ( 3 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
@@ -139,7 +139,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -156,7 +156,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location ;                ;              ; AUD_DACLRCK   ; PIN_C6        ; QSF Assignment ;
 ; Location ;                ;              ; AUD_XCK       ; PIN_A5        ; QSF Assignment ;
 ; Location ;                ;              ; CLOCK_27      ; PIN_D13       ; QSF Assignment ;
-; Location ;                ;              ; CLOCK_50      ; PIN_N2        ; QSF Assignment ;
 ; Location ;                ;              ; DRAM_ADDR[0]  ; PIN_T6        ; QSF Assignment ;
 ; Location ;                ;              ; DRAM_ADDR[10] ; PIN_Y1        ; QSF Assignment ;
 ; Location ;                ;              ; DRAM_ADDR[11] ; PIN_V5        ; QSF Assignment ;
@@ -387,8 +386,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location ;                ;              ; IRDA_TXD      ; PIN_AE24      ; QSF Assignment ;
 ; Location ;                ;              ; KEY[0]        ; PIN_G26       ; QSF Assignment ;
 ; Location ;                ;              ; KEY[1]        ; PIN_N23       ; QSF Assignment ;
-; Location ;                ;              ; KEY[2]        ; PIN_P23       ; QSF Assignment ;
-; Location ;                ;              ; KEY[3]        ; PIN_W26       ; QSF Assignment ;
 ; Location ;                ;              ; LCD_BLON      ; PIN_K2        ; QSF Assignment ;
 ; Location ;                ;              ; LCD_DATA[0]   ; PIN_J1        ; QSF Assignment ;
 ; Location ;                ;              ; LCD_DATA[1]   ; PIN_J2        ; QSF Assignment ;
@@ -402,7 +399,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location ;                ;              ; LCD_ON        ; PIN_L4        ; QSF Assignment ;
 ; Location ;                ;              ; LCD_RS        ; PIN_K1        ; QSF Assignment ;
 ; Location ;                ;              ; LCD_RW        ; PIN_K4        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[0]       ; PIN_AE22      ; QSF Assignment ;
 ; Location ;                ;              ; LEDG[1]       ; PIN_AF22      ; QSF Assignment ;
 ; Location ;                ;              ; LEDG[2]       ; PIN_W19       ; QSF Assignment ;
 ; Location ;                ;              ; LEDG[3]       ; PIN_V18       ; QSF Assignment ;
@@ -411,7 +407,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location ;                ;              ; LEDG[6]       ; PIN_AA20      ; QSF Assignment ;
 ; Location ;                ;              ; LEDG[7]       ; PIN_Y18       ; QSF Assignment ;
 ; Location ;                ;              ; LEDG[8]       ; PIN_Y12       ; QSF Assignment ;
-; Location ;                ;              ; LEDR[0]       ; PIN_AE23      ; QSF Assignment ;
 ; Location ;                ;              ; LEDR[10]      ; PIN_AA13      ; QSF Assignment ;
 ; Location ;                ;              ; LEDR[11]      ; PIN_AC14      ; QSF Assignment ;
 ; Location ;                ;              ; LEDR[12]      ; PIN_AD15      ; QSF Assignment ;
@@ -420,9 +415,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location ;                ;              ; LEDR[15]      ; PIN_AE13      ; QSF Assignment ;
 ; Location ;                ;              ; LEDR[16]      ; PIN_AE12      ; QSF Assignment ;
 ; Location ;                ;              ; LEDR[17]      ; PIN_AD12      ; QSF Assignment ;
-; Location ;                ;              ; LEDR[1]       ; PIN_AF23      ; QSF Assignment ;
-; Location ;                ;              ; LEDR[2]       ; PIN_AB21      ; QSF Assignment ;
-; Location ;                ;              ; LEDR[3]       ; PIN_AC22      ; QSF Assignment ;
 ; Location ;                ;              ; LEDR[4]       ; PIN_AD22      ; QSF Assignment ;
 ; Location ;                ;              ; LEDR[5]       ; PIN_AD23      ; QSF Assignment ;
 ; Location ;                ;              ; LEDR[6]       ; PIN_AD21      ; QSF Assignment ;
@@ -504,7 +496,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location ;                ;              ; SRAM_OE_N     ; PIN_AD10      ; QSF Assignment ;
 ; Location ;                ;              ; SRAM_UB_N     ; PIN_AF9       ; QSF Assignment ;
 ; Location ;                ;              ; SRAM_WE_N     ; PIN_AE10      ; QSF Assignment ;
-; Location ;                ;              ; SW[0]         ; PIN_N25       ; QSF Assignment ;
 ; Location ;                ;              ; SW[10]        ; PIN_N1        ; QSF Assignment ;
 ; Location ;                ;              ; SW[11]        ; PIN_P1        ; QSF Assignment ;
 ; Location ;                ;              ; SW[12]        ; PIN_P2        ; QSF Assignment ;
@@ -513,9 +504,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Location ;                ;              ; SW[15]        ; PIN_U4        ; QSF Assignment ;
 ; Location ;                ;              ; SW[16]        ; PIN_V1        ; QSF Assignment ;
 ; Location ;                ;              ; SW[17]        ; PIN_V2        ; QSF Assignment ;
-; Location ;                ;              ; SW[1]         ; PIN_N26       ; QSF Assignment ;
-; Location ;                ;              ; SW[2]         ; PIN_P25       ; QSF Assignment ;
-; Location ;                ;              ; SW[3]         ; PIN_AE14      ; QSF Assignment ;
 ; Location ;                ;              ; SW[4]         ; PIN_AF14      ; QSF Assignment ;
 ; Location ;                ;              ; SW[5]         ; PIN_AD13      ; QSF Assignment ;
 ; Location ;                ;              ; SW[6]         ; PIN_AC13      ; QSF Assignment ;
@@ -583,8 +571,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 31 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 31 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 38 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 38 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -607,7 +595,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 28      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 35      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -615,7 +603,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
+The pin-out file can be found in C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/output_files/ex8.pin.
 
 
 +---------------------------------------------------------------------+
@@ -623,29 +611,29 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 12 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 3                     ;
+; Total logic elements                        ; 15 / 33,216 ( < 1 % ) ;
+;     -- Combinational with no register       ; 6                     ;
 ;     -- Register only                        ; 3                     ;
 ;     -- Combinational with a register        ; 6                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 3                     ;
-;     -- 3 input functions                    ; 5                     ;
+;     -- 4 input functions                    ; 5                     ;
+;     -- 3 input functions                    ; 6                     ;
 ;     -- <=2 input functions                  ; 1                     ;
 ;     -- Register only                        ; 3                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 9                     ;
+;     -- normal mode                          ; 12                    ;
 ;     -- arithmetic mode                      ; 0                     ;
 ;                                             ;                       ;
 ; Total registers*                            ; 9 / 34,593 ( < 1 % )  ;
 ;     -- Dedicated logic registers            ; 9 / 33,216 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )     ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 2 / 2,076 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 1 / 2,076 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 8 / 475 ( 2 % )       ;
-;     -- Clock pins                           ; 2 / 8 ( 25 % )        ;
+; I/O pins                                    ; 12 / 475 ( 3 % )      ;
+;     -- Clock pins                           ; 4 / 8 ( 50 % )        ;
 ;                                             ;                       ;
 ; Global signals                              ; 1                     ;
 ; M4Ks                                        ; 0 / 105 ( 0 % )       ;
@@ -660,9 +648,9 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
 ; Maximum fan-out                             ; 9                     ;
-; Highest non-global fan-out                  ; 5                     ;
-; Total fan-out                               ; 52                    ;
-; Average fan-out                             ; 1.58                  ;
+; Highest non-global fan-out                  ; 7                     ;
+; Total fan-out                               ; 63                    ;
+; Average fan-out                             ; 1.66                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -675,28 +663,28 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 12 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 3                    ; 0                              ;
+; Total logic elements                        ; 15 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 6                    ; 0                              ;
 ;     -- Register only                        ; 3                    ; 0                              ;
 ;     -- Combinational with a register        ; 6                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 3                    ; 0                              ;
-;     -- 3 input functions                    ; 5                    ; 0                              ;
+;     -- 4 input functions                    ; 5                    ; 0                              ;
+;     -- 3 input functions                    ; 6                    ; 0                              ;
 ;     -- <=2 input functions                  ; 1                    ; 0                              ;
 ;     -- Register only                        ; 3                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 9                    ; 0                              ;
+;     -- normal mode                          ; 12                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 9                    ; 0                              ;
 ;     -- Dedicated logic registers            ; 9 / 33216 ( < 1 % )  ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 2 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 1 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 8                    ; 0                              ;
+; I/O pins                                    ; 12                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )       ; 0 / 70 ( 0 % )                 ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
@@ -709,8 +697,8 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 52                   ; 0                              ;
-;     -- Registered Connections               ; 16                   ; 0                              ;
+;     -- Total Connections                    ; 63                   ; 0                              ;
+;     -- Registered Connections               ; 21                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -718,7 +706,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ;                                             ;                      ;                                ;
 ; Partition Interface                         ;                      ;                                ;
 ;     -- Input Ports                          ; 7                    ; 0                              ;
-;     -- Output Ports                         ; 1                    ; 0                              ;
+;     -- Output Ports                         ; 5                    ; 0                              ;
 ;     -- Bidir Ports                          ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Registered Ports                            ;                      ;                                ;
@@ -737,28 +725,32 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 +---------------------------------------------+----------------------+--------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                    ;
-+---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
-+---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; clk     ; P2    ; 1        ; 0            ; 18           ; 2           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; code[0] ; J11   ; 3        ; 27           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; code[1] ; D13   ; 3        ; 31           ; 36           ; 3           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; code[2] ; J10   ; 3        ; 27           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; code[3] ; F12   ; 3        ; 27           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; enter   ; B12   ; 3        ; 29           ; 36           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; reset   ; C13   ; 3        ; 31           ; 36           ; 2           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-+---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                     ;
++----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; KEY[2]   ; P23   ; 6        ; 65           ; 18           ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; KEY[3]   ; W26   ; 6        ; 65           ; 10           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[0]    ; N25   ; 5        ; 65           ; 19           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[1]    ; N26   ; 5        ; 65           ; 19           ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[2]    ; P25   ; 6        ; 65           ; 19           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[3]    ; AE14  ; 7        ; 33           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; clock_50 ; N2    ; 2        ; 0            ; 18           ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
++----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                        ;
-+------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
-+------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; lock ; G12   ; 3        ; 27           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-+------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                           ;
++---------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
++---------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; LEDG[0] ; AE22  ; 7        ; 59           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDR[0] ; AE23  ; 7        ; 63           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDR[1] ; AF23  ; 7        ; 63           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDR[2] ; AB21  ; 7        ; 63           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDR[3] ; AC22  ; 7        ; 63           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
++---------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
 +-----------------------------------------------------------+
@@ -766,13 +758,13 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 +----------+-----------------+---------------+--------------+
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
 +----------+-----------------+---------------+--------------+
-; 1        ; 1 / 64 ( 2 % )  ; 3.3V          ; --           ;
-; 2        ; 2 / 59 ( 3 % )  ; 3.3V          ; --           ;
-; 3        ; 7 / 56 ( 13 % ) ; 3.3V          ; --           ;
+; 1        ; 0 / 64 ( 0 % )  ; 3.3V          ; --           ;
+; 2        ; 3 / 59 ( 5 % )  ; 3.3V          ; --           ;
+; 3        ; 0 / 56 ( 0 % )  ; 3.3V          ; --           ;
 ; 4        ; 0 / 58 ( 0 % )  ; 3.3V          ; --           ;
-; 5        ; 0 / 65 ( 0 % )  ; 3.3V          ; --           ;
-; 6        ; 1 / 59 ( 2 % )  ; 3.3V          ; --           ;
-; 7        ; 0 / 58 ( 0 % )  ; 3.3V          ; --           ;
+; 5        ; 2 / 65 ( 3 % )  ; 3.3V          ; --           ;
+; 6        ; 4 / 59 ( 7 % )  ; 3.3V          ; --           ;
+; 7        ; 6 / 58 ( 10 % ) ; 3.3V          ; --           ;
 ; 8        ; 0 / 56 ( 0 % )  ; 3.3V          ; --           ;
 +----------+-----------------+---------------+--------------+
 
@@ -852,7 +844,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; AB18     ; 215        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB19     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB20     ; 225        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AB21     ; 242        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AB21     ; 242        ; 7        ; LEDR[2]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AB22     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB23     ; 258        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB24     ; 257        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -879,7 +871,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; AC19     ; 222        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC20     ; 226        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC21     ; 237        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC22     ; 241        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC22     ; 241        ; 7        ; LEDR[3]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AC23     ; 245        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AC24     ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC25     ; 260        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -923,7 +915,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; AE11     ; 174        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE12     ; 182        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE13     ; 183        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE14     ; 188        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; AE14     ; 188        ; 7        ; SW[3]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE15     ; 189        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE16     ; 200        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE17     ; 206        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -931,8 +923,8 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; AE19     ; 214        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE20     ; 224        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE21     ; 228        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE22     ; 236        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE23     ; 244        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE22     ; 236        ; 7        ; LEDG[0]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AE23     ; 244        ; 7        ; LEDR[0]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE24     ; 247        ; 6        ; ~LVDS150p/nCEO~                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AE25     ; 246        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AE26     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -957,7 +949,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; AF20     ; 223        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF21     ; 227        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF22     ; 235        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF23     ; 243        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF23     ; 243        ; 7        ; LEDR[1]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF24     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF25     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -971,7 +963,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; B9       ; 452        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B10      ; 448        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B11      ; 435        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B12      ; 433        ; 3        ; enter                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B12      ; 433        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B13      ; 429        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B14      ; 428        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B15      ; 420        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -998,7 +990,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; C10      ; 450        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C11      ; 436        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C12      ; 434        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C13      ; 431        ; 3        ; reset                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C13      ; 431        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C15      ; 421        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C16      ; 418        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1024,7 +1016,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; D10      ; 449        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ; 445        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D12      ; 443        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D13      ; 432        ; 3        ; code[1]                                  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D13      ; 432        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D14      ; 426        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D15      ; 417        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 415        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -1075,7 +1067,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; F9       ; 470        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F10      ; 462        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F11      ; 454        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F12      ; 440        ; 3        ; code[3]                                  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F12      ; 440        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F13      ; 423        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F14      ; 425        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F15      ; 409        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1101,7 +1093,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; G9       ; 471        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G10      ; 461        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G11      ; 446        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G12      ; 439        ; 3        ; lock                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G12      ; 439        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G13      ; 422        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G14      ; 424        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G15      ; 410        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1151,8 +1143,8 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; J7       ; 17         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J8       ; 16         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J9       ; 475        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J10      ; 438        ; 3        ; code[2]                                  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; J11      ; 437        ; 3        ; code[0]                                  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J10      ; 438        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J11      ; 437        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J12      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J13      ; 442        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J14      ; 441        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1247,7 +1239,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; M25      ; 312        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N1       ; 65         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; N2       ; 64         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; N2       ; 64         ; 2        ; clock_50                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N3       ; 62         ; 2        ; ^DATA0                                   ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; N4       ; 63         ; 2        ; ^nCE                                     ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -1270,10 +1262,10 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; N22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; N23      ; 311        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N24      ; 310        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; N25      ; 309        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; N26      ; 308        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; N25      ; 309        ; 5        ; SW[0]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; N26      ; 308        ; 5        ; SW[1]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P1       ; 68         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P2       ; 67         ; 1        ; clk                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P2       ; 67         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; P3       ; 69         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P4       ; 70         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P5       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -1294,9 +1286,9 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; P20      ; 301        ; 6        ; ^MSEL0                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P21      ; 300        ; 6        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P22      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; P23      ; 305        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P23      ; 305        ; 6        ; KEY[2]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P24      ; 304        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P25      ; 307        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; P25      ; 307        ; 6        ; SW[2]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P26      ; 306        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; R1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; R2       ; 71         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1427,7 +1419,7 @@ The pin-out file can be found in D:/github/DSD/ex8/output_files/ex8.pin.
 ; W23      ; 272        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W24      ; 271        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W25      ; 273        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W26      ; 274        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W26      ; 274        ; 6        ; KEY[3]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; Y1       ; 103        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y3       ; 108        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1495,101 +1487,114 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                     ;
-+-------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------+--------------+
-; Compilation Hierarchy Node    ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                        ; Library Name ;
-+-------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------+--------------+
-; |code_lock_simple             ; 12 (0)      ; 9 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 8    ; 0            ; 3 (0)        ; 3 (0)             ; 6 (0)            ; |code_lock_simple                          ; work         ;
-;    |code_lock_simple_fsm:fsm| ; 8 (8)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (5)            ; |code_lock_simple|code_lock_simple_fsm:fsm ; work         ;
-;    |synch:synchronizer|       ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 1 (1)            ; |code_lock_simple|synch:synchronizer       ; work         ;
-+-------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                       ;
++----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                 ; Library Name ;
++----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
+; |code_lock_simple_tester               ; 15 (0)      ; 9 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 12   ; 0            ; 6 (0)        ; 3 (0)             ; 6 (0)            ; |code_lock_simple_tester                                                            ; work         ;
+;    |code_lock_simple:code_lock_simple| ; 15 (0)      ; 9 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 3 (0)             ; 6 (0)            ; |code_lock_simple_tester|code_lock_simple:code_lock_simple                          ; work         ;
+;       |code_lock_simple_fsm:fsm|       ; 11 (11)     ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 5 (5)            ; |code_lock_simple_tester|code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm ; work         ;
+;       |synch:synchronizer|             ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 1 (1)            ; |code_lock_simple_tester|code_lock_simple:code_lock_simple|synch:synchronizer       ; work         ;
++----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------+
-; Delay Chain Summary                                                              ;
-+---------+----------+---------------+---------------+-----------------------+-----+
-; Name    ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
-+---------+----------+---------------+---------------+-----------------------+-----+
-; lock    ; Output   ; --            ; --            ; --                    ; --  ;
-; reset   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; code[1] ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; code[2] ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; code[3] ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; code[0] ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; clk     ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; enter   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-+---------+----------+---------------+---------------+-----------------------+-----+
++-----------------------------------------------------------------------------------+
+; Delay Chain Summary                                                               ;
++----------+----------+---------------+---------------+-----------------------+-----+
+; Name     ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++----------+----------+---------------+---------------+-----------------------+-----+
+; LEDR[0]  ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDR[1]  ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDR[2]  ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDR[3]  ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDG[0]  ; Output   ; --            ; --            ; --                    ; --  ;
+; KEY[2]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; KEY[3]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; SW[2]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[3]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[0]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[1]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; clock_50 ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
++----------+----------+---------------+---------------+-----------------------+-----+
 
 
-+---------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                  ;
-+---------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                               ; Pad To Core Index ; Setting ;
-+---------------------------------------------------+-------------------+---------+
-; reset                                             ;                   ;         ;
-; code[1]                                           ;                   ;         ;
-; code[2]                                           ;                   ;         ;
-;      - code_lock_simple_fsm:fsm|Equal1~0          ; 0                 ; 6       ;
-; code[3]                                           ;                   ;         ;
-;      - code_lock_simple_fsm:fsm|Equal1~0          ; 1                 ; 6       ;
-; code[0]                                           ;                   ;         ;
-;      - code_lock_simple_fsm:fsm|Equal1~0          ; 0                 ; 6       ;
-; clk                                               ;                   ;         ;
-; enter                                             ;                   ;         ;
-;      - synch:synchronizer|\sync1:resync[1]~feeder ; 0                 ; 6       ;
-+---------------------------------------------------+-------------------+---------+
++-------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                    ;
++-------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                 ; Pad To Core Index ; Setting ;
++-------------------------------------------------------------------------------------+-------------------+---------+
+; KEY[2]                                                                              ;                   ;         ;
+;      - code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~7   ; 1                 ; 6       ;
+;      - code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~8   ; 1                 ; 6       ;
+;      - code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~10  ; 1                 ; 6       ;
+;      - code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~11  ; 1                 ; 6       ;
+;      - code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~13  ; 1                 ; 6       ;
+;      - code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~14  ; 1                 ; 6       ;
+;      - LEDR[0]                                                                      ; 1                 ; 6       ;
+; KEY[3]                                                                              ;                   ;         ;
+;      - LEDR[1]                                                                      ; 0                 ; 6       ;
+;      - code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[1]~feeder ; 0                 ; 6       ;
+; SW[2]                                                                               ;                   ;         ;
+; SW[3]                                                                               ;                   ;         ;
+; SW[0]                                                                               ;                   ;         ;
+; SW[1]                                                                               ;                   ;         ;
+; clock_50                                                                            ;                   ;         ;
++-------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                  ;
-+------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
-; Name ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
-; clk  ; PIN_P2   ; 9       ; Clock ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-+------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                      ;
++----------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; Name     ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; clock_50 ; PIN_N2   ; 9       ; Clock ; yes    ; Global Clock         ; GCLK2            ; --                        ;
++----------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                     ;
-+------+----------+---------+----------------------+------------------+---------------------------+
-; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------+----------+---------+----------------------+------------------+---------------------------+
-; clk  ; PIN_P2   ; 9       ; Global Clock         ; GCLK3            ; --                        ;
-+------+----------+---------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                         ;
++----------+----------+---------+----------------------+------------------+---------------------------+
+; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------+----------+---------+----------------------+------------------+---------------------------+
+; clock_50 ; PIN_N2   ; 9       ; Global Clock         ; GCLK2            ; --                        ;
++----------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                            ;
-+--------------------------------------------------+---------+
-; Name                                             ; Fan-Out ;
-+--------------------------------------------------+---------+
-; reset                                            ; 5       ;
-; code[1]                                          ; 3       ;
-; synch:synchronizer|fall                          ; 3       ;
-; code_lock_simple_fsm:fsm|Equal1~0                ; 3       ;
-; code_lock_simple_fsm:fsm|present_state.idle      ; 2       ;
-; synch:synchronizer|\sync1:resync[2]              ; 2       ;
-; code_lock_simple_fsm:fsm|present_state.Ev_code1  ; 2       ;
-; code_lock_simple_fsm:fsm|present_state.get_code2 ; 2       ;
-; code_lock_simple_fsm:fsm|present_state.Ev_code2  ; 2       ;
-; enter                                            ; 1       ;
-; code[0]                                          ; 1       ;
-; code[3]                                          ; 1       ;
-; code[2]                                          ; 1       ;
-; code_lock_simple_fsm:fsm|present_state~13        ; 1       ;
-; code_lock_simple_fsm:fsm|present_state~12        ; 1       ;
-; code_lock_simple_fsm:fsm|present_state~11        ; 1       ;
-; synch:synchronizer|\sync1:resync[1]              ; 1       ;
-; code_lock_simple_fsm:fsm|present_state~10        ; 1       ;
-; synch:synchronizer|fall~0                        ; 1       ;
-; synch:synchronizer|\sync1:resync[3]              ; 1       ;
-; code_lock_simple_fsm:fsm|present_state~9         ; 1       ;
-; code_lock_simple_fsm:fsm|present_state~8         ; 1       ;
-; code_lock_simple_fsm:fsm|present_state~7         ; 1       ;
-; code_lock_simple_fsm:fsm|present_state.Unlocked  ; 1       ;
-+--------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                              ;
++------------------------------------------------------------------------------------+---------+
+; Name                                                                               ; Fan-Out ;
++------------------------------------------------------------------------------------+---------+
+; KEY[2]                                                                             ; 7       ;
+; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; 5       ;
+; SW[1]                                                                              ; 3       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; 3       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; 3       ;
+; SW[0]                                                                              ; 2       ;
+; SW[3]                                                                              ; 2       ;
+; SW[2]                                                                              ; 2       ;
+; KEY[3]                                                                             ; 2       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; 2       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; 2       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; 2       ;
+; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; 2       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~8         ; 2       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~17        ; 1       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~16        ; 1       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~15        ; 1       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~14        ; 1       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~13        ; 1       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~12        ; 1       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~11        ; 1       ;
+; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[1]              ; 1       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~10        ; 1       ;
+; code_lock_simple:code_lock_simple|synch:synchronizer|fall~0                        ; 1       ;
+; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ; 1       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~9         ; 1       ;
+; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state~7         ; 1       ;
++------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -1597,58 +1602,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 12 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 0 / 3,315 ( 0 % )     ;
-; C4 interconnects            ; 7 / 60,840 ( < 1 % )  ;
+; Block interconnects         ; 14 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 2 / 3,315 ( < 1 % )   ;
+; C4 interconnects            ; 16 / 60,840 ( < 1 % ) ;
 ; Direct links                ; 5 / 94,460 ( < 1 % )  ;
 ; Global clocks               ; 1 / 16 ( 6 % )        ;
-; Local interconnects         ; 9 / 33,216 ( < 1 % )  ;
-; R24 interconnects           ; 0 / 3,091 ( 0 % )     ;
-; R4 interconnects            ; 2 / 81,294 ( < 1 % )  ;
+; Local interconnects         ; 13 / 33,216 ( < 1 % ) ;
+; R24 interconnects           ; 1 / 3,091 ( < 1 % )   ;
+; R4 interconnects            ; 4 / 81,294 ( < 1 % )  ;
 +-----------------------------+-----------------------+
 
 
-+--------------------------------------------------------------------------+
-; LAB Logic Elements                                                       ;
-+--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 6.00) ; Number of LABs  (Total = 2) ;
-+--------------------------------------------+-----------------------------+
-; 1                                          ; 1                           ;
-; 2                                          ; 0                           ;
-; 3                                          ; 0                           ;
-; 4                                          ; 0                           ;
-; 5                                          ; 0                           ;
-; 6                                          ; 0                           ;
-; 7                                          ; 0                           ;
-; 8                                          ; 0                           ;
-; 9                                          ; 0                           ;
-; 10                                         ; 0                           ;
-; 11                                         ; 1                           ;
-; 12                                         ; 0                           ;
-; 13                                         ; 0                           ;
-; 14                                         ; 0                           ;
-; 15                                         ; 0                           ;
-; 16                                         ; 0                           ;
-+--------------------------------------------+-----------------------------+
++---------------------------------------------------------------------------+
+; LAB Logic Elements                                                        ;
++---------------------------------------------+-----------------------------+
+; Number of Logic Elements  (Average = 15.00) ; Number of LABs  (Total = 1) ;
++---------------------------------------------+-----------------------------+
+; 1                                           ; 0                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 0                           ;
+; 5                                           ; 0                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 0                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 1                           ;
+; 16                                          ; 0                           ;
++---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 2) ;
+; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 1) ;
 +------------------------------------+-----------------------------+
-; 1 Clock                            ; 2                           ;
+; 1 Clock                            ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 10.50) ; Number of LABs  (Total = 2) ;
+; Number of Signals Sourced  (Average = 22.00) ; Number of LABs  (Total = 1) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
-; 2                                            ; 1                           ;
+; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
 ; 5                                            ; 0                           ;
@@ -1665,28 +1670,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 16                                           ; 0                           ;
 ; 17                                           ; 0                           ;
 ; 18                                           ; 0                           ;
-; 19                                           ; 1                           ;
+; 19                                           ; 0                           ;
+; 20                                           ; 0                           ;
+; 21                                           ; 0                           ;
+; 22                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 1.00) ; Number of LABs  (Total = 2) ;
+; Number of Signals Sourced Out  (Average = 1.00) ; Number of LABs  (Total = 1) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 2                           ;
+; 1                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 4.50) ; Number of LABs  (Total = 2) ;
+; Number of Distinct Inputs  (Average = 7.00) ; Number of LABs  (Total = 1) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
-; 2                                           ; 1                           ;
+; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
@@ -1740,36 +1748,14 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location E3
     Info (169125): Pin ~nCSO~ is reserved at location D3
     Info (169125): Pin ~LVDS150p/nCEO~ is reserved at location AE24
-Critical Warning (169085): No exact pin location assignment(s) for 8 pins of 8 total pins
-    Info (169086): Pin lock not assigned to an exact location on the device
-    Info (169086): Pin reset not assigned to an exact location on the device
-    Info (169086): Pin code[1] not assigned to an exact location on the device
-    Info (169086): Pin code[2] not assigned to an exact location on the device
-    Info (169086): Pin code[3] not assigned to an exact location on the device
-    Info (169086): Pin code[0] not assigned to an exact location on the device
-    Info (169086): Pin clk not assigned to an exact location on the device
-    Info (169086): Pin enter not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ex8.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk (placed in PIN P2 (CLK2, LVDSCLK1p, Input))
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+Info (176353): Automatically promoted node clock_50 (placed in PIN N2 (CLK0, LVDSCLK0p, Input))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 7 (unused VREF, 3.3V VCCIO, 6 input, 1 output, 0 bidirectional)
-        Info (176212): I/O standards used: 3.3-V LVTTL.
-Info (176215): I/O bank details before I/O pin placement
-    Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  63 pins available
-        Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  57 pins available
-        Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
-        Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
-        Info (176213): I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  65 pins available
-        Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  58 pins available
-        Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
-        Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "AUD_ADCDAT" is assigned to location or region, but does not exist in design
     Warning (15706): Node "AUD_ADCLRCK" is assigned to location or region, but does not exist in design
@@ -1778,7 +1764,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "AUD_DACLRCK" is assigned to location or region, but does not exist in design
     Warning (15706): Node "AUD_XCK" is assigned to location or region, but does not exist in design
     Warning (15706): Node "CLOCK_27" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "CLOCK_50" is assigned to location or region, but does not exist in design
     Warning (15706): Node "DRAM_ADDR[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "DRAM_ADDR[10]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "DRAM_ADDR[11]" is assigned to location or region, but does not exist in design
@@ -2009,8 +1994,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "IRDA_TXD" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "KEY[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "KEY[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_BLON" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_DATA[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_DATA[1]" is assigned to location or region, but does not exist in design
@@ -2024,7 +2007,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LCD_ON" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_RS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_RW" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDG[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDG[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDG[3]" is assigned to location or region, but does not exist in design
@@ -2033,7 +2015,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LEDG[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDG[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDG[8]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDR[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[10]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[11]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[12]" is assigned to location or region, but does not exist in design
@@ -2042,9 +2023,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LEDR[15]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[16]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[17]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDR[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDR[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDR[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[4]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[5]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[6]" is assigned to location or region, but does not exist in design
@@ -2126,7 +2104,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "SRAM_OE_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SRAM_UB_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SRAM_WE_N" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[10]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[11]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[12]" is assigned to location or region, but does not exist in design
@@ -2135,9 +2112,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "SW[15]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[16]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[17]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[4]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[5]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[6]" is assigned to location or region, but does not exist in design
@@ -2196,7 +2170,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[9]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -2204,31 +2178,35 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y24 to location X32_Y36
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X55_Y12 to location X65_Y23
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 1 output pins without output pin load capacitance assignment
-    Info (306007): Pin "lock" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Warning (306006): Found 5 output pins without output pin load capacitance assignment
+    Info (306007): Pin "LEDR[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDR[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDR[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDR[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDG[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file D:/github/DSD/ex8/output_files/ex8.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 433 warnings
-    Info: Peak virtual memory: 4878 megabytes
-    Info: Processing ended: Fri Dec 02 14:47:23 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:04
+Info (144001): Generated suppressed messages file C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/output_files/ex8.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 420 warnings
+    Info: Peak virtual memory: 4871 megabytes
+    Info: Processing ended: Tue Dec 06 13:37:31 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/github/DSD/ex8/output_files/ex8.fit.smsg.
+The suppressed messages can be found in C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/output_files/ex8.fit.smsg.
 
 

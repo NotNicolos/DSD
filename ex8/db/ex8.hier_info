@@ -1,4 +1,21 @@
-|Code_lock_simple
+|code_lock_simple_tester
+clock_50 => code_lock_simple:code_lock_simple.clk
+SW[0] => code_lock_simple:code_lock_simple.code[0]
+SW[1] => code_lock_simple:code_lock_simple.code[1]
+SW[2] => code_lock_simple:code_lock_simple.code[2]
+SW[3] => code_lock_simple:code_lock_simple.code[3]
+KEY[2] => code_lock_simple:code_lock_simple.reset
+KEY[2] => LEDR[0].DATAIN
+KEY[3] => code_lock_simple:code_lock_simple.enter
+KEY[3] => LEDR[1].DATAIN
+LEDR[0] <= KEY[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= KEY[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDG[0] <= code_lock_simple:code_lock_simple.lock
+
+
+|code_lock_simple_tester|code_lock_simple:code_lock_simple
 clk => synch:synchronizer.clk
 clk => code_lock_simple_fsm:fsm.clk
 reset => code_lock_simple_fsm:fsm.reset
@@ -10,7 +27,7 @@ enter => synch:synchronizer.async_sig
 lock <= code_lock_simple_fsm:fsm.lock
 
 
-|Code_lock_simple|synch:synchronizer
+|code_lock_simple_tester|code_lock_simple:code_lock_simple|synch:synchronizer
 async_sig => \sync1:resync[1].DATAIN
 clk => fall~reg0.CLK
 clk => rise~reg0.CLK
@@ -21,13 +38,13 @@ rise <= rise~reg0.DB_MAX_OUTPUT_PORT_TYPE
 fall <= fall~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Code_lock_simple|code_lock_simple_fsm:fsm
-clk => present_state~9.DATAIN
-reset => present_state~0.OUTPUTSELECT
-reset => present_state~1.OUTPUTSELECT
-reset => present_state~2.OUTPUTSELECT
-reset => present_state~3.OUTPUTSELECT
-reset => present_state~4.OUTPUTSELECT
+|code_lock_simple_tester|code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm
+clk => present_state~1.DATAIN
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
 code[0] => Equal0.IN1
 code[0] => Equal1.IN0
 code[1] => Equal0.IN0
@@ -36,10 +53,12 @@ code[2] => Equal0.IN3
 code[2] => Equal1.IN2
 code[3] => Equal0.IN2
 code[3] => Equal1.IN1
+enter => Selector0.IN4
 enter => next_state.Ev_code1.DATAB
 enter => next_state.Ev_code2.DATAB
 enter => Selector0.IN1
-enter => Selector0.IN2
-lock <= lock~0.DB_MAX_OUTPUT_PORT_TYPE
+enter => Selector1.IN1
+enter => Selector2.IN1
+lock <= lock.DB_MAX_OUTPUT_PORT_TYPE
 
 
