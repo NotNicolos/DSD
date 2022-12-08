@@ -1,8 +1,9 @@
 
-State Machine - |code_lock_simple_tester|code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state
-Name present_state.Unlocked present_state.Ev_code2 present_state.get_code2 present_state.Ev_code1 present_state.idle 
-present_state.idle 0 0 0 0 0 
-present_state.Ev_code1 0 0 0 1 1 
-present_state.get_code2 0 0 1 0 1 
-present_state.Ev_code2 0 1 0 0 1 
-present_state.Unlocked 1 0 0 0 1 
+State Machine - |Code_lock|code_lock_simple_fsm:clf0|present_state
+Name present_state.err_state present_state.Unlocked present_state.Ev_code2 present_state.get_code2 present_state.Ev_code1 present_state.idle 
+present_state.idle 0 0 0 0 0 0 
+present_state.Ev_code1 0 0 0 0 1 1 
+present_state.get_code2 0 0 0 1 0 1 
+present_state.Ev_code2 0 0 1 0 0 1 
+present_state.Unlocked 0 1 0 0 0 1 
+present_state.err_state 1 0 0 0 0 1 

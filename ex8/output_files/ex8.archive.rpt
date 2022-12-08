@@ -1,5 +1,5 @@
 Archive Project report for ex8
-Fri Dec 02 15:57:02 2022
+Thu Dec 08 11:02:35 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -35,9 +35,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Fri Dec 02 15:57:02 2022 ;
+; Archive Project Status ; Successful - Thu Dec 08 11:02:35 2022 ;
 ; Revision Name          ; ex8                                   ;
-; Top-level Entity Name  ; Code_lock_simple                      ;
+; Top-level Entity Name  ; wrong_code_tester                     ;
 ; Family                 ; Cyclone II                            ;
 +------------------------+---------------------------------------+
 
@@ -50,34 +50,38 @@ Info: File Set 'Source control' contains:
     Info: Automatically detected source files
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/output_files/ex8.qar'
+Info: Generated archive 'C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/ex8 - Wrong_code fejl.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'ex8.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/altera/13.0sp1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4450 megabytes
-    Info: Processing ended: Fri Dec 02 15:57:02 2022
+    Info: Peak virtual memory: 4449 megabytes
+    Info: Processing ended: Thu Dec 08 11:02:35 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
-+-------------------------------------------------------------------------------------+
-; Files Archived                                                                      ;
-+-------------------------------------------------------------------------------------+
-; File Name                                                                           ;
-+-------------------------------------------------------------------------------------+
-; c:/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf                             ;
-; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/output_files/WaveformLockTest.vwf ;
-; Code_lock_simple.vhd                                                                ;
-; Code_lock_simple_fsm.vhd                                                            ;
-; code_lock_tester.vhd                                                                ;
-; db/ex8.sim.vwf                                                                      ;
-; ex8.qpf                                                                             ;
-; ex8.qsf                                                                             ;
-; incremental_db/compiled_partitions/ex8.db_info                                      ;
-; output_files/WaveformLockTest.vwf                                                   ;
-; synch.vhd                                                                           ;
-+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------+
+; Files Archived                                                  ;
++-----------------------------------------------------------------+
+; File Name                                                       ;
++-----------------------------------------------------------------+
+; c:/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf         ;
+; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8/Waveform2.vwf ;
+; Code_lock.vhdl                                                  ;
+; Code_lock_simple_fsm.vhd                                        ;
+; db/ex8.sim.vwf                                                  ;
+; ex8.qpf                                                         ;
+; ex8.qsf                                                         ;
+; incremental_db/compiled_partitions/ex8.db_info                  ;
+; output_files/Chain1.cdf                                         ;
+; output_files/WaveformLockTest.vwf                               ;
+; synch.vhd                                                       ;
+; Waveform1.vwf                                                   ;
+; Waveform2.vwf                                                   ;
+; wrong_code.vhd                                                  ;
+; wrong_code_tester.vhd                                           ;
++-----------------------------------------------------------------+
 
 

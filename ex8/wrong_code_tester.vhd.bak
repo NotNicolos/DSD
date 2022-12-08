@@ -1,0 +1,38 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+USE work.ALL;
+
+ENTITY Code_lock IS
+	PORT (
+	
+		clock_50 : IN STD_LOGIC;
+		--SW : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 2); -- til err_event
+		LEDR : OUT STD_LOGIC_VECTOR(2 downto 0)
+--		clk : IN STD_LOGIC;
+--		reset : IN STD_LOGIC;
+--		enter : IN STD_LOGIC;
+--		code : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+--		lock : OUT STD_LOGIC)
+	;
+END;
+
+ARCHITECTURE Code_lock_impl OF Code_lock IS
+	SIGNAL Enter_rising : STD_LOGIC;
+	signal failed_sig : STD_LOGIC;
+	signal err_event_sig : STD_LOGIC;
+BEGIN
+	wc0 : ENTITY work.wrong_code
+		PORT MAP
+		(
+			-- Input ports
+			clk => clk,
+			reset => reset,
+			err_event => err_event_sig,
+			-- Output ports,
+			failed => failed_sig
+		);
+
+		
+end Code_lock_impl;

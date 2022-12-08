@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ex8
-Tue Dec 06 13:37:37 2022
+Thu Dec 08 10:49:10 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -23,35 +23,29 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  15. Hold Times
  16. Clock to Output Times
  17. Minimum Clock to Output Times
- 18. Propagation Delay
- 19. Minimum Propagation Delay
- 20. Fast Model Setup Summary
- 21. Fast Model Hold Summary
- 22. Fast Model Recovery Summary
- 23. Fast Model Removal Summary
- 24. Fast Model Minimum Pulse Width Summary
- 25. Fast Model Setup: 'clock_50'
- 26. Fast Model Hold: 'clock_50'
- 27. Fast Model Minimum Pulse Width: 'clock_50'
- 28. Setup Times
- 29. Hold Times
- 30. Clock to Output Times
- 31. Minimum Clock to Output Times
- 32. Propagation Delay
- 33. Minimum Propagation Delay
- 34. Multicorner Timing Analysis Summary
- 35. Setup Times
- 36. Hold Times
- 37. Clock to Output Times
- 38. Minimum Clock to Output Times
- 39. Progagation Delay
- 40. Minimum Progagation Delay
- 41. Setup Transfers
- 42. Hold Transfers
- 43. Report TCCS
- 44. Report RSKM
- 45. Unconstrained Paths
- 46. TimeQuest Timing Analyzer Messages
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clock_50'
+ 24. Fast Model Hold: 'clock_50'
+ 25. Fast Model Minimum Pulse Width: 'clock_50'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
 
 
 
@@ -107,23 +101,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow Model Fmax Summary                                                                                   ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 629.72 MHz ; 420.17 MHz      ; clock_50   ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                    ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 1109.88 MHz ; 420.17 MHz      ; clock_50   ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-----------------------------------+
-; Slow Model Setup Summary          ;
-+----------+--------+---------------+
-; Clock    ; Slack  ; End Point TNS ;
-+----------+--------+---------------+
-; clock_50 ; -0.588 ; -1.344        ;
-+----------+--------+---------------+
++----------------------------------+
+; Slow Model Setup Summary         ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; clock_50 ; 0.099 ; 0.000         ;
++----------+-------+---------------+
 
 
 +----------------------------------+
@@ -131,7 +125,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+---------------+
 ; Clock    ; Slack ; End Point TNS ;
 +----------+-------+---------------+
-; clock_50 ; 0.520 ; 0.000         ;
+; clock_50 ; 0.391 ; 0.000         ;
 +----------+-------+---------------+
 
 
@@ -152,129 +146,73 @@ No paths to report.
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; clock_50 ; -1.380 ; -10.380            ;
+; clock_50 ; -1.380 ; -4.380             ;
 +----------+--------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'clock_50'                                                                                                                                                                                                                           ;
-+--------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                                                                          ; To Node                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.588 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.624      ;
-; -0.444 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.480      ;
-; -0.299 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.335      ;
-; -0.291 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.327      ;
-; -0.288 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.324      ;
-; -0.171 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.207      ;
-; -0.169 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.205      ;
-; -0.166 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.202      ;
-; -0.089 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.125      ;
-; -0.088 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.124      ;
-; -0.064 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.100      ;
-; -0.047 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 1.083      ;
-; 0.097  ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.939      ;
-; 0.099  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.937      ;
-; 0.100  ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[1]              ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.936      ;
-; 0.102  ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.934      ;
-; 0.103  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.933      ;
-; 0.240  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.796      ;
-; 0.250  ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.786      ;
-+--------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock_50'                                                                                                                            ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.099 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|\counter_proc:cnt[0] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.937      ;
+; 0.113 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|failed               ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.923      ;
+; 0.247 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|\counter_proc:cnt[1] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.789      ;
+; 0.248 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|failed               ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.788      ;
+; 0.379 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|\counter_proc:cnt[0] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|\counter_proc:cnt[1] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.657      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Hold: 'clock_50'                                                                                                                                                                                                                           ;
-+-------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                                          ; To Node                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.520 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.786      ;
-; 0.530 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.796      ;
-; 0.667 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.933      ;
-; 0.668 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.934      ;
-; 0.670 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[1]              ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.936      ;
-; 0.671 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.937      ;
-; 0.673 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.939      ;
-; 0.784 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.050      ;
-; 0.817 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.083      ;
-; 0.834 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.100      ;
-; 0.858 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.124      ;
-; 0.859 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.125      ;
-; 0.936 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.202      ;
-; 0.941 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.207      ;
-; 1.058 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.324      ;
-; 1.061 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.327      ;
-; 1.069 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.335      ;
-; 1.214 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.480      ;
-; 1.358 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.624      ;
-+-------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock_50'                                                                                                                             ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|\counter_proc:cnt[1] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|\counter_proc:cnt[0] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.522 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|failed               ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.788      ;
+; 0.523 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|\counter_proc:cnt[1] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.789      ;
+; 0.657 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|failed               ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.923      ;
+; 0.671 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|\counter_proc:cnt[0] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.937      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'clock_50'                                                                                                                             ;
-+--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                                             ;
-+--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------+
-; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock_50 ; Rise       ; clock_50                                                                           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[1]              ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[1]              ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50|combout                                                                   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50|combout                                                                   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50~clkctrl|inclk[0]                                                          ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50~clkctrl|inclk[0]                                                          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50~clkctrl|outclk                                                            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50~clkctrl|outclk                                                            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Ev_code1|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Ev_code1|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Ev_code2|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Ev_code2|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Unlocked|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Unlocked|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.get_code2|clk                                   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.get_code2|clk                                   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.idle|clk                                        ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.idle|clk                                        ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[1]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[1]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[2]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[2]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[3]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[3]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|synchronizer|fall|clk                                             ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|synchronizer|fall|clk                                             ;
-+--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock_50'                                                                              ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock_50 ; Rise       ; clock_50                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; wrong_code:wc0|\counter_proc:cnt[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wrong_code:wc0|\counter_proc:cnt[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; wrong_code:wc0|\counter_proc:cnt[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wrong_code:wc0|\counter_proc:cnt[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; wrong_code:wc0|failed               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wrong_code:wc0|failed               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50~clkctrl|inclk[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50~clkctrl|inclk[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50~clkctrl|outclk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50~clkctrl|outclk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; wc0|\counter_proc:cnt[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wc0|\counter_proc:cnt[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; wc0|\counter_proc:cnt[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wc0|\counter_proc:cnt[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; wc0|failed|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wc0|failed|clk                      ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Setup Times                                                             ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; KEY[*]    ; clock_50   ; 4.321  ; 4.321  ; Rise       ; clock_50        ;
-;  KEY[2]   ; clock_50   ; 4.321  ; 4.321  ; Rise       ; clock_50        ;
-;  KEY[3]   ; clock_50   ; 3.727  ; 3.727  ; Rise       ; clock_50        ;
-; SW[*]     ; clock_50   ; 2.110  ; 2.110  ; Rise       ; clock_50        ;
-;  SW[0]    ; clock_50   ; 0.296  ; 0.296  ; Rise       ; clock_50        ;
-;  SW[1]    ; clock_50   ; -0.596 ; -0.596 ; Rise       ; clock_50        ;
-;  SW[2]    ; clock_50   ; 0.161  ; 0.161  ; Rise       ; clock_50        ;
-;  SW[3]    ; clock_50   ; 2.110  ; 2.110  ; Rise       ; clock_50        ;
-+-----------+------------+--------+--------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; clock_50   ; 3.469 ; 3.469 ; Rise       ; clock_50        ;
+;  KEY[3]   ; clock_50   ; 3.469 ; 3.469 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +-------------------------------------------------------------------------+
@@ -282,14 +220,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; KEY[*]    ; clock_50   ; -3.223 ; -3.223 ; Rise       ; clock_50        ;
-;  KEY[2]   ; clock_50   ; -3.223 ; -3.223 ; Rise       ; clock_50        ;
-;  KEY[3]   ; clock_50   ; -3.497 ; -3.497 ; Rise       ; clock_50        ;
-; SW[*]     ; clock_50   ; 1.106  ; 1.106  ; Rise       ; clock_50        ;
-;  SW[0]    ; clock_50   ; 0.357  ; 0.357  ; Rise       ; clock_50        ;
-;  SW[1]    ; clock_50   ; 1.106  ; 1.106  ; Rise       ; clock_50        ;
-;  SW[2]    ; clock_50   ; 0.489  ; 0.489  ; Rise       ; clock_50        ;
-;  SW[3]    ; clock_50   ; -1.455 ; -1.455 ; Rise       ; clock_50        ;
+; KEY[*]    ; clock_50   ; -3.211 ; -3.211 ; Rise       ; clock_50        ;
+;  KEY[3]   ; clock_50   ; -3.211 ; -3.211 ; Rise       ; clock_50        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -298,8 +230,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; clock_50   ; 7.923 ; 7.923 ; Rise       ; clock_50        ;
-;  LEDG[0]  ; clock_50   ; 7.923 ; 7.923 ; Rise       ; clock_50        ;
+; LEDR[*]   ; clock_50   ; 6.709 ; 6.709 ; Rise       ; clock_50        ;
+;  LEDR[2]  ; clock_50   ; 6.709 ; 6.709 ; Rise       ; clock_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -308,29 +240,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; clock_50   ; 7.923 ; 7.923 ; Rise       ; clock_50        ;
-;  LEDG[0]  ; clock_50   ; 7.923 ; 7.923 ; Rise       ; clock_50        ;
+; LEDR[*]   ; clock_50   ; 6.709 ; 6.709 ; Rise       ; clock_50        ;
+;  LEDR[2]  ; clock_50   ; 6.709 ; 6.709 ; Rise       ; clock_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
-
-
-+----------------------------------------------------+
-; Propagation Delay                                  ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; KEY[2]     ; LEDR[0]     ; 9.589 ;    ;    ; 9.589 ;
-; KEY[3]     ; LEDR[1]     ; 8.971 ;    ;    ; 8.971 ;
-+------------+-------------+-------+----+----+-------+
-
-
-+----------------------------------------------------+
-; Minimum Propagation Delay                          ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; KEY[2]     ; LEDR[0]     ; 9.589 ;    ;    ; 9.589 ;
-; KEY[3]     ; LEDR[1]     ; 8.971 ;    ;    ; 8.971 ;
-+------------+-------------+-------+----+----+-------+
 
 
 +----------------------------------+
@@ -338,7 +250,7 @@ No paths to report.
 +----------+-------+---------------+
 ; Clock    ; Slack ; End Point TNS ;
 +----------+-------+---------------+
-; clock_50 ; 0.289 ; 0.000         ;
+; clock_50 ; 0.565 ; 0.000         ;
 +----------+-------+---------------+
 
 
@@ -347,7 +259,7 @@ No paths to report.
 +----------+-------+---------------+
 ; Clock    ; Slack ; End Point TNS ;
 +----------+-------+---------------+
-; clock_50 ; 0.239 ; 0.000         ;
+; clock_50 ; 0.215 ; 0.000         ;
 +----------+-------+---------------+
 
 
@@ -368,129 +280,73 @@ No paths to report.
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; clock_50 ; -1.380 ; -10.380            ;
+; clock_50 ; -1.380 ; -4.380             ;
 +----------+--------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'clock_50'                                                                                                                                                                                                                          ;
-+-------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                                          ; To Node                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.289 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.743      ;
-; 0.356 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.676      ;
-; 0.392 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.640      ;
-; 0.395 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.637      ;
-; 0.411 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.621      ;
-; 0.460 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.572      ;
-; 0.464 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.568      ;
-; 0.464 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.568      ;
-; 0.468 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.564      ;
-; 0.470 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.562      ;
-; 0.497 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.535      ;
-; 0.509 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.523      ;
-; 0.547 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.485      ;
-; 0.548 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[1]              ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.484      ;
-; 0.568 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.464      ;
-; 0.578 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.454      ;
-; 0.581 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.451      ;
-; 0.633 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.399      ;
-; 0.641 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.391      ;
-+-------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock_50'                                                                                                                            ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.565 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|failed               ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.467      ;
+; 0.568 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|\counter_proc:cnt[0] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.464      ;
+; 0.638 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|\counter_proc:cnt[1] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.394      ;
+; 0.639 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|failed               ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|\counter_proc:cnt[0] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|\counter_proc:cnt[1] ; clock_50     ; clock_50    ; 1.000        ; 0.000      ; 0.367      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Hold: 'clock_50'                                                                                                                                                                                                                           ;
-+-------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                                          ; To Node                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.239 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.391      ;
-; 0.247 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.399      ;
-; 0.299 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.451      ;
-; 0.302 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.454      ;
-; 0.312 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.464      ;
-; 0.332 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[1]              ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.484      ;
-; 0.333 ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.485      ;
-; 0.370 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.522      ;
-; 0.371 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.523      ;
-; 0.383 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.535      ;
-; 0.410 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.562      ;
-; 0.412 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.564      ;
-; 0.416 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.568      ;
-; 0.420 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.572      ;
-; 0.469 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.621      ;
-; 0.485 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.637      ;
-; 0.488 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.640      ;
-; 0.524 ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.676      ;
-; 0.591 ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.743      ;
-+-------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock_50'                                                                                                                             ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|\counter_proc:cnt[1] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|\counter_proc:cnt[0] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|failed               ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; wrong_code:wc0|\counter_proc:cnt[0] ; wrong_code:wc0|\counter_proc:cnt[1] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.394      ;
+; 0.312 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|\counter_proc:cnt[0] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.464      ;
+; 0.315 ; wrong_code:wc0|\counter_proc:cnt[1] ; wrong_code:wc0|failed               ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.467      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'clock_50'                                                                                                                             ;
-+--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                                             ;
-+--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------+
-; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock_50 ; Rise       ; clock_50                                                                           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code1  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Ev_code2  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.Unlocked  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.get_code2 ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm|present_state.idle      ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[1]              ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[1]              ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[2]              ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|\sync1:resync[3]              ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple:code_lock_simple|synch:synchronizer|fall                          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50|combout                                                                   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50|combout                                                                   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50~clkctrl|inclk[0]                                                          ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50~clkctrl|inclk[0]                                                          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50~clkctrl|outclk                                                            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50~clkctrl|outclk                                                            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Ev_code1|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Ev_code1|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Ev_code2|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Ev_code2|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Unlocked|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.Unlocked|clk                                    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.get_code2|clk                                   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.get_code2|clk                                   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.idle|clk                                        ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|fsm|present_state.idle|clk                                        ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[1]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[1]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[2]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[2]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[3]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|synchronizer|\sync1:resync[3]|clk                                 ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; code_lock_simple|synchronizer|fall|clk                                             ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; code_lock_simple|synchronizer|fall|clk                                             ;
-+--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock_50'                                                                              ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock_50 ; Rise       ; clock_50                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; wrong_code:wc0|\counter_proc:cnt[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wrong_code:wc0|\counter_proc:cnt[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; wrong_code:wc0|\counter_proc:cnt[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wrong_code:wc0|\counter_proc:cnt[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; wrong_code:wc0|failed               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wrong_code:wc0|failed               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50~clkctrl|inclk[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50~clkctrl|inclk[0]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; clock_50~clkctrl|outclk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; clock_50~clkctrl|outclk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; wc0|\counter_proc:cnt[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wc0|\counter_proc:cnt[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; wc0|\counter_proc:cnt[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wc0|\counter_proc:cnt[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50 ; Rise       ; wc0|failed|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50 ; Rise       ; wc0|failed|clk                      ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Setup Times                                                             ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; KEY[*]    ; clock_50   ; 2.255  ; 2.255  ; Rise       ; clock_50        ;
-;  KEY[2]   ; clock_50   ; 2.255  ; 2.255  ; Rise       ; clock_50        ;
-;  KEY[3]   ; clock_50   ; 2.022  ; 2.022  ; Rise       ; clock_50        ;
-; SW[*]     ; clock_50   ; 0.691  ; 0.691  ; Rise       ; clock_50        ;
-;  SW[0]    ; clock_50   ; -0.253 ; -0.253 ; Rise       ; clock_50        ;
-;  SW[1]    ; clock_50   ; -0.640 ; -0.640 ; Rise       ; clock_50        ;
-;  SW[2]    ; clock_50   ; -0.307 ; -0.307 ; Rise       ; clock_50        ;
-;  SW[3]    ; clock_50   ; 0.691  ; 0.691  ; Rise       ; clock_50        ;
-+-----------+------------+--------+--------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; clock_50   ; 1.893 ; 1.893 ; Rise       ; clock_50        ;
+;  KEY[3]   ; clock_50   ; 1.893 ; 1.893 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +-------------------------------------------------------------------------+
@@ -498,14 +354,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; KEY[*]    ; clock_50   ; -1.755 ; -1.755 ; Rise       ; clock_50        ;
-;  KEY[2]   ; clock_50   ; -1.755 ; -1.755 ; Rise       ; clock_50        ;
-;  KEY[3]   ; clock_50   ; -1.902 ; -1.902 ; Rise       ; clock_50        ;
-; SW[*]     ; clock_50   ; 0.859  ; 0.859  ; Rise       ; clock_50        ;
-;  SW[0]    ; clock_50   ; 0.552  ; 0.552  ; Rise       ; clock_50        ;
-;  SW[1]    ; clock_50   ; 0.859  ; 0.859  ; Rise       ; clock_50        ;
-;  SW[2]    ; clock_50   ; 0.602  ; 0.602  ; Rise       ; clock_50        ;
-;  SW[3]    ; clock_50   ; -0.393 ; -0.393 ; Rise       ; clock_50        ;
+; KEY[*]    ; clock_50   ; -1.769 ; -1.769 ; Rise       ; clock_50        ;
+;  KEY[3]   ; clock_50   ; -1.769 ; -1.769 ; Rise       ; clock_50        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -514,8 +364,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; clock_50   ; 4.413 ; 4.413 ; Rise       ; clock_50        ;
-;  LEDG[0]  ; clock_50   ; 4.413 ; 4.413 ; Rise       ; clock_50        ;
+; LEDR[*]   ; clock_50   ; 3.816 ; 3.816 ; Rise       ; clock_50        ;
+;  LEDR[2]  ; clock_50   ; 3.816 ; 3.816 ; Rise       ; clock_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -524,57 +374,31 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; clock_50   ; 4.413 ; 4.413 ; Rise       ; clock_50        ;
-;  LEDG[0]  ; clock_50   ; 4.413 ; 4.413 ; Rise       ; clock_50        ;
+; LEDR[*]   ; clock_50   ; 3.816 ; 3.816 ; Rise       ; clock_50        ;
+;  LEDR[2]  ; clock_50   ; 3.816 ; 3.816 ; Rise       ; clock_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
-+----------------------------------------------------+
-; Propagation Delay                                  ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; KEY[2]     ; LEDR[0]     ; 5.444 ;    ;    ; 5.444 ;
-; KEY[3]     ; LEDR[1]     ; 5.163 ;    ;    ; 5.163 ;
-+------------+-------------+-------+----+----+-------+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 0.099 ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  clock_50        ; 0.099 ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; -4.38               ;
+;  clock_50        ; 0.000 ; 0.000 ; N/A      ; N/A     ; -4.380              ;
++------------------+-------+-------+----------+---------+---------------------+
 
 
-+----------------------------------------------------+
-; Minimum Propagation Delay                          ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; KEY[2]     ; LEDR[0]     ; 5.444 ;    ;    ; 5.444 ;
-; KEY[3]     ; LEDR[1]     ; 5.163 ;    ;    ; 5.163 ;
-+------------+-------------+-------+----+----+-------+
-
-
-+------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                          ;
-+------------------+--------+-------+----------+---------+---------------------+
-; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.588 ; 0.239 ; N/A      ; N/A     ; -1.380              ;
-;  clock_50        ; -0.588 ; 0.239 ; N/A      ; N/A     ; -1.380              ;
-; Design-wide TNS  ; -1.344 ; 0.0   ; 0.0      ; 0.0     ; -10.38              ;
-;  clock_50        ; -1.344 ; 0.000 ; N/A      ; N/A     ; -10.380             ;
-+------------------+--------+-------+----------+---------+---------------------+
-
-
-+-------------------------------------------------------------------------+
-; Setup Times                                                             ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; KEY[*]    ; clock_50   ; 4.321  ; 4.321  ; Rise       ; clock_50        ;
-;  KEY[2]   ; clock_50   ; 4.321  ; 4.321  ; Rise       ; clock_50        ;
-;  KEY[3]   ; clock_50   ; 3.727  ; 3.727  ; Rise       ; clock_50        ;
-; SW[*]     ; clock_50   ; 2.110  ; 2.110  ; Rise       ; clock_50        ;
-;  SW[0]    ; clock_50   ; 0.296  ; 0.296  ; Rise       ; clock_50        ;
-;  SW[1]    ; clock_50   ; -0.596 ; -0.596 ; Rise       ; clock_50        ;
-;  SW[2]    ; clock_50   ; 0.161  ; 0.161  ; Rise       ; clock_50        ;
-;  SW[3]    ; clock_50   ; 2.110  ; 2.110  ; Rise       ; clock_50        ;
-+-----------+------------+--------+--------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; clock_50   ; 3.469 ; 3.469 ; Rise       ; clock_50        ;
+;  KEY[3]   ; clock_50   ; 3.469 ; 3.469 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +-------------------------------------------------------------------------+
@@ -582,14 +406,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; KEY[*]    ; clock_50   ; -1.755 ; -1.755 ; Rise       ; clock_50        ;
-;  KEY[2]   ; clock_50   ; -1.755 ; -1.755 ; Rise       ; clock_50        ;
-;  KEY[3]   ; clock_50   ; -1.902 ; -1.902 ; Rise       ; clock_50        ;
-; SW[*]     ; clock_50   ; 1.106  ; 1.106  ; Rise       ; clock_50        ;
-;  SW[0]    ; clock_50   ; 0.552  ; 0.552  ; Rise       ; clock_50        ;
-;  SW[1]    ; clock_50   ; 1.106  ; 1.106  ; Rise       ; clock_50        ;
-;  SW[2]    ; clock_50   ; 0.602  ; 0.602  ; Rise       ; clock_50        ;
-;  SW[3]    ; clock_50   ; -0.393 ; -0.393 ; Rise       ; clock_50        ;
+; KEY[*]    ; clock_50   ; -1.769 ; -1.769 ; Rise       ; clock_50        ;
+;  KEY[3]   ; clock_50   ; -1.769 ; -1.769 ; Rise       ; clock_50        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -598,8 +416,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; clock_50   ; 7.923 ; 7.923 ; Rise       ; clock_50        ;
-;  LEDG[0]  ; clock_50   ; 7.923 ; 7.923 ; Rise       ; clock_50        ;
+; LEDR[*]   ; clock_50   ; 6.709 ; 6.709 ; Rise       ; clock_50        ;
+;  LEDR[2]  ; clock_50   ; 6.709 ; 6.709 ; Rise       ; clock_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -608,29 +426,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; clock_50   ; 4.413 ; 4.413 ; Rise       ; clock_50        ;
-;  LEDG[0]  ; clock_50   ; 4.413 ; 4.413 ; Rise       ; clock_50        ;
+; LEDR[*]   ; clock_50   ; 3.816 ; 3.816 ; Rise       ; clock_50        ;
+;  LEDR[2]  ; clock_50   ; 3.816 ; 3.816 ; Rise       ; clock_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
-
-
-+----------------------------------------------------+
-; Progagation Delay                                  ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; KEY[2]     ; LEDR[0]     ; 9.589 ;    ;    ; 9.589 ;
-; KEY[3]     ; LEDR[1]     ; 8.971 ;    ;    ; 8.971 ;
-+------------+-------------+-------+----+----+-------+
-
-
-+----------------------------------------------------+
-; Minimum Progagation Delay                          ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; KEY[2]     ; LEDR[0]     ; 5.444 ;    ;    ; 5.444 ;
-; KEY[3]     ; LEDR[1]     ; 5.163 ;    ;    ; 5.163 ;
-+------------+-------------+-------+----+----+-------+
 
 
 +-------------------------------------------------------------------+
@@ -638,7 +436,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clock_50   ; clock_50 ; 20       ; 0        ; 0        ; 0        ;
+; clock_50   ; clock_50 ; 6        ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -648,7 +446,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clock_50   ; clock_50 ; 20       ; 0        ; 0        ; 0        ;
+; clock_50   ; clock_50 ; 6        ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -672,10 +470,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 6     ; 6    ;
-; Unconstrained Input Port Paths  ; 20    ; 20   ;
-; Unconstrained Output Ports      ; 3     ; 3    ;
-; Unconstrained Output Port Paths ; 3     ; 3    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 3     ; 3    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
 +---------------------------------+-------+------+
 
 
@@ -685,9 +483,33 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Dec 06 13:37:35 2022
+    Info: Processing started: Thu Dec 08 10:49:09 2022
 Info: Command: quartus_sta ex8 -c ex8
 Info: qsta_default_script.tcl version: #1
+Warning (20013): Ignored assignments for entity "code_lock_simple" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity code_lock_simple -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity code_lock_simple -section_id Top was ignored
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -697,44 +519,44 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clock_50 clock_50
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.588
+Info (332146): Worst-case setup slack is 0.099
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.588        -1.344 clock_50 
-Info (332146): Worst-case hold slack is 0.520
+    Info (332119):     0.099         0.000 clock_50 
+Info (332146): Worst-case hold slack is 0.391
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.520         0.000 clock_50 
+    Info (332119):     0.391         0.000 clock_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.380       -10.380 clock_50 
+    Info (332119):    -1.380        -4.380 clock_50 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332146): Worst-case setup slack is 0.289
+Info (332146): Worst-case setup slack is 0.565
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.289         0.000 clock_50 
-Info (332146): Worst-case hold slack is 0.239
+    Info (332119):     0.565         0.000 clock_50 
+Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     0.239         0.000 clock_50 
+    Info (332119):     0.215         0.000 clock_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.380       -10.380 clock_50 
+    Info (332119):    -1.380        -4.380 clock_50 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4551 megabytes
-    Info: Processing ended: Tue Dec 06 13:37:36 2022
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4547 megabytes
+    Info: Processing ended: Thu Dec 08 10:49:10 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

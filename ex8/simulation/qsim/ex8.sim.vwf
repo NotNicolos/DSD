@@ -32,23 +32,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-USER_TYPE("|code_lock_simple|code_lock_simple_fsm:fsm|present_state")
-{
-	VALUES = "present_state.idle", "present_state.Ev_code1", "present_state.get_code2", "present_state.Ev_code2", "present_state.Unlocked";
-}
-
-SIGNAL("code_lock_simple_fsm:fsm|present_state")
-{
-	VALUE_TYPE = ENUM;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = MACHINE;
-	PARENT = "";
-	ENUM_NAME = "|code_lock_simple|code_lock_simple_fsm:fsm|present_state";
-}
-
-SIGNAL("code[0]")
+SIGNAL("clock_50")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -58,57 +42,47 @@ SIGNAL("code[0]")
 	PARENT = "";
 }
 
-SIGNAL("code[1]")
+SIGNAL("LEDR")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 3;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
 	PARENT = "";
 }
 
-SIGNAL("code[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("code[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("enter")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("lock")
+SIGNAL("LEDR[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "";
+	PARENT = "LEDR";
 }
 
-SIGNAL("reset")
+SIGNAL("LEDR[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "LEDR";
+}
+
+SIGNAL("LEDR[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "LEDR";
+}
+
+SIGNAL("KEY[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -118,7 +92,7 @@ SIGNAL("reset")
 	PARENT = "";
 }
 
-SIGNAL("clk")
+SIGNAL("KEY[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -128,108 +102,7 @@ SIGNAL("clk")
 	PARENT = "";
 }
 
-GROUP("code")
-{
-	MEMBERS = "code[0]", "code[1]", "code[2]", "code[3]";
-}
-
-TRANSITION_LIST("code_lock_simple_fsm:fsm|present_state")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL present_state.idle FOR 65.0;
-		LEVEL present_state.Ev_code1 FOR 10.0;
-		LEVEL present_state.get_code2 FOR 130.0;
-		LEVEL present_state.Ev_code2 FOR 10.0;
-		LEVEL present_state.Unlocked FOR 150.0;
-		LEVEL present_state.idle FOR 90.0;
-		LEVEL present_state.Ev_code1 FOR 10.0;
-		LEVEL present_state.idle FOR 535.0;
-	}
-}
-
-TRANSITION_LIST("code[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("code[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 160.0;
-		LEVEL 1 FOR 250.0;
-		LEVEL 0 FOR 590.0;
-	}
-}
-
-TRANSITION_LIST("code[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 380.0;
-		LEVEL 0 FOR 590.0;
-	}
-}
-
-TRANSITION_LIST("code[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 380.0;
-		LEVEL 0 FOR 590.0;
-	}
-}
-
-TRANSITION_LIST("enter")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 130.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 150.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 570.0;
-	}
-}
-
-TRANSITION_LIST("lock")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 215.0;
-		LEVEL 0 FOR 150.0;
-		LEVEL 1 FOR 635.0;
-	}
-}
-
-TRANSITION_LIST("reset")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 990.0;
-	}
-}
-
-TRANSITION_LIST("clk")
+TRANSITION_LIST("clock_50")
 {
 	NODE
 	{
@@ -243,9 +116,55 @@ TRANSITION_LIST("clk")
 	}
 }
 
+TRANSITION_LIST("LEDR[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 35.0;
+		LEVEL 1 FOR 965.0;
+	}
+}
+
+TRANSITION_LIST("LEDR[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("LEDR[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("KEY[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("KEY[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
 DISPLAY_LINE
 {
-	CHANNEL = "code_lock_simple_fsm:fsm|present_state";
+	CHANNEL = "clock_50";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -254,17 +173,17 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "code";
-	EXPAND_STATUS = COLLAPSED;
+	CHANNEL = "LEDR";
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
 	TREE_LEVEL = 0;
-	CHILDREN = 2, 3, 4, 5;
+	CHILDREN = 2, 3, 4;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "code[0]";
+	CHANNEL = "LEDR[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -274,7 +193,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "code[1]";
+	CHANNEL = "LEDR[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -284,7 +203,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "code[2]";
+	CHANNEL = "LEDR[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -294,53 +213,25 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "code[3]";
+	CHANNEL = "KEY[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
-	TREE_LEVEL = 1;
-	PARENT = 1;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "enter";
+	CHANNEL = "KEY[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 0;
 }
 
-DISPLAY_LINE
-{
-	CHANNEL = "lock";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 7;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "reset";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 8;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "clk";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 9;
-	TREE_LEVEL = 0;
-}
-
 TIME_BAR
 {
-	TIME = 70000;
+	TIME = 0;
 	MASTER = TRUE;
 }
 ;
