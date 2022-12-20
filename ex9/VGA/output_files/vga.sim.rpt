@@ -1,0 +1,601 @@
+Simulator report for vga
+Tue Dec 20 14:51:03 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 ms       ;
+; Simulation Netlist Size     ; 397 nodes    ;
+; Simulation Coverage         ;      87.88 % ;
+; Total Number of Transitions ; 2674189      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                         ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+; Option                                                                                     ; Setting                       ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                    ; Timing        ;
+; Start time                                                                                 ; 0 ns                          ; 0 ns          ;
+; End time                                                                                   ; 1 s                           ;               ;
+; Simulation results format                                                                  ; VWF                           ;               ;
+; Vector input source                                                                        ; D:/github/DSD/ex9/VGA/vga.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                            ; On            ;
+; Check outputs                                                                              ; Off                           ; Off           ;
+; Report simulation coverage                                                                 ; On                            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                            ; On            ;
+; Display missing 1-value coverage report                                                    ; On                            ; On            ;
+; Display missing 0-value coverage report                                                    ; On                            ; On            ;
+; Detect setup and hold time violations                                                      ; Off                           ; Off           ;
+; Detect glitches                                                                            ; Off                           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                           ; Off           ;
+; Generate Signal Activity File                                                              ; Off                           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                          ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      87.88 % ;
+; Total nodes checked                                 ; 397          ;
+; Total output ports checked                          ; 396          ;
+; Total output ports with complete 1/0-value coverage ; 348          ;
+; Total output ports with no 1/0-value coverage       ; 40           ;
+; Total output ports with no 1-value coverage         ; 44           ;
+; Total output ports with no 0-value coverage         ; 44           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                    ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |vga|blankOut~0      ; |vga|blankOut~0      ; out              ;
+; |vga|blankOut~1      ; |vga|blankOut~1      ; out              ;
+; |vga|blankOut~2      ; |vga|blankOut~2      ; out              ;
+; |vga|blankOut~3      ; |vga|blankOut~3      ; out              ;
+; |vga|syncOut~0       ; |vga|syncOut~0       ; out              ;
+; |vga|syncOut~1       ; |vga|syncOut~1       ; out              ;
+; |vga|syncOut~2       ; |vga|syncOut~2       ; out              ;
+; |vga|syncOut~3       ; |vga|syncOut~3       ; out              ;
+; |vga|syncCounter~0   ; |vga|syncCounter~0   ; out              ;
+; |vga|syncCounter~1   ; |vga|syncCounter~1   ; out              ;
+; |vga|syncCounter~2   ; |vga|syncCounter~2   ; out              ;
+; |vga|syncCounter~3   ; |vga|syncCounter~3   ; out              ;
+; |vga|syncCounter~4   ; |vga|syncCounter~4   ; out              ;
+; |vga|syncCounter~5   ; |vga|syncCounter~5   ; out              ;
+; |vga|syncCounter~6   ; |vga|syncCounter~6   ; out              ;
+; |vga|syncCounter~7   ; |vga|syncCounter~7   ; out              ;
+; |vga|syncCounter~8   ; |vga|syncCounter~8   ; out              ;
+; |vga|syncCounter~9   ; |vga|syncCounter~9   ; out              ;
+; |vga|syncCounter~10  ; |vga|syncCounter~10  ; out              ;
+; |vga|syncCounter~11  ; |vga|syncCounter~11  ; out              ;
+; |vga|syncCounter~12  ; |vga|syncCounter~12  ; out              ;
+; |vga|syncCounter~13  ; |vga|syncCounter~13  ; out              ;
+; |vga|syncCounter~14  ; |vga|syncCounter~14  ; out              ;
+; |vga|syncCounter~15  ; |vga|syncCounter~15  ; out              ;
+; |vga|syncCounter~16  ; |vga|syncCounter~16  ; out              ;
+; |vga|syncCounter~17  ; |vga|syncCounter~17  ; out              ;
+; |vga|syncCounter~18  ; |vga|syncCounter~18  ; out              ;
+; |vga|syncCounter~19  ; |vga|syncCounter~19  ; out              ;
+; |vga|syncCounter~20  ; |vga|syncCounter~20  ; out              ;
+; |vga|syncCounter~21  ; |vga|syncCounter~21  ; out              ;
+; |vga|syncCounter~22  ; |vga|syncCounter~22  ; out              ;
+; |vga|syncCounter~23  ; |vga|syncCounter~23  ; out              ;
+; |vga|syncCounter~24  ; |vga|syncCounter~24  ; out              ;
+; |vga|syncCounter~25  ; |vga|syncCounter~25  ; out              ;
+; |vga|syncCounter~26  ; |vga|syncCounter~26  ; out              ;
+; |vga|syncCounter~27  ; |vga|syncCounter~27  ; out              ;
+; |vga|syncCounter~28  ; |vga|syncCounter~28  ; out              ;
+; |vga|syncCounter~29  ; |vga|syncCounter~29  ; out              ;
+; |vga|syncCounter~30  ; |vga|syncCounter~30  ; out              ;
+; |vga|syncCounter~31  ; |vga|syncCounter~31  ; out              ;
+; |vga|syncCounter~32  ; |vga|syncCounter~32  ; out              ;
+; |vga|syncCounter~33  ; |vga|syncCounter~33  ; out              ;
+; |vga|syncCounter~34  ; |vga|syncCounter~34  ; out              ;
+; |vga|syncCounter~35  ; |vga|syncCounter~35  ; out              ;
+; |vga|syncCounter~36  ; |vga|syncCounter~36  ; out              ;
+; |vga|syncCounter~37  ; |vga|syncCounter~37  ; out              ;
+; |vga|syncCounter~38  ; |vga|syncCounter~38  ; out              ;
+; |vga|syncCounter~39  ; |vga|syncCounter~39  ; out              ;
+; |vga|syncCounter~40  ; |vga|syncCounter~40  ; out              ;
+; |vga|syncCounter~41  ; |vga|syncCounter~41  ; out              ;
+; |vga|syncCounter~42  ; |vga|syncCounter~42  ; out              ;
+; |vga|syncCounter~43  ; |vga|syncCounter~43  ; out              ;
+; |vga|syncCounter~44  ; |vga|syncCounter~44  ; out              ;
+; |vga|syncCounter~45  ; |vga|syncCounter~45  ; out              ;
+; |vga|syncCounter~46  ; |vga|syncCounter~46  ; out              ;
+; |vga|syncCounter~47  ; |vga|syncCounter~47  ; out              ;
+; |vga|syncCounter~48  ; |vga|syncCounter~48  ; out              ;
+; |vga|syncCounter~49  ; |vga|syncCounter~49  ; out              ;
+; |vga|hSyncCounter[9] ; |vga|hSyncCounter[9] ; regout           ;
+; |vga|hSyncCounter[8] ; |vga|hSyncCounter[8] ; regout           ;
+; |vga|hSyncCounter[7] ; |vga|hSyncCounter[7] ; regout           ;
+; |vga|hSyncCounter[6] ; |vga|hSyncCounter[6] ; regout           ;
+; |vga|hSyncCounter[5] ; |vga|hSyncCounter[5] ; regout           ;
+; |vga|hSyncCounter[4] ; |vga|hSyncCounter[4] ; regout           ;
+; |vga|hSyncCounter[3] ; |vga|hSyncCounter[3] ; regout           ;
+; |vga|hSyncCounter[2] ; |vga|hSyncCounter[2] ; regout           ;
+; |vga|hSyncCounter[1] ; |vga|hSyncCounter[1] ; regout           ;
+; |vga|hSyncCounter[0] ; |vga|hSyncCounter[0] ; regout           ;
+; |vga|hSyncOut        ; |vga|hSyncOut        ; regout           ;
+; |vga|blankOut~7      ; |vga|blankOut~7      ; out              ;
+; |vga|syncCounter~53  ; |vga|syncCounter~53  ; out              ;
+; |vga|syncCounter~54  ; |vga|syncCounter~54  ; out              ;
+; |vga|syncCounter~55  ; |vga|syncCounter~55  ; out              ;
+; |vga|syncCounter~56  ; |vga|syncCounter~56  ; out              ;
+; |vga|syncCounter~57  ; |vga|syncCounter~57  ; out              ;
+; |vga|syncCounter~58  ; |vga|syncCounter~58  ; out              ;
+; |vga|syncCounter~59  ; |vga|syncCounter~59  ; out              ;
+; |vga|syncCounter~63  ; |vga|syncCounter~63  ; out              ;
+; |vga|syncCounter~64  ; |vga|syncCounter~64  ; out              ;
+; |vga|syncCounter~65  ; |vga|syncCounter~65  ; out              ;
+; |vga|syncCounter~66  ; |vga|syncCounter~66  ; out              ;
+; |vga|syncCounter~67  ; |vga|syncCounter~67  ; out              ;
+; |vga|syncCounter~68  ; |vga|syncCounter~68  ; out              ;
+; |vga|syncCounter~69  ; |vga|syncCounter~69  ; out              ;
+; |vga|vBlank          ; |vga|vBlank          ; regout           ;
+; |vga|syncCounter~73  ; |vga|syncCounter~73  ; out              ;
+; |vga|syncCounter~74  ; |vga|syncCounter~74  ; out              ;
+; |vga|syncCounter~75  ; |vga|syncCounter~75  ; out              ;
+; |vga|syncCounter~76  ; |vga|syncCounter~76  ; out              ;
+; |vga|syncCounter~77  ; |vga|syncCounter~77  ; out              ;
+; |vga|syncCounter~78  ; |vga|syncCounter~78  ; out              ;
+; |vga|syncCounter~79  ; |vga|syncCounter~79  ; out              ;
+; |vga|syncCounter~83  ; |vga|syncCounter~83  ; out              ;
+; |vga|syncCounter~84  ; |vga|syncCounter~84  ; out              ;
+; |vga|syncCounter~85  ; |vga|syncCounter~85  ; out              ;
+; |vga|syncCounter~86  ; |vga|syncCounter~86  ; out              ;
+; |vga|syncCounter~87  ; |vga|syncCounter~87  ; out              ;
+; |vga|syncCounter~88  ; |vga|syncCounter~88  ; out              ;
+; |vga|syncCounter~89  ; |vga|syncCounter~89  ; out              ;
+; |vga|syncCounter~93  ; |vga|syncCounter~93  ; out              ;
+; |vga|syncCounter~94  ; |vga|syncCounter~94  ; out              ;
+; |vga|syncCounter~95  ; |vga|syncCounter~95  ; out              ;
+; |vga|syncCounter~96  ; |vga|syncCounter~96  ; out              ;
+; |vga|syncCounter~97  ; |vga|syncCounter~97  ; out              ;
+; |vga|syncCounter~98  ; |vga|syncCounter~98  ; out              ;
+; |vga|syncCounter~99  ; |vga|syncCounter~99  ; out              ;
+; |vga|hBlank          ; |vga|hBlank          ; regout           ;
+; |vga|vSyncCounter[4] ; |vga|vSyncCounter[4] ; regout           ;
+; |vga|vSyncCounter[3] ; |vga|vSyncCounter[3] ; regout           ;
+; |vga|vSyncCounter[2] ; |vga|vSyncCounter[2] ; regout           ;
+; |vga|vSyncCounter[1] ; |vga|vSyncCounter[1] ; regout           ;
+; |vga|vSyncCounter[0] ; |vga|vSyncCounter[0] ; regout           ;
+; |vga|color~0         ; |vga|color~0         ; out0             ;
+; |vga|color~1         ; |vga|color~1         ; out0             ;
+; |vga|green~0         ; |vga|green~0         ; out              ;
+; |vga|green~1         ; |vga|green~1         ; out              ;
+; |vga|green~2         ; |vga|green~2         ; out              ;
+; |vga|green~3         ; |vga|green~3         ; out              ;
+; |vga|green~4         ; |vga|green~4         ; out              ;
+; |vga|green~5         ; |vga|green~5         ; out              ;
+; |vga|green~6         ; |vga|green~6         ; out              ;
+; |vga|green~7         ; |vga|green~7         ; out              ;
+; |vga|green~8         ; |vga|green~8         ; out              ;
+; |vga|green~9         ; |vga|green~9         ; out              ;
+; |vga|blue~0          ; |vga|blue~0          ; out              ;
+; |vga|blue~1          ; |vga|blue~1          ; out              ;
+; |vga|blue~2          ; |vga|blue~2          ; out              ;
+; |vga|blue~3          ; |vga|blue~3          ; out              ;
+; |vga|blue~4          ; |vga|blue~4          ; out              ;
+; |vga|blue~5          ; |vga|blue~5          ; out              ;
+; |vga|blue~6          ; |vga|blue~6          ; out              ;
+; |vga|blue~7          ; |vga|blue~7          ; out              ;
+; |vga|blue~8          ; |vga|blue~8          ; out              ;
+; |vga|blue~9          ; |vga|blue~9          ; out              ;
+; |vga|blank~0         ; |vga|blank~0         ; out0             ;
+; |vga|clk             ; |vga|clk             ; out              ;
+; |vga|red[0]          ; |vga|red[0]          ; pin_out          ;
+; |vga|red[1]          ; |vga|red[1]          ; pin_out          ;
+; |vga|red[2]          ; |vga|red[2]          ; pin_out          ;
+; |vga|red[3]          ; |vga|red[3]          ; pin_out          ;
+; |vga|red[4]          ; |vga|red[4]          ; pin_out          ;
+; |vga|red[5]          ; |vga|red[5]          ; pin_out          ;
+; |vga|red[6]          ; |vga|red[6]          ; pin_out          ;
+; |vga|red[7]          ; |vga|red[7]          ; pin_out          ;
+; |vga|red[8]          ; |vga|red[8]          ; pin_out          ;
+; |vga|red[9]          ; |vga|red[9]          ; pin_out          ;
+; |vga|green[0]        ; |vga|green[0]        ; pin_out          ;
+; |vga|green[1]        ; |vga|green[1]        ; pin_out          ;
+; |vga|green[2]        ; |vga|green[2]        ; pin_out          ;
+; |vga|green[3]        ; |vga|green[3]        ; pin_out          ;
+; |vga|green[4]        ; |vga|green[4]        ; pin_out          ;
+; |vga|green[5]        ; |vga|green[5]        ; pin_out          ;
+; |vga|green[6]        ; |vga|green[6]        ; pin_out          ;
+; |vga|green[7]        ; |vga|green[7]        ; pin_out          ;
+; |vga|green[8]        ; |vga|green[8]        ; pin_out          ;
+; |vga|green[9]        ; |vga|green[9]        ; pin_out          ;
+; |vga|blue[0]         ; |vga|blue[0]         ; pin_out          ;
+; |vga|blue[1]         ; |vga|blue[1]         ; pin_out          ;
+; |vga|blue[2]         ; |vga|blue[2]         ; pin_out          ;
+; |vga|blue[3]         ; |vga|blue[3]         ; pin_out          ;
+; |vga|blue[4]         ; |vga|blue[4]         ; pin_out          ;
+; |vga|blue[5]         ; |vga|blue[5]         ; pin_out          ;
+; |vga|blue[6]         ; |vga|blue[6]         ; pin_out          ;
+; |vga|blue[7]         ; |vga|blue[7]         ; pin_out          ;
+; |vga|blue[8]         ; |vga|blue[8]         ; pin_out          ;
+; |vga|blue[9]         ; |vga|blue[9]         ; pin_out          ;
+; |vga|hsync           ; |vga|hsync           ; pin_out          ;
+; |vga|clockOut        ; |vga|clockOut        ; pin_out          ;
+; |vga|blank           ; |vga|blank           ; pin_out          ;
+; |vga|LessThan0~0     ; |vga|LessThan0~0     ; out0             ;
+; |vga|LessThan0~1     ; |vga|LessThan0~1     ; out0             ;
+; |vga|LessThan0~2     ; |vga|LessThan0~2     ; out0             ;
+; |vga|LessThan0~3     ; |vga|LessThan0~3     ; out0             ;
+; |vga|LessThan0~4     ; |vga|LessThan0~4     ; out0             ;
+; |vga|LessThan0~5     ; |vga|LessThan0~5     ; out0             ;
+; |vga|LessThan0~6     ; |vga|LessThan0~6     ; out0             ;
+; |vga|LessThan0~7     ; |vga|LessThan0~7     ; out0             ;
+; |vga|LessThan0~8     ; |vga|LessThan0~8     ; out0             ;
+; |vga|LessThan0~9     ; |vga|LessThan0~9     ; out0             ;
+; |vga|LessThan0~10    ; |vga|LessThan0~10    ; out0             ;
+; |vga|LessThan1~0     ; |vga|LessThan1~0     ; out0             ;
+; |vga|LessThan1~1     ; |vga|LessThan1~1     ; out0             ;
+; |vga|LessThan1~2     ; |vga|LessThan1~2     ; out0             ;
+; |vga|LessThan1~3     ; |vga|LessThan1~3     ; out0             ;
+; |vga|LessThan1~4     ; |vga|LessThan1~4     ; out0             ;
+; |vga|LessThan1~5     ; |vga|LessThan1~5     ; out0             ;
+; |vga|LessThan1~6     ; |vga|LessThan1~6     ; out0             ;
+; |vga|LessThan1~7     ; |vga|LessThan1~7     ; out0             ;
+; |vga|LessThan1~8     ; |vga|LessThan1~8     ; out0             ;
+; |vga|LessThan1~9     ; |vga|LessThan1~9     ; out0             ;
+; |vga|LessThan1~10    ; |vga|LessThan1~10    ; out0             ;
+; |vga|LessThan1~11    ; |vga|LessThan1~11    ; out0             ;
+; |vga|LessThan1~12    ; |vga|LessThan1~12    ; out0             ;
+; |vga|LessThan2~0     ; |vga|LessThan2~0     ; out0             ;
+; |vga|LessThan2~1     ; |vga|LessThan2~1     ; out0             ;
+; |vga|LessThan2~2     ; |vga|LessThan2~2     ; out0             ;
+; |vga|LessThan2~3     ; |vga|LessThan2~3     ; out0             ;
+; |vga|LessThan2~4     ; |vga|LessThan2~4     ; out0             ;
+; |vga|LessThan2~5     ; |vga|LessThan2~5     ; out0             ;
+; |vga|LessThan2~6     ; |vga|LessThan2~6     ; out0             ;
+; |vga|LessThan2~7     ; |vga|LessThan2~7     ; out0             ;
+; |vga|LessThan2~8     ; |vga|LessThan2~8     ; out0             ;
+; |vga|LessThan2~9     ; |vga|LessThan2~9     ; out0             ;
+; |vga|LessThan2~10    ; |vga|LessThan2~10    ; out0             ;
+; |vga|LessThan2~11    ; |vga|LessThan2~11    ; out0             ;
+; |vga|LessThan3~0     ; |vga|LessThan3~0     ; out0             ;
+; |vga|LessThan3~1     ; |vga|LessThan3~1     ; out0             ;
+; |vga|LessThan3~2     ; |vga|LessThan3~2     ; out0             ;
+; |vga|LessThan3~3     ; |vga|LessThan3~3     ; out0             ;
+; |vga|LessThan3~4     ; |vga|LessThan3~4     ; out0             ;
+; |vga|LessThan3~5     ; |vga|LessThan3~5     ; out0             ;
+; |vga|LessThan3~6     ; |vga|LessThan3~6     ; out0             ;
+; |vga|LessThan3~7     ; |vga|LessThan3~7     ; out0             ;
+; |vga|LessThan3~8     ; |vga|LessThan3~8     ; out0             ;
+; |vga|LessThan3~9     ; |vga|LessThan3~9     ; out0             ;
+; |vga|LessThan3~10    ; |vga|LessThan3~10    ; out0             ;
+; |vga|LessThan3~11    ; |vga|LessThan3~11    ; out0             ;
+; |vga|LessThan4~0     ; |vga|LessThan4~0     ; out0             ;
+; |vga|LessThan4~1     ; |vga|LessThan4~1     ; out0             ;
+; |vga|LessThan4~2     ; |vga|LessThan4~2     ; out0             ;
+; |vga|LessThan4~3     ; |vga|LessThan4~3     ; out0             ;
+; |vga|LessThan4~4     ; |vga|LessThan4~4     ; out0             ;
+; |vga|LessThan4~5     ; |vga|LessThan4~5     ; out0             ;
+; |vga|LessThan5~0     ; |vga|LessThan5~0     ; out0             ;
+; |vga|LessThan5~1     ; |vga|LessThan5~1     ; out0             ;
+; |vga|LessThan5~2     ; |vga|LessThan5~2     ; out0             ;
+; |vga|LessThan5~3     ; |vga|LessThan5~3     ; out0             ;
+; |vga|LessThan5~4     ; |vga|LessThan5~4     ; out0             ;
+; |vga|LessThan5~5     ; |vga|LessThan5~5     ; out0             ;
+; |vga|LessThan5~6     ; |vga|LessThan5~6     ; out0             ;
+; |vga|LessThan5~7     ; |vga|LessThan5~7     ; out0             ;
+; |vga|LessThan5~8     ; |vga|LessThan5~8     ; out0             ;
+; |vga|LessThan6~0     ; |vga|LessThan6~0     ; out0             ;
+; |vga|LessThan6~1     ; |vga|LessThan6~1     ; out0             ;
+; |vga|LessThan6~2     ; |vga|LessThan6~2     ; out0             ;
+; |vga|LessThan7~0     ; |vga|LessThan7~0     ; out0             ;
+; |vga|LessThan7~1     ; |vga|LessThan7~1     ; out0             ;
+; |vga|LessThan7~2     ; |vga|LessThan7~2     ; out0             ;
+; |vga|LessThan7~3     ; |vga|LessThan7~3     ; out0             ;
+; |vga|LessThan7~4     ; |vga|LessThan7~4     ; out0             ;
+; |vga|LessThan7~5     ; |vga|LessThan7~5     ; out0             ;
+; |vga|LessThan7~6     ; |vga|LessThan7~6     ; out0             ;
+; |vga|LessThan8~0     ; |vga|LessThan8~0     ; out0             ;
+; |vga|LessThan8~1     ; |vga|LessThan8~1     ; out0             ;
+; |vga|LessThan8~2     ; |vga|LessThan8~2     ; out0             ;
+; |vga|LessThan8~3     ; |vga|LessThan8~3     ; out0             ;
+; |vga|LessThan8~4     ; |vga|LessThan8~4     ; out0             ;
+; |vga|LessThan8~5     ; |vga|LessThan8~5     ; out0             ;
+; |vga|LessThan8~6     ; |vga|LessThan8~6     ; out0             ;
+; |vga|LessThan8~7     ; |vga|LessThan8~7     ; out0             ;
+; |vga|LessThan8~8     ; |vga|LessThan8~8     ; out0             ;
+; |vga|LessThan9~0     ; |vga|LessThan9~0     ; out0             ;
+; |vga|LessThan9~1     ; |vga|LessThan9~1     ; out0             ;
+; |vga|LessThan9~2     ; |vga|LessThan9~2     ; out0             ;
+; |vga|LessThan9~3     ; |vga|LessThan9~3     ; out0             ;
+; |vga|LessThan9~4     ; |vga|LessThan9~4     ; out0             ;
+; |vga|LessThan9~5     ; |vga|LessThan9~5     ; out0             ;
+; |vga|LessThan9~6     ; |vga|LessThan9~6     ; out0             ;
+; |vga|LessThan9~7     ; |vga|LessThan9~7     ; out0             ;
+; |vga|LessThan9~8     ; |vga|LessThan9~8     ; out0             ;
+; |vga|LessThan9~9     ; |vga|LessThan9~9     ; out0             ;
+; |vga|LessThan9~10    ; |vga|LessThan9~10    ; out0             ;
+; |vga|LessThan9~11    ; |vga|LessThan9~11    ; out0             ;
+; |vga|LessThan9~12    ; |vga|LessThan9~12    ; out0             ;
+; |vga|LessThan9~13    ; |vga|LessThan9~13    ; out0             ;
+; |vga|LessThan10~0    ; |vga|LessThan10~0    ; out0             ;
+; |vga|LessThan10~1    ; |vga|LessThan10~1    ; out0             ;
+; |vga|LessThan10~2    ; |vga|LessThan10~2    ; out0             ;
+; |vga|LessThan10~3    ; |vga|LessThan10~3    ; out0             ;
+; |vga|LessThan10~4    ; |vga|LessThan10~4    ; out0             ;
+; |vga|LessThan10~5    ; |vga|LessThan10~5    ; out0             ;
+; |vga|LessThan10~6    ; |vga|LessThan10~6    ; out0             ;
+; |vga|LessThan10~7    ; |vga|LessThan10~7    ; out0             ;
+; |vga|LessThan10~8    ; |vga|LessThan10~8    ; out0             ;
+; |vga|LessThan10~9    ; |vga|LessThan10~9    ; out0             ;
+; |vga|LessThan10~10   ; |vga|LessThan10~10   ; out0             ;
+; |vga|LessThan10~11   ; |vga|LessThan10~11   ; out0             ;
+; |vga|LessThan10~12   ; |vga|LessThan10~12   ; out0             ;
+; |vga|LessThan10~13   ; |vga|LessThan10~13   ; out0             ;
+; |vga|LessThan10~14   ; |vga|LessThan10~14   ; out0             ;
+; |vga|LessThan10~15   ; |vga|LessThan10~15   ; out0             ;
+; |vga|LessThan11~0    ; |vga|LessThan11~0    ; out0             ;
+; |vga|LessThan11~1    ; |vga|LessThan11~1    ; out0             ;
+; |vga|LessThan11~2    ; |vga|LessThan11~2    ; out0             ;
+; |vga|LessThan11~3    ; |vga|LessThan11~3    ; out0             ;
+; |vga|LessThan11~4    ; |vga|LessThan11~4    ; out0             ;
+; |vga|LessThan11~5    ; |vga|LessThan11~5    ; out0             ;
+; |vga|LessThan11~6    ; |vga|LessThan11~6    ; out0             ;
+; |vga|LessThan11~7    ; |vga|LessThan11~7    ; out0             ;
+; |vga|LessThan11~8    ; |vga|LessThan11~8    ; out0             ;
+; |vga|LessThan11~9    ; |vga|LessThan11~9    ; out0             ;
+; |vga|LessThan12~0    ; |vga|LessThan12~0    ; out0             ;
+; |vga|LessThan12~1    ; |vga|LessThan12~1    ; out0             ;
+; |vga|LessThan12~2    ; |vga|LessThan12~2    ; out0             ;
+; |vga|LessThan12~3    ; |vga|LessThan12~3    ; out0             ;
+; |vga|LessThan12~4    ; |vga|LessThan12~4    ; out0             ;
+; |vga|LessThan12~5    ; |vga|LessThan12~5    ; out0             ;
+; |vga|LessThan12~6    ; |vga|LessThan12~6    ; out0             ;
+; |vga|LessThan12~7    ; |vga|LessThan12~7    ; out0             ;
+; |vga|LessThan12~8    ; |vga|LessThan12~8    ; out0             ;
+; |vga|LessThan12~9    ; |vga|LessThan12~9    ; out0             ;
+; |vga|LessThan12~10   ; |vga|LessThan12~10   ; out0             ;
+; |vga|LessThan12~11   ; |vga|LessThan12~11   ; out0             ;
+; |vga|LessThan12~12   ; |vga|LessThan12~12   ; out0             ;
+; |vga|LessThan12~13   ; |vga|LessThan12~13   ; out0             ;
+; |vga|LessThan13~0    ; |vga|LessThan13~0    ; out0             ;
+; |vga|LessThan13~1    ; |vga|LessThan13~1    ; out0             ;
+; |vga|LessThan13~2    ; |vga|LessThan13~2    ; out0             ;
+; |vga|LessThan13~3    ; |vga|LessThan13~3    ; out0             ;
+; |vga|LessThan13~4    ; |vga|LessThan13~4    ; out0             ;
+; |vga|LessThan13~5    ; |vga|LessThan13~5    ; out0             ;
+; |vga|LessThan13~6    ; |vga|LessThan13~6    ; out0             ;
+; |vga|LessThan13~7    ; |vga|LessThan13~7    ; out0             ;
+; |vga|LessThan13~8    ; |vga|LessThan13~8    ; out0             ;
+; |vga|LessThan13~9    ; |vga|LessThan13~9    ; out0             ;
+; |vga|LessThan13~10   ; |vga|LessThan13~10   ; out0             ;
+; |vga|LessThan13~11   ; |vga|LessThan13~11   ; out0             ;
+; |vga|LessThan13~12   ; |vga|LessThan13~12   ; out0             ;
+; |vga|LessThan13~13   ; |vga|LessThan13~13   ; out0             ;
+; |vga|LessThan13~14   ; |vga|LessThan13~14   ; out0             ;
+; |vga|Add0~0          ; |vga|Add0~0          ; out0             ;
+; |vga|Add0~1          ; |vga|Add0~1          ; out0             ;
+; |vga|Add0~2          ; |vga|Add0~2          ; out0             ;
+; |vga|Add0~3          ; |vga|Add0~3          ; out0             ;
+; |vga|Add0~4          ; |vga|Add0~4          ; out0             ;
+; |vga|Add0~5          ; |vga|Add0~5          ; out0             ;
+; |vga|Add0~6          ; |vga|Add0~6          ; out0             ;
+; |vga|Add0~7          ; |vga|Add0~7          ; out0             ;
+; |vga|Add0~8          ; |vga|Add0~8          ; out0             ;
+; |vga|Add0~9          ; |vga|Add0~9          ; out0             ;
+; |vga|Add0~10         ; |vga|Add0~10         ; out0             ;
+; |vga|Add0~11         ; |vga|Add0~11         ; out0             ;
+; |vga|Add0~12         ; |vga|Add0~12         ; out0             ;
+; |vga|Add0~13         ; |vga|Add0~13         ; out0             ;
+; |vga|Add0~14         ; |vga|Add0~14         ; out0             ;
+; |vga|Add0~15         ; |vga|Add0~15         ; out0             ;
+; |vga|Add0~16         ; |vga|Add0~16         ; out0             ;
+; |vga|Add1~0          ; |vga|Add1~0          ; out0             ;
+; |vga|Add1~1          ; |vga|Add1~1          ; out0             ;
+; |vga|Add1~2          ; |vga|Add1~2          ; out0             ;
+; |vga|Add1~3          ; |vga|Add1~3          ; out0             ;
+; |vga|Add1~4          ; |vga|Add1~4          ; out0             ;
+; |vga|Add1~5          ; |vga|Add1~5          ; out0             ;
+; |vga|Add1~6          ; |vga|Add1~6          ; out0             ;
+; |vga|Add1~7          ; |vga|Add1~7          ; out0             ;
+; |vga|Add1~8          ; |vga|Add1~8          ; out0             ;
+; |vga|Add1~9          ; |vga|Add1~9          ; out0             ;
+; |vga|Add1~10         ; |vga|Add1~10         ; out0             ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------+
+; Missing 1-Value Coverage                                       ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |vga|blankOut~4      ; |vga|blankOut~4      ; out              ;
+; |vga|blankOut~5      ; |vga|blankOut~5      ; out              ;
+; |vga|blankOut~6      ; |vga|blankOut~6      ; out              ;
+; |vga|syncOut~4       ; |vga|syncOut~4       ; out              ;
+; |vga|syncOut~5       ; |vga|syncOut~5       ; out              ;
+; |vga|syncOut~6       ; |vga|syncOut~6       ; out              ;
+; |vga|syncOut~7       ; |vga|syncOut~7       ; out              ;
+; |vga|syncCounter~50  ; |vga|syncCounter~50  ; out              ;
+; |vga|syncCounter~51  ; |vga|syncCounter~51  ; out              ;
+; |vga|syncCounter~52  ; |vga|syncCounter~52  ; out              ;
+; |vga|syncCounter~60  ; |vga|syncCounter~60  ; out              ;
+; |vga|syncCounter~61  ; |vga|syncCounter~61  ; out              ;
+; |vga|syncCounter~62  ; |vga|syncCounter~62  ; out              ;
+; |vga|syncCounter~70  ; |vga|syncCounter~70  ; out              ;
+; |vga|syncCounter~71  ; |vga|syncCounter~71  ; out              ;
+; |vga|syncCounter~72  ; |vga|syncCounter~72  ; out              ;
+; |vga|syncCounter~80  ; |vga|syncCounter~80  ; out              ;
+; |vga|syncCounter~81  ; |vga|syncCounter~81  ; out              ;
+; |vga|syncCounter~82  ; |vga|syncCounter~82  ; out              ;
+; |vga|syncCounter~90  ; |vga|syncCounter~90  ; out              ;
+; |vga|syncCounter~91  ; |vga|syncCounter~91  ; out              ;
+; |vga|syncCounter~92  ; |vga|syncCounter~92  ; out              ;
+; |vga|vSyncCounter[9] ; |vga|vSyncCounter[9] ; regout           ;
+; |vga|vSyncCounter[8] ; |vga|vSyncCounter[8] ; regout           ;
+; |vga|vSyncCounter[7] ; |vga|vSyncCounter[7] ; regout           ;
+; |vga|vSyncCounter[6] ; |vga|vSyncCounter[6] ; regout           ;
+; |vga|compSync        ; |vga|compSync        ; pin_out          ;
+; |vga|LessThan6~3     ; |vga|LessThan6~3     ; out0             ;
+; |vga|LessThan6~4     ; |vga|LessThan6~4     ; out0             ;
+; |vga|LessThan6~5     ; |vga|LessThan6~5     ; out0             ;
+; |vga|LessThan6~6     ; |vga|LessThan6~6     ; out0             ;
+; |vga|LessThan6~7     ; |vga|LessThan6~7     ; out0             ;
+; |vga|LessThan6~8     ; |vga|LessThan6~8     ; out0             ;
+; |vga|LessThan7~7     ; |vga|LessThan7~7     ; out0             ;
+; |vga|LessThan7~8     ; |vga|LessThan7~8     ; out0             ;
+; |vga|LessThan8~9     ; |vga|LessThan8~9     ; out0             ;
+; |vga|LessThan8~10    ; |vga|LessThan8~10    ; out0             ;
+; |vga|LessThan9~14    ; |vga|LessThan9~14    ; out0             ;
+; |vga|Add1~11         ; |vga|Add1~11         ; out0             ;
+; |vga|Add1~12         ; |vga|Add1~12         ; out0             ;
+; |vga|Add1~13         ; |vga|Add1~13         ; out0             ;
+; |vga|Add1~14         ; |vga|Add1~14         ; out0             ;
+; |vga|Add1~15         ; |vga|Add1~15         ; out0             ;
+; |vga|Add1~16         ; |vga|Add1~16         ; out0             ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------+
+; Missing 0-Value Coverage                                       ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |vga|blankOut~4      ; |vga|blankOut~4      ; out              ;
+; |vga|blankOut~5      ; |vga|blankOut~5      ; out              ;
+; |vga|blankOut~6      ; |vga|blankOut~6      ; out              ;
+; |vga|syncOut~4       ; |vga|syncOut~4       ; out              ;
+; |vga|syncOut~5       ; |vga|syncOut~5       ; out              ;
+; |vga|syncOut~6       ; |vga|syncOut~6       ; out              ;
+; |vga|syncOut~7       ; |vga|syncOut~7       ; out              ;
+; |vga|syncCounter~50  ; |vga|syncCounter~50  ; out              ;
+; |vga|syncCounter~51  ; |vga|syncCounter~51  ; out              ;
+; |vga|syncCounter~52  ; |vga|syncCounter~52  ; out              ;
+; |vga|syncCounter~60  ; |vga|syncCounter~60  ; out              ;
+; |vga|syncCounter~61  ; |vga|syncCounter~61  ; out              ;
+; |vga|syncCounter~62  ; |vga|syncCounter~62  ; out              ;
+; |vga|syncCounter~70  ; |vga|syncCounter~70  ; out              ;
+; |vga|syncCounter~71  ; |vga|syncCounter~71  ; out              ;
+; |vga|syncCounter~72  ; |vga|syncCounter~72  ; out              ;
+; |vga|syncCounter~80  ; |vga|syncCounter~80  ; out              ;
+; |vga|syncCounter~81  ; |vga|syncCounter~81  ; out              ;
+; |vga|syncCounter~82  ; |vga|syncCounter~82  ; out              ;
+; |vga|syncCounter~90  ; |vga|syncCounter~90  ; out              ;
+; |vga|syncCounter~91  ; |vga|syncCounter~91  ; out              ;
+; |vga|syncCounter~92  ; |vga|syncCounter~92  ; out              ;
+; |vga|vSyncCounter[9] ; |vga|vSyncCounter[9] ; regout           ;
+; |vga|vSyncCounter[8] ; |vga|vSyncCounter[8] ; regout           ;
+; |vga|vSyncCounter[7] ; |vga|vSyncCounter[7] ; regout           ;
+; |vga|vSyncCounter[6] ; |vga|vSyncCounter[6] ; regout           ;
+; |vga|vSyncCounter[5] ; |vga|vSyncCounter[5] ; regout           ;
+; |vga|vSyncOut        ; |vga|vSyncOut        ; regout           ;
+; |vga|reset           ; |vga|reset           ; out              ;
+; |vga|vsync           ; |vga|vsync           ; pin_out          ;
+; |vga|compSync        ; |vga|compSync        ; pin_out          ;
+; |vga|LessThan6~7     ; |vga|LessThan6~7     ; out0             ;
+; |vga|LessThan6~8     ; |vga|LessThan6~8     ; out0             ;
+; |vga|LessThan7~7     ; |vga|LessThan7~7     ; out0             ;
+; |vga|LessThan7~8     ; |vga|LessThan7~8     ; out0             ;
+; |vga|LessThan8~9     ; |vga|LessThan8~9     ; out0             ;
+; |vga|LessThan8~10    ; |vga|LessThan8~10    ; out0             ;
+; |vga|LessThan9~14    ; |vga|LessThan9~14    ; out0             ;
+; |vga|Add1~11         ; |vga|Add1~11         ; out0             ;
+; |vga|Add1~12         ; |vga|Add1~12         ; out0             ;
+; |vga|Add1~13         ; |vga|Add1~13         ; out0             ;
+; |vga|Add1~14         ; |vga|Add1~14         ; out0             ;
+; |vga|Add1~15         ; |vga|Add1~15         ; out0             ;
+; |vga|Add1~16         ; |vga|Add1~16         ; out0             ;
++----------------------+----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Dec 20 14:51:00 2022
+Info: Command: quartus_sim --simulation_results_format=VWF vga -c vga
+Info (324025): Using vector source file "D:/github/DSD/ex9/VGA/vga.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "hSyncCounter[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "vSyncCounter[10]" in design.
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      87.88 %
+Info (328052): Number of transitions in simulation is 2674189
+Info (324045): Vector file vga.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4444 megabytes
+    Info: Processing ended: Tue Dec 20 14:51:03 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

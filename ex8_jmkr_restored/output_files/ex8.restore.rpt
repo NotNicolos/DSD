@@ -1,5 +1,5 @@
 Restore Archived Project report for ex8
-Tue Dec 20 10:22:48 2022
+Tue Dec 20 14:37:38 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Tue Dec 20 10:22:48 2022 ;
+; Restore Archived Project Status ; Successful - Tue Dec 20 14:37:38 2022 ;
 ; Revision Name                   ; ex8                                   ;
-; Top-level Entity Name           ; wrong_code_tester                     ;
+; Top-level Entity Name           ; Code_lock                             ;
 ; Family                          ; Cyclone II                            ;
 +---------------------------------+---------------------------------------+
 
@@ -46,18 +46,25 @@ applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr.qar' into the 'C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/' directory
+Info: Successfully restored 'D:/github/DSD/ex8_jmkr.qar' into the 'D:/github/DSD/ex8_jmkr_restored/' directory
 Info: Generated report 'ex8.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/altera/13.0sp1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4406 megabytes
-    Info: Processing ended: Tue Dec 20 10:22:48 2022
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4405 megabytes
+    Info: Processing ended: Tue Dec 20 14:37:38 2022
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
 
 
 +------------------------------------------------+
-; Files Restored                                 ;
+; Files Not Restored                             ;
 +------------------------------------------------+
 ; File Name                                      ;
 +------------------------------------------------+
@@ -76,12 +83,5 @@ Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
 ; wrong_code.vhd                                 ;
 ; wrong_code_tester.vhd                          ;
 +------------------------------------------------+
-
-
-+--------------------+
-; Files Not Restored ;
-+--------------------+
-; File Name          ;
-+--------------------+
 
 

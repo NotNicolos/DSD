@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga
-Tue Dec 20 13:52:43 2022
+Tue Dec 20 14:50:21 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,13 +44,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 20 13:52:43 2022           ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 20 14:50:21 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vga                                             ;
 ; Top-level Entity Name              ; vga                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 49                                              ;
-;     Total combinational functions  ; 49                                              ;
+; Total logic elements               ; 56                                              ;
+;     Total combinational functions  ; 56                                              ;
 ;     Dedicated logic registers      ; 25                                              ;
 ; Total registers                    ; 25                                              ;
 ; Total pins                         ; 37                                              ;
@@ -152,18 +152,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
-; vga.vhd                          ; yes             ; User VHDL File  ; C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex9/VGA/vga.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path  ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------+---------+
+; vga.vhd                          ; yes             ; User VHDL File  ; D:/github/DSD/ex9/VGA/vga.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -171,17 +171,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 49    ;
+; Estimated Total logic elements              ; 56    ;
 ;                                             ;       ;
-; Total combinational functions               ; 49    ;
+; Total combinational functions               ; 56    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 14    ;
-;     -- 3 input functions                    ; 15    ;
-;     -- <=2 input functions                  ; 20    ;
+;     -- 4 input functions                    ; 21    ;
+;     -- 3 input functions                    ; 10    ;
+;     -- <=2 input functions                  ; 25    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 33    ;
-;     -- arithmetic mode                      ; 16    ;
+;     -- normal mode                          ; 38    ;
+;     -- arithmetic mode                      ; 18    ;
 ;                                             ;       ;
 ; Total registers                             ; 25    ;
 ;     -- Dedicated logic registers            ; 25    ;
@@ -190,9 +190,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 37    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; reset ;
-; Maximum fan-out                             ; 25    ;
-; Total fan-out                               ; 245   ;
-; Average fan-out                             ; 2.21  ;
+; Maximum fan-out                             ; 23    ;
+; Total fan-out                               ; 290   ;
+; Average fan-out                             ; 2.46  ;
 +---------------------------------------------+-------+
 
 
@@ -201,7 +201,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |vga                       ; 49 (49)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |vga                ; work         ;
+; |vga                       ; 56 (56)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |vga                ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -221,7 +221,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; hSyncCounter[6] ; yes                                                              ; yes                                        ;
 ; hSyncCounter[7] ; yes                                                              ; yes                                        ;
 ; hSyncCounter[9] ; yes                                                              ; yes                                        ;
-; vSyncCounter[1] ; yes                                                              ; yes                                        ;
 ; vSyncCounter[2] ; yes                                                              ; yes                                        ;
 ; vSyncCounter[3] ; yes                                                              ; yes                                        ;
 ; vSyncCounter[4] ; yes                                                              ; yes                                        ;
@@ -230,6 +229,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vSyncCounter[7] ; yes                                                              ; yes                                        ;
 ; vSyncCounter[8] ; yes                                                              ; yes                                        ;
 ; vSyncCounter[9] ; yes                                                              ; yes                                        ;
+; vSyncCounter[1] ; yes                                                              ; yes                                        ;
 ; vSyncCounter[0] ; yes                                                              ; yes                                        ;
 +-----------------+------------------------------------------------------------------+--------------------------------------------+
 
@@ -240,7 +240,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 25    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -254,8 +254,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |vga|hSyncOut              ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |vga|vSyncOut              ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|hSyncOut              ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|vSyncOut              ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; Yes        ; |vga|hSyncCounter[9]       ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; Yes        ; |vga|vSyncCounter[9]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -302,7 +304,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Dec 20 13:52:41 2022
+    Info: Processing started: Tue Dec 20 14:50:20 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file vga.vhd
@@ -313,14 +315,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "compSync" is stuck at VCC
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 93 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 35 output pins
-    Info (21061): Implemented 49 logic cells
+    Info (21061): Implemented 56 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4627 megabytes
-    Info: Processing ended: Tue Dec 20 13:52:43 2022
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4642 megabytes
+    Info: Processing ended: Tue Dec 20 14:50:21 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

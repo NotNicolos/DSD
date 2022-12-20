@@ -76,8 +76,7 @@ ARCHITECTURE testGenerator OF vga IS
 		blankOut <= '1';
 		syncOut <= '0';
 	ELSIF (syncCounter >= (backPorch + dataLen + frontPorch + synWidth)) THEN
-		blankOut <= '1';
-		syncOut <= '1';
+		syncCounter <= 0;
 	END IF;
 END syncGenerator;
 
