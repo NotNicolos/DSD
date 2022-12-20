@@ -1,0 +1,34 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.all;
+
+entity my_gates is
+	port(
+		a : in std_logic;
+		b : in std_logic;
+		xor_out : out std_logic;
+		or_out : out std_logic;
+		and_out : out std_logic
+	);
+end my_gates;
+
+
+architecture my_gates_impli of my_gates is 
+	function my_xor (a : std_logic; b : std_logic) return std_logic is 
+		begin	
+			return  (a xor b);
+	end function  my_xor;
+	-- Procedure body for NAND gate procedure
+	procedure my_and_out (a, b : in std_logic; signal and_out : out std_logic)is
+		begin
+		and_out <= (a and b);
+	end my_and_out;
+	procedure my_or (a, b : in std_logic; signal or_out : out std_logic)is
+		begin
+		or_out <= (a or b);
+	end my_or;
+begin
+	my_and_out(a,b,and_out);
+			
+end my_gates_impli;

@@ -13,7 +13,6 @@ ENTITY code_lock_simple_fsm IS
     ;
 END;
 
-
 ARCHITECTURE code_lock_simple_impl OF code_lock_simple_fsm IS
     TYPE state IS (idle, Ev_code1, get_code2, Ev_code2, Unlocked);
     SIGNAL present_state, next_state : state;
