@@ -1,0 +1,27 @@
+Quartus II Archive log --	C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/output_files/ex8medtæller.qarlog
+
+Archive:	C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/output_files/ex8medtæller.qar
+Date:		Tue Dec 20 12:32:08 2022
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/Code_lock.vhdl
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/Code_lock_simple_fsm.vhd
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/Waveform1.vwf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/Waveform2.vwf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/assignment_defaults.qdf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/db/ex8.sim.vwf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/ex8.qpf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/ex8.qsf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/incremental_db/compiled_partitions/ex8.db_info
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/output_files/Chain1.cdf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/output_files/WaveformLockTest.vwf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/output_files/WaveformLockWithWrongCode.vwf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/output_files/WaveformWrongCode.vwf
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/synch.vhd
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/wrong_code.vhd
+C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex8_jmkr_restored/wrong_code_tester.vhd
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,72 @@
+|Code_lock
+clk => wrong_code:wc0.clk
+clk => code_lock_simple_fsm:clf0.clk
+clk => synch:snc0.clk
+reset => wrong_code:wc0.reset
+reset => code_lock_simple_fsm:clf0.reset
+enter => synch:snc0.async_sig
+code[0] => code_lock_simple_fsm:clf0.code[0]
+code[1] => code_lock_simple_fsm:clf0.code[1]
+code[2] => code_lock_simple_fsm:clf0.code[2]
+code[3] => code_lock_simple_fsm:clf0.code[3]
+lock <= code_lock_simple_fsm:clf0.lock
+
+
+|Code_lock|wrong_code:wc0
+clk => ~NO_FANOUT~
+reset => failed~reg0.ACLR
+reset => \counter_proc:cnt[0].ACLR
+reset => \counter_proc:cnt[1].ACLR
+reset => \counter_proc:cnt[2].ACLR
+reset => \counter_proc:cnt[3].ACLR
+err_event => failed~reg0.CLK
+err_event => \counter_proc:cnt[0].CLK
+err_event => \counter_proc:cnt[1].CLK
+err_event => \counter_proc:cnt[2].CLK
+err_event => \counter_proc:cnt[3].CLK
+failed <= failed~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Code_lock|code_lock_simple_fsm:clf0
+clk => present_state~10.DATAIN
+reset => present_state~0.OUTPUTSELECT
+reset => present_state~1.OUTPUTSELECT
+reset => present_state~2.OUTPUTSELECT
+reset => present_state~3.OUTPUTSELECT
+reset => present_state~4.OUTPUTSELECT
+reset => present_state~5.OUTPUTSELECT
+code[0] => Equal0.IN1
+code[0] => Equal1.IN0
+code[1] => Equal0.IN0
+code[1] => Equal1.IN3
+code[2] => Equal0.IN3
+code[2] => Equal1.IN2
+code[3] => Equal0.IN2
+code[3] => Equal1.IN1
+enter => Selector2.IN5
+enter => next_state.Ev_code1.DATAB
+enter => next_state.Ev_code2.DATAB
+enter => Selector4.IN2
+enter => Selector3.IN2
+enter => Selector2.IN3
+failed => next_state~1.DATAA
+failed => next_state~3.DATAA
+failed => err_event~1.IN1
+failed => err_event~0.IN1
+failed => next_state~0.DATAA
+failed => next_state~2.DATAA
+lock <= lock~0.DB_MAX_OUTPUT_PORT_TYPE
+err_event <= err_event$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Code_lock|synch:snc0
+async_sig => \sync1:resync[1].DATAIN
+clk => fall~reg0.CLK
+clk => rise~reg0.CLK
+clk => \sync1:resync[3].CLK
+clk => \sync1:resync[2].CLK
+clk => \sync1:resync[1].CLK
+rise <= rise~reg0.DB_MAX_OUTPUT_PORT_TYPE
+fall <= fall~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

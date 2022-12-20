@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\hresk\OneDrive\Dokumenter\GitHub\DSD\ex8_jmkr_restored\simulation\qsim
+vwrong_code
+Z1 IM>zcUj3fL2L[KXU;kEK=o3
+Z2 V6_R7n:X;DbGTUNA<Cea]F1
+Z3 dC:\Users\hresk\OneDrive\Dokumenter\GitHub\DSD\ex8_jmkr_restored\simulation\qsim
+Z4 w1671529758
+Z5 8ex8.vo
+Z6 Fex8.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|ex8.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 W0X=AoOPKFMTbCbdgz2j92
+!s85 0
+Z11 !s108 1671529760.599000
+Z12 !s107 ex8.vo|
+!s101 -O0
+vwrong_code_tester
+Z13 IMR]7^nSQ9[>J`e8AEROCf0
+Z14 VQTQ=eYfz1E2bgb0o4hPGW3
+R3
+Z15 w1671528350
+R5
+R6
+L0 31
+R7
+r1
+31
+R9
+Z16 !s100 O4jz6lofUj1K:3R@Wd4mE1
+Z17 !s108 1671528352.784000
+R12
+R8
+!i10b 1
+!s85 0
+!s101 -O0
+vwrong_code_tester_vlg_vec_tst
+Z18 IfEeCfn>SY`gPOmZUUF6fQ3
+Z19 VT`^1A70GW:cT04:izg8551
+R3
+Z20 w1671528349
+Z21 8ex8.vt
+Z22 Fex8.vt
+L0 29
+R7
+r1
+31
+R9
+Z23 !s100 LB;z:6fPSTE;Hja7J=XaL0
+Z24 !s108 1671528352.911000
+Z25 !s107 ex8.vt|
+Z26 !s90 -work|work|ex8.vt|
+!i10b 1
+!s85 0
+!s101 -O0
+vwrong_code_vlg_vec_tst
+!i10b 1
+!s100 JmaWH[L9i6iDMS0PMli5a1
+IY@<W8QV=g<FhHfB>8jb=R0
+V2G64DPYfc7N^D4CNdj1fN3
+R3
+R4
+R21
+R22
+L0 29
+R7
+r1
+!s85 0
+31
+!s108 1671529760.692000
+!s107 ex8.vt|
+R26
+!s101 -O0
+R9
