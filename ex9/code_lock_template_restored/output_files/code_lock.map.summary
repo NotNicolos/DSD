@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Thu Dec 08 11:48:03 2022
+Analysis & Synthesis Status : Successful - Tue Dec 20 16:48:20 2022
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : code_lock
-Top-level Entity Name : my_gates
+Top-level Entity Name : my_gates_tester
 Family : Cyclone II
 Total logic elements : 3
     Total combinational functions : 3

@@ -16,5 +16,5 @@ architecture my_gates_tester_impli of my_gates_tester is
 begin
 	my_and_out(SW(0),SW(1),LEDR(0));
 	my_or(SW(0),SW(1),LEDR(1));
-	LEDR(3) <= my_xor(SW(0),SW(1));
+	LEDR(2) <= my_xor(SW(0),SW(1));
 end my_gates_tester_impli;

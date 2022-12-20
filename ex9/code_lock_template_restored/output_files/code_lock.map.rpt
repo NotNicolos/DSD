@@ -1,5 +1,5 @@
 Analysis & Synthesis report for code_lock
-Thu Dec 08 11:48:03 2022
+Tue Dec 20 16:48:20 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,10 +41,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 08 11:48:03 2022           ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 20 16:48:20 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; code_lock                                       ;
-; Top-level Entity Name              ; my_gates                                        ;
+; Top-level Entity Name              ; my_gates_tester                                 ;
 ; Family                             ; Cyclone II                                      ;
 ; Total logic elements               ; 3                                               ;
 ;     Total combinational functions  ; 3                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; my_gates           ; code_lock          ;
+; Top-level entity name                                                      ; my_gates_tester    ; code_lock          ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -188,7 +188,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;       ;
 ; I/O pins                                    ; 5     ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; a     ;
+; Maximum fan-out node                        ; SW[0] ;
 ; Maximum fan-out                             ; 3     ;
 ; Total fan-out                               ; 9     ;
 ; Average fan-out                             ; 1.13  ;
@@ -200,7 +200,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |my_gates                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |my_gates           ; work         ;
+; |my_gates_tester           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |my_gates_tester    ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -235,7 +235,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Dec 08 11:48:02 2022
+    Info: Processing started: Tue Dec 20 16:48:19 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off code_lock -c code_lock
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file my_gates_tester.vhd
@@ -247,7 +247,7 @@ Info (12021): Found 2 design units, including 0 entities, in source file gates_p
 Info (12021): Found 2 design units, including 1 entities, in source file my_gates.vhd
     Info (12022): Found design unit 1: my_gates-my_gates_impli
     Info (12023): Found entity 1: my_gates
-Info (12127): Elaborating entity "my_gates" for the top level hierarchy
+Info (12127): Elaborating entity "my_gates_tester" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
@@ -255,8 +255,8 @@ Info (21057): Implemented 8 device resources after synthesis - the final resourc
     Info (21059): Implemented 3 output pins
     Info (21061): Implemented 3 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4630 megabytes
-    Info: Processing ended: Thu Dec 08 11:48:03 2022
+    Info: Peak virtual memory: 4631 megabytes
+    Info: Processing ended: Tue Dec 20 16:48:20 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

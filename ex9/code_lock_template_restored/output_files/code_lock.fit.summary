@@ -1,7 +1,7 @@
-Fitter Status : Successful - Thu Dec 08 11:48:07 2022
+Fitter Status : Successful - Tue Dec 20 16:48:24 2022
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : code_lock
-Top-level Entity Name : my_gates
+Top-level Entity Name : my_gates_tester
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final

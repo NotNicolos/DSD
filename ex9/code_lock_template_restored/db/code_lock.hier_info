@@ -1,12 +1,12 @@
-|my_gates
-a => and_out.IN0
-a => or_out.IN0
-a => my_xor.IN0
-b => and_out.IN1
-b => or_out.IN1
-b => my_xor.IN1
-xor_out <= my_xor.DB_MAX_OUTPUT_PORT_TYPE
-or_out <= or_out.DB_MAX_OUTPUT_PORT_TYPE
-and_out <= and_out.DB_MAX_OUTPUT_PORT_TYPE
+|my_gates_tester
+SW[0] => and_out.IN0
+SW[0] => or_out.IN0
+SW[0] => my_xor.IN0
+SW[1] => and_out.IN1
+SW[1] => or_out.IN1
+SW[1] => my_xor.IN1
+LEDR[0] <= and_out.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= or_out.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= my_xor.DB_MAX_OUTPUT_PORT_TYPE
 
 
