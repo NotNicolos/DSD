@@ -50,35 +50,40 @@ ARCHITECTURE testGenerator OF vga IS
 
 	-- INSERT YOUR PROCEDURE HERE.
 	-- Your procedure should circular increment syncCounter, produce blanking and sync output.  
-	PROCEDURE syncGenerator
-	(
-	SIGNAL syncCounter : INOUT integer;
-	SIGNAL syncOut : OUT STD_LOGIC;
-	SIGNAL blankOut : OUT STD_LOGIC;
-	CONSTANT frontPorch : in NATURAL;
-	CONSTANT backPorch : in NATURAL;
-	CONSTANT dataLen : in NATURAL;
-	CONSTANT synWidth : in NATURAL
-	)
-	IS BEGIN
-	syncCounter <= syncCounter + 1;
-
-	IF (syncCounter <= backPorch) THEN
-		blankOut <= '1';
-		syncOut <= '1';
-	ELSIF (syncCounter <= (backPorch + dataLen)) THEN
-		blankOut <= '0';
-		syncOut <= '1';
-	ELSIF (syncCounter <= (backPorch + dataLen + frontPorch)) THEN
-		blankOut <= '1';
-		syncOut <= '1';
-	ELSIF (syncCounter <= (backPorch + dataLen + frontPorch + synWidth)) THEN
-		blankOut <= '1';
-		syncOut <= '0';
-	ELSIF (syncCounter >= (backPorch + dataLen + frontPorch + synWidth)) THEN
-		syncCounter <= 0;
-	END IF;
-END syncGenerator;
+	PROCEDURE syncGenerator	(
+							-- Signaler
+							SIGNAL syncCounter : INOUT INTEGER;
+							SIGNAL syncOut : OUT STD_LOGIC;
+							SIGNAL blankOut : OUT STD_LOGIC;
+							-- Konstanter
+							CONSTANT frontPorch : IN NATURAL;
+							CONSTANT backPorch : IN NATURAL;
+							CONSTANT dataLen : IN NATURAL;
+							CONSTANT synWidth : IN NATURAL)IS 
+	BEGIN
+		-- Referer til Fig. 3: VGA timing fra Exercise 8 - Procedures and Functions in VHDL (VGA).pdf
+		syncCounter <= syncCounter + 1;
+		IF (syncCounter <= backPorch) THEN
+			-- Denne del relatere til back porch data området på Fig. 3
+			blankOut <= '1';
+			syncOut <= '1';
+		ELSIF (syncCounter <= (backPorch + dataLen)) THEN
+			-- Denne del relatere til data længde området på Fig. 3
+			blankOut <= '0';
+			syncOut <= '1';
+		ELSIF (syncCounter <= (backPorch + dataLen + frontPorch)) THEN
+			-- Denne del relatere til front porch data området på Fig. 3
+			blankOut <= '1';
+			syncOut <= '1';
+		ELSIF (syncCounter <= (backPorch + dataLen + frontPorch + synWidth)) THEN
+			-- Denne del relatere til sync width data området på Fig. 3
+			blankOut <= '1';
+			syncOut <= '0';
+		ELSIF (syncCounter >= (backPorch + dataLen + frontPorch + synWidth)) THEN
+			-- Når vi passere max nulstiller vi syncCounter
+			syncCounter <= 0;
+		END IF;
+	END syncGenerator;
 
 BEGIN
 

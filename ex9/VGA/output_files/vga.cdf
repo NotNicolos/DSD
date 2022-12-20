@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("D:/github/DSD/ex9/VGA/output_files/") File("vga.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex9/VGA/output_files/") File("vga.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

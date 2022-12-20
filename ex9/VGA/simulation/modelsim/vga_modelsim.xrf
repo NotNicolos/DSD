@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, D:/github/DSD/ex9/VGA/vga.vhd
-source_file = 1, D:/github/DSD/ex9/VGA/vga.vwf
-source_file = 1, D:/github/DSD/ex9/VGA/db/vga.cbx.xml
+source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex9/VGA/vga.vhd
+source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex9/VGA/vga.vwf
+source_file = 1, C:/Users/hresk/OneDrive/Dokumenter/GitHub/DSD/ex9/VGA/db/vga.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
