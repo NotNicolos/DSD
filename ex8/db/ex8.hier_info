@@ -1,64 +1,28 @@
-|code_lock_simple_tester
-clock_50 => code_lock_simple:code_lock_simple.clk
-SW[0] => code_lock_simple:code_lock_simple.code[0]
-SW[1] => code_lock_simple:code_lock_simple.code[1]
-SW[2] => code_lock_simple:code_lock_simple.code[2]
-SW[3] => code_lock_simple:code_lock_simple.code[3]
-KEY[2] => code_lock_simple:code_lock_simple.reset
-KEY[2] => LEDR[0].DATAIN
-KEY[3] => code_lock_simple:code_lock_simple.enter
-KEY[3] => LEDR[1].DATAIN
-LEDR[0] <= KEY[2].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[1] <= KEY[3].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[2] <= <GND>
-LEDR[3] <= <GND>
-LEDG[0] <= code_lock_simple:code_lock_simple.lock
+|wrong_code_tester
+clock_50 => wrong_code:wc0.clk
+KEY[2] => ~NO_FANOUT~
+KEY[3] => wrong_code:wc0.err_event
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= wrong_code:wc0.failed
 
 
-|code_lock_simple_tester|code_lock_simple:code_lock_simple
-clk => synch:synchronizer.clk
-clk => code_lock_simple_fsm:fsm.clk
-reset => code_lock_simple_fsm:fsm.reset
-code[0] => code_lock_simple_fsm:fsm.code[0]
-code[1] => code_lock_simple_fsm:fsm.code[1]
-code[2] => code_lock_simple_fsm:fsm.code[2]
-code[3] => code_lock_simple_fsm:fsm.code[3]
-enter => synch:synchronizer.async_sig
-lock <= code_lock_simple_fsm:fsm.lock
-
-
-|code_lock_simple_tester|code_lock_simple:code_lock_simple|synch:synchronizer
-async_sig => \sync1:resync[1].DATAIN
-clk => fall~reg0.CLK
-clk => rise~reg0.CLK
-clk => \sync1:resync[3].CLK
-clk => \sync1:resync[2].CLK
-clk => \sync1:resync[1].CLK
-rise <= rise~reg0.DB_MAX_OUTPUT_PORT_TYPE
-fall <= fall~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|code_lock_simple_tester|code_lock_simple:code_lock_simple|code_lock_simple_fsm:fsm
-clk => present_state~1.DATAIN
-reset => present_state.OUTPUTSELECT
-reset => present_state.OUTPUTSELECT
-reset => present_state.OUTPUTSELECT
-reset => present_state.OUTPUTSELECT
-reset => present_state.OUTPUTSELECT
-code[0] => Equal0.IN1
-code[0] => Equal1.IN0
-code[1] => Equal0.IN0
-code[1] => Equal1.IN3
-code[2] => Equal0.IN3
-code[2] => Equal1.IN2
-code[3] => Equal0.IN2
-code[3] => Equal1.IN1
-enter => Selector0.IN4
-enter => next_state.Ev_code1.DATAB
-enter => next_state.Ev_code2.DATAB
-enter => Selector0.IN1
-enter => Selector1.IN1
-enter => Selector2.IN1
-lock <= lock.DB_MAX_OUTPUT_PORT_TYPE
+|wrong_code_tester|wrong_code:wc0
+clk => failed~reg0.CLK
+clk => \counter_proc:cnt[0].CLK
+clk => \counter_proc:cnt[1].CLK
+clk => \counter_proc:cnt[2].CLK
+clk => \counter_proc:cnt[3].CLK
+reset => \counter_proc:cnt[0].ACLR
+reset => \counter_proc:cnt[1].ACLR
+reset => \counter_proc:cnt[2].ACLR
+reset => \counter_proc:cnt[3].ACLR
+reset => failed~reg0.ENA
+err_event => failed~0.OUTPUTSELECT
+err_event => \counter_proc:cnt[3].ENA
+err_event => \counter_proc:cnt[2].ENA
+err_event => \counter_proc:cnt[1].ENA
+err_event => \counter_proc:cnt[0].ENA
+failed <= failed~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

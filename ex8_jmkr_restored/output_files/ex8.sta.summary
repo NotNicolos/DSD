@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -1.088
+TNS   : -3.362
+
+Type  : Slow Model Setup 'code[0]'
+Slack : -0.388
+TNS   : -0.388
+
+Type  : Slow Model Setup 'code_lock_simple_fsm:clf0|err_event'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Slow Model Hold 'code_lock_simple_fsm:clf0|err_event'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'code[0]'
+Slack : 0.449
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -10.380
+
+Type  : Slow Model Minimum Pulse Width 'code[0]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Slow Model Minimum Pulse Width 'code_lock_simple_fsm:clf0|err_event'
+Slack : -0.500
+TNS   : -3.000
+
+Type  : Fast Model Setup 'clk'
+Slack : -0.189
+TNS   : -0.189
+
+Type  : Fast Model Setup 'code[0]'
+Slack : -0.029
+TNS   : -0.029
+
+Type  : Fast Model Setup 'code_lock_simple_fsm:clf0|err_event'
+Slack : 0.636
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -0.284
+TNS   : -0.542
+
+Type  : Fast Model Hold 'code_lock_simple_fsm:clf0|err_event'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'code[0]'
+Slack : 0.643
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -10.380
+
+Type  : Fast Model Minimum Pulse Width 'code[0]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Fast Model Minimum Pulse Width 'code_lock_simple_fsm:clf0|err_event'
+Slack : -0.500
+TNS   : -3.000
+
+------------------------------------------------------------
