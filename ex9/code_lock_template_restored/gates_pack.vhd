@@ -10,7 +10,6 @@ package gates_pack is
 	
 end gates_pack;
 
-
 package body gates_pack is
 	-- Her begynder funktionen my_xor.
 	function my_xor (a, b : std_logic) return std_logic is 
@@ -30,3 +29,5 @@ package body gates_pack is
 		or_out <= (a or b);
 	end my_or;
 end gates_pack;
+
+
